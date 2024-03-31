@@ -43,3 +43,35 @@ The two questions you want to answer.
 ## Analysis plan
 
 -   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+
+## Timeline
+-   **Week of March 24th**
+-   Select dataset and determine questions for analysis.
+
+-   **Week of March 31st**
+-   Create proposal for peer review.
+-   Perform group peer reviews on other teams' proposals.
+
+-   **Week of April 7th**
+-   Discuss feedback from peer reviews and make appropriate changes.
+-   Updated proposal for instructor review.
+
+-   **Week of April 14th**
+-   Discuss feedback given from instuctor.
+-   Deligate tasks for team members(6) to begin presentation(2), data analysis(2), and dashboard(2).
+
+-   **Week of April 21st**
+-   Fill in information for about.qmd . 
+-   Start working on project write up.
+-   Create appropriate codes and visualizations based on analysis questions.
+-   Start building an interactive Python Visualization Dashboard using Panel.
+
+-   **Week of April 28th**
+-   Clean up code and visualizatoins.
+-   Fill in presentation slide deck and begin to practice for the day of presenting.
+-   Wrap up dashboard creation. 
+
+-   **Week of May 5th**
+-   Determine who will speak to what slides in presentation.
+-   Present final project to class on May 6th, 2024.
+-   Do peer evalutions for both team members and other teams' project      
