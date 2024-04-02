@@ -145,7 +145,7 @@ The variable **years** is used to analysis time series.
 
 **Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.
 
-## Questions 02
+## Question 02
 
 What countries or regions are practicing sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
@@ -187,79 +187,51 @@ To complete the analysis of this question, the following data columns are essent
 
 **Density plots:** Density plots will be used to visualize the distribution of data for renewable and non-renewable energy sources across continents and or other forms of regional boundaries.
 
-# Project Timeline
-
-**Week of March 24th**
-
-\- Select dataset and determine questions for analysis.
-
-**Week of March 31st**
-
-\- Create proposal for peer review.
-
-\- Perform group peer reviews on other teams' proposals.
-
-**Week of April 7th**
-
-\- Discuss feedback from peer reviews and make appropriate changes.
-
-\- Updated proposal for instructor review.
-
-**Week of April 14th**
-
-\- Discuss feedback given from instructor.
-
-\- Delegate tasks for team members(6) to begin presentation(2), data analysis(2), and dashboard(2).
-
-**Week of April 21st**
-
-\- Fill in information for about.qmd.
-
-\- Start working on project write up.
-
-\- Create appropriate codes and visualizations based on analysis questions.
-
-\- Start building an interactive Python Visualization Dashboard using Panel.
-
-**Week of April 28th**
-
-\- Clean up code and visualizations.
-
-\- Fill in presentation slide deck and begin to practice for the day of presenting.
-
-\- Wrap up dashboard creation.
-
-**Week of May 5th**
-
-\- Determine who will speak to what slides in presentation.
-
-\- Present final project to class on May 6th, 2024.
-
-\- Do peer evaluations for both team members and other teams' projects
-
 ## Project Timeline
 
-## Project Tasks
+### Project Tasks
 
 This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.
 
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-| Task Name                                               | Status                             | Assignee | Due        | Priority | Summary                                     |
-+=========================================================+====================================+==========+============+==========+=============================================+
-| Dataset and question selection                          | Explored and finalized the dataset | All      | March 24th | High     | Selected dataset and question to be solved. |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-| Brainstorming and working on data analysis and proposal | Completed the proposal             | All      | April 1st  | High     | Proposal ready for review.                  |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-| Review peer evaluations on proposal                     | *in progress*                      | All      | April 8th  | High     |                                             |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                    |          | April 15th |          |                                             |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                    |          | April 22nd |          |                                             |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                    |          | April 29th |          |                                             |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                    |          | May 6th    |          |                                             |
-+---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Task Name                        | Status        | Assignee | Due        | Priority | Summary                                                                                                             |
++==================================+===============+==========+============+==========+=====================================================================================================================+
+| Dataset                          | Complete      | All (6)  | March 27th | High     | Brainstorming and selecting appropriate dataset.                                                                    |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Questions                        | Complete      | All (6)  | March 29th | High     | Determining questions to answer in analysis.                                                                        |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Proposal                         | Complete      | All (6)  | April 3rd  | High     | Brainstorming and working on data analysis and proposal.                                                            |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Peer evaluation: *proposal*      | *in progress* | All (6)  | April 3rd  | High     | Performing evaluations on different teams' project proposals.                                                       |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Proposal feedback                | *backlog*     | All (6)  | TBD        | High     | Discuss feedback given on our proposal and make necessary adjustments.                                              |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Instructor review: *proposal*    | *backlog*     | All (6)  | April 10th | High     | Instructor will review the proposal and provide feedback on a later date.                                           |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Peer evaluation: *code*          | *backlog*     | All (6)  | TBD        | High     | Performing evaluations on different teams' project code.                                                            |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Code feedback                    | *backlog*     | All (6)  | TBD        | High     | Discuss feedback given on our code and make necessary adjustments.                                                  |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| About                            | *backlog*     | All (6)  | April 17th | High     | Fill in individual information about yourself in the **About.qmd**                                                  |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Write-up                         | *backlog*     | TBD (2)  | May 2nd    | High     |                                                                                                                     |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Presentation                     | *backlog*     | TBD (2)  | May 2nd    | High     | Build a presentation with all visualizations, descriptions, and talking points needed to answer analysis questions. |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Dashboard                        | *backlog*     | TBD (2)  | May 2nd    | High     | Build an interactive Python Visualization Dashboard using Panel.                                                    |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Final checks                     | *backlog*     | All (6)  | May 3rd    | Med      | Clean-up all clutter/mistakes found in write-up, presentation, and dashboard.                                       |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Presentation delegating          | *backlog*     | All (6)  | May 3rd    | High     | Determine who will speak to what slides.                                                                            |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Presentation practice            | *backlog*     | All (6)  | May 3rd    | High     | Do a mock presentation to ensure smooth transitions and correct interpretations of graphs and information.          |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Presentation                     | *backlog*     | All (6)  | May 6th    | High     | Present findings in 5 minutes.                                                                                      |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Team Member Evaluations          | *backlog*     | All (6)  | May 6th    | High     | Give feedback on each team member.                                                                                  |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
+| Peer evaluation: *presentations* | *backlog*     | All (6)  | May 7th    | High     | Performing evaluations on different teams' project presentations.                                                   |
++----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 
 # Repo Organization
 
