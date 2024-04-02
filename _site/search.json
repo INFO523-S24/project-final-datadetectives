@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Proposal title",
+    "section": "",
+    "text": "country  year iso_code  population  gdp  biofuel_cons_change_pct  \\\n0  ASEAN (Ember)  2000      NaN         NaN  NaN                      NaN   \n1  ASEAN (Ember)  2001      NaN         NaN  NaN                      NaN   \n2  ASEAN (Ember)  2002      NaN         NaN  NaN                      NaN   \n3  ASEAN (Ember)  2003      NaN         NaN  NaN                      NaN   \n4  ASEAN (Ember)  2004      NaN         NaN  NaN                      NaN   \n\n   biofuel_cons_change_twh  biofuel_cons_per_capita  biofuel_consumption  \\\n0                      NaN                      NaN                  NaN   \n1                      NaN                      NaN                  NaN   \n2                      NaN                      NaN                  NaN   \n3                      NaN                      NaN                  NaN   \n4                      NaN                      NaN                  NaN   \n\n   biofuel_elec_per_capita  ...  solar_share_elec  solar_share_energy  \\\n0                      NaN  ...               0.0                 NaN   \n1                      NaN  ...               0.0                 NaN   \n2                      NaN  ...               0.0                 NaN   \n3                      NaN  ...               0.0                 NaN   \n4                      NaN  ...               0.0                 NaN   \n\n   wind_cons_change_pct  wind_cons_change_twh  wind_consumption  \\\n0                   NaN                   NaN               NaN   \n1                   NaN                   NaN               NaN   \n2                   NaN                   NaN               NaN   \n3                   NaN                   NaN               NaN   \n4                   NaN                   NaN               NaN   \n\n   wind_elec_per_capita  wind_electricity  wind_energy_per_capita  \\\n0                   NaN               0.0                     NaN   \n1                   NaN               0.0                     NaN   \n2                   NaN               0.0                     NaN   \n3                   NaN               0.0                     NaN   \n4                   NaN               0.0                     NaN   \n\n   wind_share_elec  wind_share_energy  \n0              0.0                NaN  \n1              0.0                NaN  \n2              0.0                NaN  \n3              0.0                NaN  \n4              0.0                NaN  \n\n[5 rows x 129 columns]"
+  },
+  {
+    "objectID": "proposal.html#dataset",
+    "href": "proposal.html#dataset",
+    "title": "Proposal title",
+    "section": "",
+    "text": "country  year iso_code  population  gdp  biofuel_cons_change_pct  \\\n0  ASEAN (Ember)  2000      NaN         NaN  NaN                      NaN   \n1  ASEAN (Ember)  2001      NaN         NaN  NaN                      NaN   \n2  ASEAN (Ember)  2002      NaN         NaN  NaN                      NaN   \n3  ASEAN (Ember)  2003      NaN         NaN  NaN                      NaN   \n4  ASEAN (Ember)  2004      NaN         NaN  NaN                      NaN   \n\n   biofuel_cons_change_twh  biofuel_cons_per_capita  biofuel_consumption  \\\n0                      NaN                      NaN                  NaN   \n1                      NaN                      NaN                  NaN   \n2                      NaN                      NaN                  NaN   \n3                      NaN                      NaN                  NaN   \n4                      NaN                      NaN                  NaN   \n\n   biofuel_elec_per_capita  ...  solar_share_elec  solar_share_energy  \\\n0                      NaN  ...               0.0                 NaN   \n1                      NaN  ...               0.0                 NaN   \n2                      NaN  ...               0.0                 NaN   \n3                      NaN  ...               0.0                 NaN   \n4                      NaN  ...               0.0                 NaN   \n\n   wind_cons_change_pct  wind_cons_change_twh  wind_consumption  \\\n0                   NaN                   NaN               NaN   \n1                   NaN                   NaN               NaN   \n2                   NaN                   NaN               NaN   \n3                   NaN                   NaN               NaN   \n4                   NaN                   NaN               NaN   \n\n   wind_elec_per_capita  wind_electricity  wind_energy_per_capita  \\\n0                   NaN               0.0                     NaN   \n1                   NaN               0.0                     NaN   \n2                   NaN               0.0                     NaN   \n3                   NaN               0.0                     NaN   \n4                   NaN               0.0                     NaN   \n\n   wind_share_elec  wind_share_energy  \n0              0.0                NaN  \n1              0.0                NaN  \n2              0.0                NaN  \n3              0.0                NaN  \n4              0.0                NaN  \n\n[5 rows x 129 columns]"
+  },
+  {
+    "objectID": "proposal.html#is-it-possible-to-predict-a-nations-power-consumption-by-considering-its-population-size-gross-domestic-product-gdp-and-the-percentage-of-electricity-generated-from-renewable-sources-and-changes-across-the-years",
+    "href": "proposal.html#is-it-possible-to-predict-a-nations-power-consumption-by-considering-its-population-size-gross-domestic-product-gdp-and-the-percentage-of-electricity-generated-from-renewable-sources-and-changes-across-the-years",
+    "title": "Proposal title",
+    "section": "Is it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years??",
+    "text": "Is it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years??\n\nThe Importance of this Question\nPredicting a country’s power consumption is a difficult yet important taking on, necessary for guaranteeing sustained progress and energy stability. This subject explores the intricate relationship between economic progress, population growth, and sustainable energy consumption by examining a nation’s population size, Gross Domestic Product (GDP), and the proportion of electricity generated from renewable sources. The research can provide valuable guidance for policy decisions, energy planning, and infrastructure investment to fulfill future energy demands in a sustainable manner.\n\n\nDependency Columns\nIn order to investigate this research issue, the following data columns are essential: Population (population): Functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes. A larger Gross Domestic Product (gdp) frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions. The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable “renewables_electricity / electricity_generation”. Assessing the proportion of renewable energy in a nation’s entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns. Energy Consumption (energy_consumption): Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as “electricity_consumption” it would be more directly applicable to the subject at hand. years also used to analysis time series.\n\n\nAnalysis plan\nData Preparation and Analysis\nData Cleaning: Verify that the data is devoid of anomalies, addressing any missing or incorrect values in a suitable manner.\nFeature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of renewables_electricity by the value of electricity_generation. If required, standardize or normalize the appropriate columns.\nExploratory Data Analysis (EDA): is a process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data.\nDescriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable (energy_consumption) and independent variables. Time series analysis :For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends. Regression analysis: Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.\n\nData Visualization: \nFor time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.\nScatter plots: are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables. Bar charts and pie charts: are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.\nModel Evaluation: Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption."
+  },
+  {
+    "objectID": "proposal.html#timeline",
+    "href": "proposal.html#timeline",
+    "title": "Proposal title",
+    "section": "Timeline",
+    "text": "Timeline\n\nWeek of March 24th\nSelect dataset and determine questions for analysis.\nWeek of March 31st\nCreate proposal for peer review.\nPerform group peer reviews on other teams’ proposals.\nWeek of April 7th\nDiscuss feedback from peer reviews and make appropriate changes.\nUpdated proposal for instructor review.\nWeek of April 14th\nDiscuss feedback given from instuctor.\nDeligate tasks for team members(6) to begin presentation(2), data analysis(2), and dashboard(2).\nWeek of April 21st\nFill in information for about.qmd .\nStart working on project write up.\nCreate appropriate codes and visualizations based on analysis questions.\nStart building an interactive Python Visualization Dashboard using Panel.\nWeek of April 28th\nClean up code and visualizatoins.\nFill in presentation slide deck and begin to practice for the day of presenting.\nWrap up dashboard creation.\nWeek of May 5th\nDetermine who will speak to what slides in presentation.\nPresent final project to class on May 6th, 2024.\nDo peer evalutions for both team members and other teams’ project"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Project Title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by [Data Detectives] For INFO 523 - Data Mining and Discovery at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.).\nTeam member 5: One sentence description of Team member 5 (e.g., year, major, etc.).\nTeam member 6: One sentence description of Team member 6 (e.g., year, major, etc.)."
+  },
+  {
+    "objectID": "presentation.html#quarto",
+    "href": "presentation.html#quarto",
+    "title": "Project title",
+    "section": "Quarto",
+    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
+  },
+  {
+    "objectID": "presentation.html#layouts",
+    "href": "presentation.html#layouts",
+    "title": "Project title",
+    "section": "Layouts",
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
+  },
+  {
+    "objectID": "presentation.html#code",
+    "href": "presentation.html#code",
+    "title": "Project title",
+    "section": "Code",
+    "text": "Code\n\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                    mpg   R-squared:                       0.073\nModel:                            OLS   Adj. R-squared:                  0.070\nMethod:                 Least Squares   F-statistic:                     30.59\nDate:                Tue, 05 Dec 2023   Prob (F-statistic):           5.84e-08\nTime:                        15:26:39   Log-Likelihood:                -1346.4\nNo. Observations:                 392   AIC:                             2697.\nDf Residuals:                     390   BIC:                             2705.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         35.8015      2.266     15.800      0.000      31.347      40.257\nspeed       -354.7055     64.129     -5.531      0.000    -480.788    -228.623\n==============================================================================\nOmnibus:                       27.687   Durbin-Watson:                   0.589\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               18.976\nSkew:                           0.420   Prob(JB):                     7.57e-05\nKurtosis:                       2.323   Cond. No.                         169.\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+  },
+  {
+    "objectID": "presentation.html#plots",
+    "href": "presentation.html#plots",
+    "title": "Project title",
+    "section": "Plots",
+    "text": "Plots"
+  },
+  {
+    "objectID": "presentation.html#plot-and-text",
+    "href": "presentation.html#plot-and-text",
+    "title": "Project title",
+    "section": "Plot and text",
+    "text": "Plot and text\n\n\n\nSome text\ngoes here"
+  },
+  {
+    "objectID": "presentation.html#tables",
+    "href": "presentation.html#tables",
+    "title": "Project title",
+    "section": "Tables",
+    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\nisland\n\n\n\nbill_length_mm\n\n\n\nbill_depth_mm\n\n\n\nflipper_length_mm\n\n\n\nbody_mass_g\n\n\n\nsex\n\n\n\n\n\n\n\n\n\n\n\n0\n\n\n\nAdelie\n\n\n\nTorgersen\n\n\n\n39.1\n\n\n\n18.7\n\n\n\n181.0\n\n\n\n3750.0\n\n\n\nMale\n\n\n\n\n\n\n\n1\n\n\n\nAdelie\n\n\n\nTorgersen\n\n\n\n39.5\n\n\n\n17.4\n\n\n\n186.0\n\n\n\n3800.0\n\n\n\nFemale\n\n\n\n\n\n\n\n2\n\n\n\nAdelie\n\n\n\nTorgersen\n\n\n\n40.3\n\n\n\n18.0\n\n\n\n195.0\n\n\n\n3250.0\n\n\n\nFemale\n\n\n\n\n\n\n\n4\n\n\n\nAdelie\n\n\n\nTorgersen\n\n\n\n36.7\n\n\n\n19.3\n\n\n\n193.0\n\n\n\n3450.0\n\n\n\nFemale\n\n\n\n\n\n\n\n5\n\n\n\nAdelie\n\n\n\nTorgersen\n\n\n\n39.3\n\n\n\n20.6\n\n\n\n190.0\n\n\n\n3650.0\n\n\n\nMale"
+  },
+  {
+    "objectID": "presentation.html#images",
+    "href": "presentation.html#images",
+    "title": "Project title",
+    "section": "Images",
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
+  },
+  {
+    "objectID": "presentation.html#math-expressions",
+    "href": "presentation.html#math-expressions",
+    "title": "Project title",
+    "section": "Math Expressions",
+    "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
+  },
+  {
+    "objectID": "presentation.html#feeling-adventurous",
+    "href": "presentation.html#feeling-adventurous",
+    "title": "Project title",
+    "section": "Feeling adventurous?",
+    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  }
+]
