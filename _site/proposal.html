@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="DataDetectives - Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa">
-<meta name="description" content="Project description">
+<meta name="description" content="The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption">
 
 <title>Project Title - Global Energy Trends</title>
 <style>
@@ -4719,32 +4719,28 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a>
   <ul class="collapse">
   <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset Description:</a></li>
-  <li><a href="#dimension" id="toc-dimension" class="nav-link" data-scroll-target="#dimension">Dimension:</a></li>
-  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance">Provenance:</a></li>
+  <li><a href="#dimensions" id="toc-dimensions" class="nav-link" data-scroll-target="#dimensions">Dimensions</a></li>
+  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance">Provenance</a></li>
   <li><a href="#code-book-insights" id="toc-code-book-insights" class="nav-link" data-scroll-target="#code-book-insights">Code book Insights:</a></li>
   </ul></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#why-the-dataset" id="toc-why-the-dataset" class="nav-link" data-scroll-target="#why-the-dataset">Why the dataset</a></li>
+  <li><a href="#question-01" id="toc-question-01" class="nav-link" data-scroll-target="#question-01">Question 01</a>
   <ul class="collapse">
-  <li><a href="#why-we-are-choosing-this-data-set" id="toc-why-we-are-choosing-this-data-set" class="nav-link" data-scroll-target="#why-we-are-choosing-this-data-set">Why we are choosing this data-set?</a></li>
-  <li><a href="#idea-of-analysis" id="toc-idea-of-analysis" class="nav-link" data-scroll-target="#idea-of-analysis">Idea of Analysis</a></li>
+  <li><a href="#the-importance-of-this-question" id="toc-the-importance-of-this-question" class="nav-link" data-scroll-target="#the-importance-of-this-question">The Importance of this Question</a></li>
+  <li><a href="#dependency-columns" id="toc-dependency-columns" class="nav-link" data-scroll-target="#dependency-columns">Dependency Columns</a></li>
+  <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a></li>
   </ul></li>
-  <li><a href="#question-01" id="toc-question-01" class="nav-link" data-scroll-target="#question-01">Question 01:</a>
-  <ul class="collapse">
-  <li><a href="#the-importance-of-this-question" id="toc-the-importance-of-this-question" class="nav-link" data-scroll-target="#the-importance-of-this-question">The Importance of this Question:</a></li>
-  <li><a href="#dependency-columns" id="toc-dependency-columns" class="nav-link" data-scroll-target="#dependency-columns">Dependency Columns:</a></li>
-  <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan:</a></li>
-  </ul></li>
-  <li><a href="#questions-02" id="toc-questions-02" class="nav-link" data-scroll-target="#questions-02">Questions 02:</a>
+  <li><a href="#question-02" id="toc-question-02" class="nav-link" data-scroll-target="#question-02">Question 02</a>
   <ul class="collapse">
   <li><a href="#the-importance-of-this-question-1" id="toc-the-importance-of-this-question-1" class="nav-link" data-scroll-target="#the-importance-of-this-question-1">The Importance of this Question:</a></li>
   <li><a href="#dependency-columns-1" id="toc-dependency-columns-1" class="nav-link" data-scroll-target="#dependency-columns-1">Dependency Columns:</a></li>
-  <li><a href="#analysis-plan-1" id="toc-analysis-plan-1" class="nav-link" data-scroll-target="#analysis-plan-1">Analysis plan:</a></li>
+  <li><a href="#analysis-plan-1" id="toc-analysis-plan-1" class="nav-link" data-scroll-target="#analysis-plan-1">Analysis plan</a></li>
   </ul></li>
-  <li><a href="#project-timeline" id="toc-project-timeline" class="nav-link" data-scroll-target="#project-timeline">Project Timeline</a></li>
-  <li><a href="#plan-of-attack" id="toc-plan-of-attack" class="nav-link" data-scroll-target="#plan-of-attack">Plan of Attack</a>
+  <li><a href="#project-timeline" id="toc-project-timeline" class="nav-link" data-scroll-target="#project-timeline">Project Timeline</a>
   <ul class="collapse">
   <li><a href="#project-tasks" id="toc-project-tasks" class="nav-link" data-scroll-target="#project-tasks">Project Tasks</a></li>
   </ul></li>
@@ -4764,7 +4760,7 @@ vertical-align: -.125em;
 
 <div>
   <div class="description">
-    Project description
+    The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption
   </div>
 </div>
 
@@ -4794,8 +4790,13 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="dataset" class="level1">
-<h1>Dataset</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In an era marked by escalating demands and environmental concerns, the question of predicting a nation’s power consumption becomes increasingly pivotal. The Our World in data energy data set covers a range of information on primary energy consumption, per capita energy, growth rates, energy mix, electricity composition, and other relevant factors This data set contains information from the year 1900 to 2022. By delving into these factors, this project aims to unravel the complex interplay between economic and population growth as well as sustainable energy practices.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The Our World Our Data Energy dataset.</p>
 <div id="cell-load-dataset" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
@@ -4965,14 +4966,20 @@ vertical-align: -.125em;
 </div>
 <section id="dataset-description" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description">Dataset Description:</h3>
-<p>text here</p>
+<p>This dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic project, and population information across the years from 1900s to 2022</p>
 </section>
-<section id="dimension" class="level3">
-<h3 class="anchored" data-anchor-id="dimension">Dimension:</h3>
-<p>This <code>owid-energy-data.csv</code> data-set contains 215,90 rows and 129 columns.</p>
+<section id="dimensions" class="level3">
+<h3 class="anchored" data-anchor-id="dimensions">Dimensions</h3>
+<div id="64928b06" class="cell" data-message="false" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>data.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>(21590, 129)</code></pre>
+</div>
+</div>
+<p>This <strong>owid-energy-data.csv</strong> dataset contains 215,90 rows and 129 columns.</p>
 </section>
 <section id="provenance" class="level3">
-<h3 class="anchored" data-anchor-id="provenance">Provenance:</h3>
+<h3 class="anchored" data-anchor-id="provenance">Provenance</h3>
 <p>This information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: <a href="https://ourworldindata.org/energy">LINK</a></p>
 <p><a href="https://github.com/owid/energy-data">Github Link</a></p>
 </section>
@@ -5046,91 +5053,94 @@ vertical-align: -.125em;
 </table>
 </section>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<section id="why-we-are-choosing-this-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="why-we-are-choosing-this-data-set">Why we are choosing this data-set?</h3>
-<p>text here</p>
+<section id="why-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-dataset">Why the dataset</h2>
+<p>This data set was formed from the combination of multiple data sets related to topics on energy consumption, economic growth, and population growth over the years for different regions around the world. This data set provides in-depth information on energy since it covers most if not all the topics related to energy and energy consumption as well as other related areas. The data set was built upon a statistical review of world energy by the Energy Institute, International energy data by the United States Information Administration, Energy from fossil fuels from the Shift Dataportal, Yearly Electricity Data,  European Electricity Review (Ember), Combined Electricity, Energy Mix, Fossil fuel production, Primary Energy consumption, Electricity mix, Energy data set, Population, Regions, Income groups and GDP. All these reliable and updated information sources come together to make this data set the best one for this analysis.</p>
 </section>
-<section id="idea-of-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="idea-of-analysis">Idea of Analysis</h3>
-<p>text here</p>
-</section>
-</section>
-<section id="question-01" class="level1">
-<h1>Question 01:</h1>
-<p><strong>Is it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?</strong></p>
+<section id="question-01" class="level2">
+<h2 class="anchored" data-anchor-id="question-01">Question 01</h2>
+<p>Is it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?</p>
 <section id="the-importance-of-this-question" class="level3">
-<h3 class="anchored" data-anchor-id="the-importance-of-this-question">The Importance of this Question:</h3>
+<h3 class="anchored" data-anchor-id="the-importance-of-this-question">The Importance of this Question</h3>
 <p>Predicting a country’s power consumption is a difficult yet important taking on, necessary for guaranteeing sustained progress and energy stability. This subject explores the intricate relationship between economic progress, population growth, and sustainable energy consumption by examining a nation’s population size, Gross Domestic Product (GDP), and the proportion of electricity generated from renewable sources. The research can provide valuable guidance for policy decisions, energy planning, and infrastructure investment to fulfill future energy demands in a sustainable manner.</p>
 </section>
 <section id="dependency-columns" class="level3">
-<h3 class="anchored" data-anchor-id="dependency-columns">Dependency Columns:</h3>
-<p>In order to investigate this research issue, the following data columns are essential: Population (population) which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes. A larger Gross Domestic Product (<code>gdp</code>) frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions. The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable “<code>renewables_electricity</code> / <code>electricity_generation</code>”. Assessing the proportion of renewable energy in a nation’s entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns. Energy Consumption (<code>energy_consumption</code>): Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as “<code>electricity_consumption</code>” it would be more directly applicable to the subject at hand. The variable <code>years</code> is used to analysis time series.</p>
+<h3 class="anchored" data-anchor-id="dependency-columns">Dependency Columns</h3>
+<p>In order to investigate this research issue, the following data columns are essential:</p>
+<p>Population <strong>(population)</strong> which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes.</p>
+<p>A larger Gross Domestic Product <strong>(gdp)</strong> frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions.</p>
+<p>The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable “<strong>renewable_energy</strong> / <strong>electricity generation</strong>”. Assessing the proportion of renewable energy in a nation’s entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns.</p>
+<p>Energy Consumption (<strong>energy_consumption)</strong>: Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as “<strong>electricity_consumption</strong>” it would be more directly applicable to the subject at hand.</p>
+<p>The variable <strong>years</strong> is used to analysis time series.</p>
 </section>
 <section id="analysis-plan" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan:</h3>
-<p><strong>Data Preparation and Analysis:</strong> <strong><em><code>Data Cleaning:</code></em></strong> helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner. Feature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of r<code>enewables_electricity</code> by the value of <code>electricity_generation</code>. If we find it to be beneficial, we can standardize or normalize the appropriate columns. <strong><em><code>Exploratory Data Analysis (EDA):</code></em></strong> is a process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data. Descriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable (<code>energy_consumption</code>) and independent variables. <strong><em><code>Time series analysis :</code></em></strong> For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends. <strong><em><code>Regression analysis:</code></em></strong> Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.</p>
-<p><br>
-<strong>Data Visualization:</strong> For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time. <strong><em><code>Scatter plots:</code></em></strong> are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables. <strong><em><code>Bar charts and pie charts:</code></em></strong> are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.</p>
+<h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
+<section id="data-preparation-and-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="data-preparation-and-analysis"><strong>Data Preparation and Analysis</strong></h4>
+<p><strong>Data Cleaning</strong> helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.</p>
+<p><strong>Feature Engineering:</strong> To get the percentage of electricity generated from renewable sources, divide the value of <strong>renewable electricity</strong> by the value of <strong>electricity generatio</strong>n. If we find it to be beneficial, we can standardize or normalize the appropriate columns.</p>
+<p><strong>Exploratory Data Analysis</strong> is the process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data.</p>
+<p><strong>Descriptive Statistics:</strong> Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data.</p>
+<p><strong>Correlation Analysis:</strong> aims to ascertain the magnitude and orientation of the association between the dependent variable <strong>energy consumption</strong> and independent variables.</p>
+<p><strong>Time series analysis:</strong> For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends.</p>
+<p><strong>Regression analysis:</strong> Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables.</p>
+<p><strong>Multiple Regression:</strong> Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.</p>
+</section>
+<section id="data-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="data-visualization"><strong>Data Visualization</strong></h4>
+<p><strong>Line Graphs:</strong> For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.</p>
+<p><strong>Scatterplots</strong> are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables.</p>
+<p><strong>Bar and pie charts</strong> are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.</p>
 <p><strong>Model Evaluation:</strong> Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.</p>
 </section>
 </section>
-<section id="questions-02" class="level1">
-<h1>Questions 02:</h1>
+</section>
+<section id="question-02" class="level2">
+<h2 class="anchored" data-anchor-id="question-02">Question 02</h2>
+<p>What countries or regions are practicing sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?</p>
 <section id="the-importance-of-this-question-1" class="level3">
 <h3 class="anchored" data-anchor-id="the-importance-of-this-question-1">The Importance of this Question:</h3>
-<p>text here</p>
+<p>The goal of this question is to analyze the energy practices of various countries and determine which countries are practicing sustainable energy practices and reducing the energy consumption of nonrenewable energy sources. Sustainable energy. This question seeks to determine which countries rely more on non-renewable energy sources compared to that of renewable energy sources. An analysis will also be done to determine which countries based on the current information is moving in the trajectory of using renewable energy sources using regression analysis. For this data the countries will be divided into countries with larger and smaller populations to handle any form of bias that may occur due to the population sizes of the various countries. A log transformation can also be done to the population to resolve this issue.</p>
 </section>
 <section id="dependency-columns-1" class="level3">
 <h3 class="anchored" data-anchor-id="dependency-columns-1">Dependency Columns:</h3>
-<p>text here</p>
+<p>To complete the analysis of this question, the following data columns are essential.</p>
+<p><strong>Population:</strong> This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.</p>
+<p><strong>Energy consumed:</strong> These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.</p>
+<p><strong>Greenhouse gas emissions:</strong> This will determine which regions or countries produce the most gree house gases and cause pollution.</p>
+<p><strong>Renewable and non-renewable consumption:</strong> The renewable and non renewable consumption columns and all other related columns will be used to determine the countries practicing sustainable energy practices.</p>
 </section>
 <section id="analysis-plan-1" class="level3">
-<h3 class="anchored" data-anchor-id="analysis-plan-1">Analysis plan:</h3>
-<p>text here</p>
+<h3 class="anchored" data-anchor-id="analysis-plan-1">Analysis plan</h3>
+<section id="data-preparation-and-analysis-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-preparation-and-analysis-1"><strong>Data Preparation and Analysis</strong></h4>
+<p><strong>Data Cleaning</strong> helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.</p>
+<p><strong>Feature Engineering:</strong> This will be done to get the proportion of renewable sources of energy used relative to total energy and the proportion of non renewabke energy sources of energy used relative to total energy consumption.</p>
+<p><strong>Exploratory Data Analysis:</strong> This is the process of analyzing and visualizing the data to gain insights and understand the underlying patterns and relationships in the data.</p>
+<p><strong>Descriptive Statistics:</strong> Generate a statistical summary for each of the dependence columns in order to ascertain the magnitude and association between the renewable and non-renewable sources.</p>
+<p><strong>Regression analysis</strong>: A form of regression analysis will be done to determine which countries are on the right path to maximizing sustainable energy practices.</p>
+</section>
+<section id="data-visualization-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-visualization-1"><strong>Data Visualization</strong></h4>
+<p><strong>Maps:</strong> The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources.</p>
+<p><strong>Line graphs:</strong> Line graphs will be used to determine the patterns in the use of certain renewable and non-renewable energy sources over the years for certain regions.</p>
+<p><strong>Density plots:</strong> Density plots will be used to visualize the distribution of data for renewable and non-renewable energy sources across continents and or other forms of regional boundaries.</p>
 </section>
 </section>
-<section id="project-timeline" class="level1">
-<h1>Project Timeline</h1>
-<p><strong>Week of March 24th</strong></p>
-<p>- Select dataset and determine questions for analysis.</p>
-<p><strong>Week of March 31st</strong></p>
-<p>- Create proposal for peer review.</p>
-<p>- Perform group peer reviews on other teams’ proposals.</p>
-<p><strong>Week of April 7th</strong></p>
-<p>- Discuss feedback from peer reviews and make appropriate changes.</p>
-<p>- Updated proposal for instructor review.</p>
-<p><strong>Week of April 14th</strong></p>
-<p>- Discuss feedback given from instructor.</p>
-<p>- Delegate tasks for team members(6) to begin presentation(2), data analysis(2), and dashboard(2).</p>
-<p><strong>Week of April 21st</strong></p>
-<p>- Fill in information for about.qmd.</p>
-<p>- Start working on project write up.</p>
-<p>- Create appropriate codes and visualizations based on analysis questions.</p>
-<p>- Start building an interactive Python Visualization Dashboard using Panel.</p>
-<p><strong>Week of April 28th</strong></p>
-<p>- Clean up code and visualizations.</p>
-<p>- Fill in presentation slide deck and begin to practice for the day of presenting.</p>
-<p>- Wrap up dashboard creation.</p>
-<p><strong>Week of May 5th</strong></p>
-<p>- Determine who will speak to what slides in presentation.</p>
-<p>- Present final project to class on May 6th, 2024.</p>
-<p>- Do peer evaluations for both team members and other teams’ projects</p>
 </section>
-<section id="plan-of-attack" class="level1">
-<h1>Plan of Attack</h1>
-<section id="project-tasks" class="level2">
-<h2 class="anchored" data-anchor-id="project-tasks">Project Tasks</h2>
+<section id="project-timeline" class="level2">
+<h2 class="anchored" data-anchor-id="project-timeline">Project Timeline</h2>
+<section id="project-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="project-tasks">Project Tasks</h3>
 <p>This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.</p>
 <table class="table">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 20%">
-<col style="width: 6%">
+<col style="width: 16%">
 <col style="width: 7%">
+<col style="width: 5%">
 <col style="width: 6%">
-<col style="width: 25%">
+<col style="width: 5%">
+<col style="width: 56%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -5144,60 +5154,148 @@ vertical-align: -.125em;
 </thead>
 <tbody>
 <tr class="odd">
-<td>Dataset and question selection</td>
-<td>Explored and finalized the dataset</td>
-<td>All</td>
-<td>March 24th</td>
+<td>Dataset</td>
+<td>Complete</td>
+<td>All (6)</td>
+<td>March 27th</td>
 <td>High</td>
-<td>Selected dataset and question to be solved.</td>
+<td>Brainstorming and selecting appropriate dataset.</td>
 </tr>
 <tr class="even">
-<td>Brainstorming and working on data analysis and proposal</td>
-<td>Completed the proposal</td>
-<td>All</td>
-<td>April 1st</td>
+<td>Questions</td>
+<td>Complete</td>
+<td>All (6)</td>
+<td>March 29th</td>
 <td>High</td>
-<td>Proposal ready for review.</td>
+<td>Determining questions to answer in analysis.</td>
 </tr>
 <tr class="odd">
-<td>Review peer evaluations on proposal</td>
+<td>Proposal</td>
+<td>Complete</td>
+<td>All (6)</td>
+<td>April 3rd</td>
+<td>High</td>
+<td>Brainstorming and working on data analysis and proposal.</td>
+</tr>
+<tr class="even">
+<td>Peer evaluation: <em>proposal</em></td>
 <td><em>in progress</em></td>
-<td>All</td>
-<td>April 8th</td>
+<td>All (6)</td>
+<td>April 3rd</td>
+<td>High</td>
+<td>Performing evaluations on different teams’ project proposals.</td>
+</tr>
+<tr class="odd">
+<td>Proposal feedback</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>TBD</td>
+<td>High</td>
+<td>Discuss feedback given on our proposal and make necessary adjustments.</td>
+</tr>
+<tr class="even">
+<td>Instructor review: <em>proposal</em></td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>April 10th</td>
+<td>High</td>
+<td>Instructor will review the proposal and provide feedback on a later date.</td>
+</tr>
+<tr class="odd">
+<td>Peer evaluation: <em>code</em></td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>TBD</td>
+<td>High</td>
+<td>Performing evaluations on different teams’ project code.</td>
+</tr>
+<tr class="even">
+<td>Code feedback</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>TBD</td>
+<td>High</td>
+<td>Discuss feedback given on our code and make necessary adjustments.</td>
+</tr>
+<tr class="odd">
+<td>About</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>April 17th</td>
+<td>High</td>
+<td>Fill in individual information about yourself in the <strong>About.qmd</strong></td>
+</tr>
+<tr class="even">
+<td>Write-up</td>
+<td><em>backlog</em></td>
+<td>TBD (2)</td>
+<td>May 2nd</td>
 <td>High</td>
 <td></td>
 </tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td>April 15th</td>
-<td></td>
-<td></td>
-</tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td>April 22nd</td>
-<td></td>
-<td></td>
+<td>Presentation</td>
+<td><em>backlog</em></td>
+<td>TBD (2)</td>
+<td>May 2nd</td>
+<td>High</td>
+<td>Build a presentation with all visualizations, descriptions, and talking points needed to answer analysis questions.</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td>April 29th</td>
-<td></td>
-<td></td>
+<td>Dashboard</td>
+<td><em>backlog</em></td>
+<td>TBD (2)</td>
+<td>May 2nd</td>
+<td>High</td>
+<td>Build an interactive Python Visualization Dashboard using Panel.</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
+<td>Final checks</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>May 3rd</td>
+<td>Med</td>
+<td>Clean-up all clutter/mistakes found in write-up, presentation, and dashboard.</td>
+</tr>
+<tr class="even">
+<td>Presentation delegating</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>May 3rd</td>
+<td>High</td>
+<td>Determine who will speak to what slides.</td>
+</tr>
+<tr class="odd">
+<td>Presentation practice</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>May 3rd</td>
+<td>High</td>
+<td>Do a mock presentation to ensure smooth transitions and correct interpretations of graphs and information.</td>
+</tr>
+<tr class="even">
+<td>Presentation</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
 <td>May 6th</td>
-<td></td>
-<td></td>
+<td>High</td>
+<td>Present findings in 5 minutes.</td>
+</tr>
+<tr class="odd">
+<td>Team Member Evaluations</td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>May 6th</td>
+<td>High</td>
+<td>Give feedback on each team member.</td>
+</tr>
+<tr class="even">
+<td>Peer evaluation: <em>presentations</em></td>
+<td><em>backlog</em></td>
+<td>All (6)</td>
+<td>May 7th</td>
+<td>High</td>
+<td>Performing evaluations on different teams’ project presentations.</td>
 </tr>
 </tbody>
 </table>
@@ -5851,232 +5949,270 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> &quot;Global Energy Trends&quot;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Insights into Consumption and Sustainability&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="an">author:</span><span class="co"> </span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">  - name: &quot;DataDetectives - Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa&quot;</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">    affiliations:</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="an">description:</span><span class="co"> &quot;Project description&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="an">format:</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co">  html:</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co">    code-tools: true</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co">    code-overflow: wrap</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co">    embed-resources: true</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="an">execute:</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co">  warning: false</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">---</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="in">```{python}</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="co">#| label: load-pkgs</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="co">#| message: false</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="in">```</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="fu"># Dataset</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a></span>
-<span id="cb2-36"><a href="#cb2-36"></a><span class="in">```{python}</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a><span class="co">#| label: load-dataset</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-39"><a href="#cb2-39"></a></span>
-<span id="cb2-40"><a href="#cb2-40"></a><span class="co"># Load the dataset</span></span>
-<span id="cb2-41"><a href="#cb2-41"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&#39;data/owid-energy-data.csv&#39;</span>)</span>
-<span id="cb2-42"><a href="#cb2-42"></a></span>
-<span id="cb2-43"><a href="#cb2-43"></a><span class="co"># Display the first few rows of the dataset</span></span>
-<span id="cb2-44"><a href="#cb2-44"></a>data.head()</span>
-<span id="cb2-45"><a href="#cb2-45"></a><span class="in">```</span></span>
-<span id="cb2-46"><a href="#cb2-46"></a></span>
-<span id="cb2-47"><a href="#cb2-47"></a><span class="fu">### Dataset Description:</span></span>
-<span id="cb2-48"><a href="#cb2-48"></a></span>
-<span id="cb2-49"><a href="#cb2-49"></a>text here</span>
-<span id="cb2-50"><a href="#cb2-50"></a></span>
-<span id="cb2-51"><a href="#cb2-51"></a><span class="fu">### Dimension:</span></span>
-<span id="cb2-52"><a href="#cb2-52"></a></span>
-<span id="cb2-53"><a href="#cb2-53"></a>This <span class="in">`owid-energy-data.csv`</span> data-set contains 215,90 rows and 129 columns.</span>
-<span id="cb2-54"><a href="#cb2-54"></a></span>
-<span id="cb2-55"><a href="#cb2-55"></a><span class="fu">### Provenance:</span></span>
-<span id="cb2-56"><a href="#cb2-56"></a></span>
-<span id="cb2-57"><a href="#cb2-57"></a>This information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: <span class="co">[</span><span class="ot">LINK</span><span class="co">](https://ourworldindata.org/energy)</span></span>
-<span id="cb2-58"><a href="#cb2-58"></a></span>
-<span id="cb2-59"><a href="#cb2-59"></a><span class="co">[</span><span class="ot">Github Link</span><span class="co">](https://github.com/owid/energy-data)</span></span>
-<span id="cb2-60"><a href="#cb2-60"></a></span>
-<span id="cb2-61"><a href="#cb2-61"></a><span class="fu">### Code book Insights:</span></span>
-<span id="cb2-62"><a href="#cb2-62"></a></span>
-<span id="cb2-63"><a href="#cb2-63"></a>This data-set has about 129 columns but we will work on few columns, that is why we only provided the important data descriptions. Code book Insights is shown below:</span>
-<span id="cb2-64"><a href="#cb2-64"></a></span>
-<span id="cb2-65"><a href="#cb2-65"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-66"><a href="#cb2-66"></a>| Index  | Column Name            | Descriptions                                                                                                                                                                                                                     |</span>
-<span id="cb2-67"><a href="#cb2-67"></a>+========+========================+==================================================================================================================================================================================================================================+</span>
-<span id="cb2-68"><a href="#cb2-68"></a>| 1.     | country                | Country - Geographic location.                                                                                                                                                                                                   |</span>
-<span id="cb2-69"><a href="#cb2-69"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-70"><a href="#cb2-70"></a>| 2.     | year                   | Year - Year of observation.                                                                                                                                                                                                      |</span>
-<span id="cb2-71"><a href="#cb2-71"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-72"><a href="#cb2-72"></a>| 3.     | population             | Population - Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources.                                                                                                       |</span>
-<span id="cb2-73"><a href="#cb2-73"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-74"><a href="#cb2-74"></a>| 4.     | gdp                    | GDP - Gross domestic product measured in international-\$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population. |</span>
-<span id="cb2-75"><a href="#cb2-75"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-76"><a href="#cb2-76"></a>| 5.     | renewables_electricity | Electricity generation from renewables - Measured in terawatt-hours.                                                                                                                                                             |</span>
-<span id="cb2-77"><a href="#cb2-77"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-78"><a href="#cb2-78"></a>| 6.     | electricity_generation | Total electricity generation - Measured in terawatt-hours.                                                                                                                                                                       |</span>
-<span id="cb2-79"><a href="#cb2-79"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-80"><a href="#cb2-80"></a>| 7.     | fossil_electricity     | Electricity generation from fossil fuels - Measured in terawatt-hours.                                                                                                                                                           |</span>
-<span id="cb2-81"><a href="#cb2-81"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb2-82"><a href="#cb2-82"></a></span>
-<span id="cb2-83"><a href="#cb2-83"></a><span class="fu"># Introduction</span></span>
-<span id="cb2-84"><a href="#cb2-84"></a></span>
-<span id="cb2-85"><a href="#cb2-85"></a><span class="fu">### Why we are choosing this data-set?</span></span>
-<span id="cb2-86"><a href="#cb2-86"></a></span>
-<span id="cb2-87"><a href="#cb2-87"></a>text here</span>
-<span id="cb2-88"><a href="#cb2-88"></a></span>
-<span id="cb2-89"><a href="#cb2-89"></a><span class="fu">### Idea of Analysis</span></span>
-<span id="cb2-90"><a href="#cb2-90"></a></span>
-<span id="cb2-91"><a href="#cb2-91"></a>text here</span>
-<span id="cb2-92"><a href="#cb2-92"></a></span>
-<span id="cb2-93"><a href="#cb2-93"></a><span class="fu"># Question 01:</span></span>
-<span id="cb2-94"><a href="#cb2-94"></a></span>
-<span id="cb2-95"><a href="#cb2-95"></a>**Is it possible to predict a nation&#39;s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?**</span>
-<span id="cb2-96"><a href="#cb2-96"></a></span>
-<span id="cb2-97"><a href="#cb2-97"></a><span class="fu">### The Importance of this Question:</span></span>
-<span id="cb2-98"><a href="#cb2-98"></a></span>
-<span id="cb2-99"><a href="#cb2-99"></a>Predicting a country&#39;s power consumption is a difficult yet important taking on, necessary for guaranteeing sustained progress and energy stability. This subject explores the intricate relationship between economic progress, population growth, and sustainable energy consumption by examining a nation&#39;s population size, Gross Domestic Product (GDP), and the proportion of electricity generated from renewable sources. The research can provide valuable guidance for policy decisions, energy planning, and infrastructure investment to fulfill future energy demands in a sustainable manner.</span>
-<span id="cb2-100"><a href="#cb2-100"></a></span>
-<span id="cb2-101"><a href="#cb2-101"></a><span class="fu">### Dependency Columns:</span></span>
-<span id="cb2-102"><a href="#cb2-102"></a></span>
-<span id="cb2-103"><a href="#cb2-103"></a>In order to investigate this research issue, the following data columns are essential: Population (population) which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes. A larger Gross Domestic Product (<span class="in">`gdp`</span>) frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions. The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable &quot;<span class="in">`renewables_electricity`</span> / <span class="in">`electricity_generation`</span>&quot;. Assessing the proportion of renewable energy in a nation&#39;s entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns. Energy Consumption (<span class="in">`energy_consumption`</span>): Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as &quot;<span class="in">`electricity_consumption`</span>&quot; it would be more directly applicable to the subject at hand. The variable <span class="in">`years`</span> is used to analysis time series.</span>
-<span id="cb2-104"><a href="#cb2-104"></a></span>
-<span id="cb2-105"><a href="#cb2-105"></a><span class="fu">### Analysis plan:</span></span>
-<span id="cb2-106"><a href="#cb2-106"></a></span>
-<span id="cb2-107"><a href="#cb2-107"></a>**Data Preparation and Analysis:** ***`Data Cleaning:`*** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner. Feature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of r`enewables_electricity` by the value of `electricity_generation`. If we find it to be beneficial, we can standardize or normalize the appropriate columns. ***`Exploratory Data Analysis (EDA):`*** is a process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data. Descriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable (`energy_consumption`) and independent variables. ***`Time series analysis :`*** For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends. ***`Regression analysis:`*** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.</span>
-<span id="cb2-108"><a href="#cb2-108"></a></span>
-<span id="cb2-109"><a href="#cb2-109"></a>\</span>
-<span id="cb2-110"><a href="#cb2-110"></a>**Data Visualization:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time. ***`Scatter plots:`*** are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables. ***`Bar charts and pie charts:`*** are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.</span>
-<span id="cb2-111"><a href="#cb2-111"></a></span>
-<span id="cb2-112"><a href="#cb2-112"></a>**Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.</span>
-<span id="cb2-113"><a href="#cb2-113"></a></span>
-<span id="cb2-114"><a href="#cb2-114"></a><span class="fu"># Questions 02:</span></span>
-<span id="cb2-115"><a href="#cb2-115"></a></span>
-<span id="cb2-116"><a href="#cb2-116"></a><span class="fu">### The Importance of this Question:</span></span>
-<span id="cb2-117"><a href="#cb2-117"></a></span>
-<span id="cb2-118"><a href="#cb2-118"></a>text here</span>
-<span id="cb2-119"><a href="#cb2-119"></a></span>
-<span id="cb2-120"><a href="#cb2-120"></a><span class="fu">### Dependency Columns:</span></span>
-<span id="cb2-121"><a href="#cb2-121"></a></span>
-<span id="cb2-122"><a href="#cb2-122"></a>text here</span>
-<span id="cb2-123"><a href="#cb2-123"></a></span>
-<span id="cb2-124"><a href="#cb2-124"></a><span class="fu">### Analysis plan:</span></span>
-<span id="cb2-125"><a href="#cb2-125"></a></span>
-<span id="cb2-126"><a href="#cb2-126"></a>text here</span>
-<span id="cb2-127"><a href="#cb2-127"></a></span>
-<span id="cb2-128"><a href="#cb2-128"></a><span class="fu"># Project Timeline</span></span>
-<span id="cb2-129"><a href="#cb2-129"></a></span>
-<span id="cb2-130"><a href="#cb2-130"></a>**Week of March 24th**</span>
-<span id="cb2-131"><a href="#cb2-131"></a></span>
-<span id="cb2-132"><a href="#cb2-132"></a><span class="sc">\-</span> Select dataset and determine questions for analysis.</span>
-<span id="cb2-133"><a href="#cb2-133"></a></span>
-<span id="cb2-134"><a href="#cb2-134"></a>**Week of March 31st**</span>
-<span id="cb2-135"><a href="#cb2-135"></a></span>
-<span id="cb2-136"><a href="#cb2-136"></a><span class="sc">\-</span> Create proposal for peer review.</span>
-<span id="cb2-137"><a href="#cb2-137"></a></span>
-<span id="cb2-138"><a href="#cb2-138"></a><span class="sc">\-</span> Perform group peer reviews on other teams&#39; proposals.</span>
-<span id="cb2-139"><a href="#cb2-139"></a></span>
-<span id="cb2-140"><a href="#cb2-140"></a>**Week of April 7th**</span>
-<span id="cb2-141"><a href="#cb2-141"></a></span>
-<span id="cb2-142"><a href="#cb2-142"></a><span class="sc">\-</span> Discuss feedback from peer reviews and make appropriate changes.</span>
-<span id="cb2-143"><a href="#cb2-143"></a></span>
-<span id="cb2-144"><a href="#cb2-144"></a><span class="sc">\-</span> Updated proposal for instructor review.</span>
-<span id="cb2-145"><a href="#cb2-145"></a></span>
-<span id="cb2-146"><a href="#cb2-146"></a>**Week of April 14th**</span>
-<span id="cb2-147"><a href="#cb2-147"></a></span>
-<span id="cb2-148"><a href="#cb2-148"></a><span class="sc">\-</span> Discuss feedback given from instructor.</span>
-<span id="cb2-149"><a href="#cb2-149"></a></span>
-<span id="cb2-150"><a href="#cb2-150"></a><span class="sc">\-</span> Delegate tasks for team members(6) to begin presentation(2), data analysis(2), and dashboard(2).</span>
-<span id="cb2-151"><a href="#cb2-151"></a></span>
-<span id="cb2-152"><a href="#cb2-152"></a>**Week of April 21st**</span>
-<span id="cb2-153"><a href="#cb2-153"></a></span>
-<span id="cb2-154"><a href="#cb2-154"></a><span class="sc">\-</span> Fill in information for about.qmd.</span>
-<span id="cb2-155"><a href="#cb2-155"></a></span>
-<span id="cb2-156"><a href="#cb2-156"></a><span class="sc">\-</span> Start working on project write up.</span>
-<span id="cb2-157"><a href="#cb2-157"></a></span>
-<span id="cb2-158"><a href="#cb2-158"></a><span class="sc">\-</span> Create appropriate codes and visualizations based on analysis questions.</span>
-<span id="cb2-159"><a href="#cb2-159"></a></span>
-<span id="cb2-160"><a href="#cb2-160"></a><span class="sc">\-</span> Start building an interactive Python Visualization Dashboard using Panel.</span>
-<span id="cb2-161"><a href="#cb2-161"></a></span>
-<span id="cb2-162"><a href="#cb2-162"></a>**Week of April 28th**</span>
-<span id="cb2-163"><a href="#cb2-163"></a></span>
-<span id="cb2-164"><a href="#cb2-164"></a><span class="sc">\-</span> Clean up code and visualizations.</span>
-<span id="cb2-165"><a href="#cb2-165"></a></span>
-<span id="cb2-166"><a href="#cb2-166"></a><span class="sc">\-</span> Fill in presentation slide deck and begin to practice for the day of presenting.</span>
-<span id="cb2-167"><a href="#cb2-167"></a></span>
-<span id="cb2-168"><a href="#cb2-168"></a><span class="sc">\-</span> Wrap up dashboard creation.</span>
-<span id="cb2-169"><a href="#cb2-169"></a></span>
-<span id="cb2-170"><a href="#cb2-170"></a>**Week of May 5th**</span>
-<span id="cb2-171"><a href="#cb2-171"></a></span>
-<span id="cb2-172"><a href="#cb2-172"></a><span class="sc">\-</span> Determine who will speak to what slides in presentation.</span>
-<span id="cb2-173"><a href="#cb2-173"></a></span>
-<span id="cb2-174"><a href="#cb2-174"></a><span class="sc">\-</span> Present final project to class on May 6th, 2024.</span>
-<span id="cb2-175"><a href="#cb2-175"></a></span>
-<span id="cb2-176"><a href="#cb2-176"></a><span class="sc">\-</span> Do peer evaluations for both team members and other teams&#39; projects</span>
-<span id="cb2-177"><a href="#cb2-177"></a></span>
-<span id="cb2-178"><a href="#cb2-178"></a><span class="fu"># Plan of Attack</span></span>
-<span id="cb2-179"><a href="#cb2-179"></a></span>
-<span id="cb2-180"><a href="#cb2-180"></a><span class="fu">## Project Tasks</span></span>
-<span id="cb2-181"><a href="#cb2-181"></a></span>
-<span id="cb2-182"><a href="#cb2-182"></a>This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.</span>
-<span id="cb2-183"><a href="#cb2-183"></a></span>
-<span id="cb2-184"><a href="#cb2-184"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-185"><a href="#cb2-185"></a>| Task Name                                               | Status                              | Assignee | Due        | Priority | Summary                                     |</span>
-<span id="cb2-186"><a href="#cb2-186"></a>+=========================================================+=====================================+==========+============+==========+=============================================+</span>
-<span id="cb2-187"><a href="#cb2-187"></a>| Dataset and question selection                          | Explored and finalized the dataset  | All      | March 24th | High     | Selected dataset and question to be solved. |</span>
-<span id="cb2-188"><a href="#cb2-188"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-189"><a href="#cb2-189"></a>| Brainstorming and working on data analysis and proposal | Completed the proposal              | All      | April 1st  | High     | Proposal ready for review.                  |</span>
-<span id="cb2-190"><a href="#cb2-190"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-191"><a href="#cb2-191"></a>| Review peer evaluations on proposal                     | *in progress*                       | All      | April 8th  | High     |                                             |</span>
-<span id="cb2-192"><a href="#cb2-192"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-193"><a href="#cb2-193"></a>|                                                         |                                     |          | April 15th |          |                                             |</span>
-<span id="cb2-194"><a href="#cb2-194"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-195"><a href="#cb2-195"></a>|                                                         |                                     |          | April 22nd |          |                                             |</span>
-<span id="cb2-196"><a href="#cb2-196"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-197"><a href="#cb2-197"></a>|                                                         |                                     |          | April 29th |          |                                             |</span>
-<span id="cb2-198"><a href="#cb2-198"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-199"><a href="#cb2-199"></a>|                                                         |                                     |          | May 6th    |          |                                             |</span>
-<span id="cb2-200"><a href="#cb2-200"></a>+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+</span>
-<span id="cb2-201"><a href="#cb2-201"></a></span>
-<span id="cb2-202"><a href="#cb2-202"></a><span class="fu"># Repo Organization</span></span>
-<span id="cb2-203"><a href="#cb2-203"></a></span>
-<span id="cb2-204"><a href="#cb2-204"></a>The following folders comprise the project repository</span>
-<span id="cb2-205"><a href="#cb2-205"></a></span>
-<span id="cb2-206"><a href="#cb2-206"></a><span class="ss">-   </span>**.github/:** This directory is designated for files associated with GitHub, encompassing workflows, actions, and templates tailored for issues.</span>
-<span id="cb2-207"><a href="#cb2-207"></a></span>
-<span id="cb2-208"><a href="#cb2-208"></a><span class="ss">-   </span>**\_extra/:** Reserved for miscellaneous files that don&#39;t neatly fit into other project categories, providing a catch-all space for various supplementary documents.</span>
-<span id="cb2-209"><a href="#cb2-209"></a></span>
-<span id="cb2-210"><a href="#cb2-210"></a><span class="ss">-   </span>**\_freeze/:** Within this directory lie frozen environment files containing comprehensive information regarding the project&#39;s environment configuration and dependencies.</span>
-<span id="cb2-211"><a href="#cb2-211"></a></span>
-<span id="cb2-212"><a href="#cb2-212"></a><span class="ss">-   </span>**data/:** Specifically allocated for storing i data files crucial for the project&#39;s functionality, encompassing input files, datasets, and other essential data resources.</span>
-<span id="cb2-213"><a href="#cb2-213"></a></span>
-<span id="cb2-214"><a href="#cb2-214"></a><span class="ss">-   </span>**images/:** Serving as a repository for visual assets employed throughout the project, including diagrams, charts, and screenshots, this directory maintains visual elements integral to project documentation and presentation.</span>
-<span id="cb2-215"><a href="#cb2-215"></a></span>
-<span id="cb2-216"><a href="#cb2-216"></a><span class="ss">-   </span>**.gitignore:** This file functions to specify exclusions from version control, ensuring that designated files and directories remain untracked by Git, thus streamlining the versioning process.</span>
-<span id="cb2-217"><a href="#cb2-217"></a></span>
-<span id="cb2-218"><a href="#cb2-218"></a><span class="ss">-   </span>**README.md:** Serving as the primary hub of project information, this README document furnishes essential details encompassing project setup, usage instructions, and an overarching overview of project objectives and scope.</span>
-<span id="cb2-219"><a href="#cb2-219"></a></span>
-<span id="cb2-220"><a href="#cb2-220"></a><span class="ss">-   </span>**\_quarto.yml:** Acting as a pivotal configuration file for Quarto, this document encapsulates various settings and options governing the construction and rendering of Quarto documents, facilitating customization and control over document output.</span>
-<span id="cb2-221"><a href="#cb2-221"></a></span>
-<span id="cb2-222"><a href="#cb2-222"></a><span class="ss">-   </span>**about.qmd:** This Quarto Markdown file supplements project documentation by providing additional contextual information, elucidating project purpose, contributor insights, and other pertinent project details.</span>
-<span id="cb2-223"><a href="#cb2-223"></a></span>
-<span id="cb2-224"><a href="#cb2-224"></a><span class="ss">-   </span>**index.qmd:** index.qmd: This serves as the main documentation page for our project. This Quarto Markdown file provides detailed descriptions of our project, including all code and visualization .</span>
-<span id="cb2-225"><a href="#cb2-225"></a></span>
-<span id="cb2-226"><a href="#cb2-226"></a><span class="fu"># References</span></span>
-<span id="cb2-227"><a href="#cb2-227"></a></span>
-<span id="cb2-228"><a href="#cb2-228"></a><span class="sc">\[</span>1<span class="sc">\]</span> The Data source link is attached here: <span class="ot">&lt;https://ourworldindata.org/energy&gt;</span></span>
-<span id="cb2-229"><a href="#cb2-229"></a></span>
-<span id="cb2-230"><a href="#cb2-230"></a><span class="sc">\[</span>2<span class="sc">\]</span> Github Link: <span class="ot">&lt;https://github.com/owid/energy-data&gt;</span></span>
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> &quot;Global Energy Trends&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Insights into Consumption and Sustainability&quot;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">  - name: &quot;DataDetectives - Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">    affiliations:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="an">description:</span><span class="co"> &quot;The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="an">format:</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">  html:</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">    code-tools: true</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="co">    embed-resources: true</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="an">execute:</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co">  warning: false</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="co">---</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="in">```{python}</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#| label: load-pkgs</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="co">#| message: false</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="co">#| echo: false</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-29"><a href="#cb4-29"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="in">```</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="fu">## Introduction</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a></span>
+<span id="cb4-34"><a href="#cb4-34"></a>In an era marked by escalating demands and environmental concerns, the question of predicting a nation’s power consumption becomes increasingly pivotal. The Our World in data energy data set covers a range of information on primary energy consumption, per capita energy, growth rates, energy mix, electricity composition, and other relevant factors This data set contains information from the year 1900 to 2022. By delving into these factors, this project aims to unravel the complex interplay between economic and population growth as well as sustainable energy practices.</span>
+<span id="cb4-35"><a href="#cb4-35"></a></span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="fu">## Dataset</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a></span>
+<span id="cb4-38"><a href="#cb4-38"></a>The Our World Our Data Energy dataset.</span>
+<span id="cb4-39"><a href="#cb4-39"></a></span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="in">```{python}</span></span>
+<span id="cb4-43"><a href="#cb4-43"></a><span class="co">#| label: load-dataset</span></span>
+<span id="cb4-44"><a href="#cb4-44"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-45"><a href="#cb4-45"></a></span>
+<span id="cb4-46"><a href="#cb4-46"></a><span class="co"># Load the dataset</span></span>
+<span id="cb4-47"><a href="#cb4-47"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&#39;data/owid-energy-data.csv&#39;</span>)</span>
+<span id="cb4-48"><a href="#cb4-48"></a></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="co"># Display the first few rows of the dataset</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a>data.head()</span>
+<span id="cb4-51"><a href="#cb4-51"></a><span class="in">```</span></span>
+<span id="cb4-52"><a href="#cb4-52"></a></span>
+<span id="cb4-53"><a href="#cb4-53"></a><span class="fu">### Dataset Description:</span></span>
+<span id="cb4-54"><a href="#cb4-54"></a></span>
+<span id="cb4-55"><a href="#cb4-55"></a>This dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic project, and population information across the years from 1900s to 2022</span>
+<span id="cb4-56"><a href="#cb4-56"></a></span>
+<span id="cb4-57"><a href="#cb4-57"></a><span class="fu">### Dimensions</span></span>
+<span id="cb4-58"><a href="#cb4-58"></a></span>
+<span id="cb4-61"><a href="#cb4-61"></a><span class="in">```{python}</span></span>
+<span id="cb4-62"><a href="#cb4-62"></a><span class="co">#| message: false</span></span>
+<span id="cb4-63"><a href="#cb4-63"></a><span class="co">#| warning: false</span></span>
+<span id="cb4-64"><a href="#cb4-64"></a></span>
+<span id="cb4-65"><a href="#cb4-65"></a>data.shape</span>
+<span id="cb4-66"><a href="#cb4-66"></a><span class="in">```</span></span>
+<span id="cb4-67"><a href="#cb4-67"></a></span>
+<span id="cb4-68"><a href="#cb4-68"></a>This **owid-energy-data.csv** dataset contains 215,90 rows and 129 columns.</span>
+<span id="cb4-69"><a href="#cb4-69"></a></span>
+<span id="cb4-70"><a href="#cb4-70"></a><span class="fu">### Provenance</span></span>
+<span id="cb4-71"><a href="#cb4-71"></a></span>
+<span id="cb4-72"><a href="#cb4-72"></a>This information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: <span class="co">[</span><span class="ot">LINK</span><span class="co">](https://ourworldindata.org/energy)</span></span>
+<span id="cb4-73"><a href="#cb4-73"></a></span>
+<span id="cb4-74"><a href="#cb4-74"></a><span class="co">[</span><span class="ot">Github Link</span><span class="co">](https://github.com/owid/energy-data)</span></span>
+<span id="cb4-75"><a href="#cb4-75"></a></span>
+<span id="cb4-76"><a href="#cb4-76"></a><span class="fu">### Code book Insights:</span></span>
+<span id="cb4-77"><a href="#cb4-77"></a></span>
+<span id="cb4-78"><a href="#cb4-78"></a>This data-set has about 129 columns but we will work on few columns, that is why we only provided the important data descriptions. Code book Insights is shown below:</span>
+<span id="cb4-79"><a href="#cb4-79"></a></span>
+<span id="cb4-80"><a href="#cb4-80"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-81"><a href="#cb4-81"></a>| Index  | Column Name            | Descriptions                                                                                                                                                                                                                     |</span>
+<span id="cb4-82"><a href="#cb4-82"></a>+========+========================+==================================================================================================================================================================================================================================+</span>
+<span id="cb4-83"><a href="#cb4-83"></a>| 1.     | country                | Country - Geographic location.                                                                                                                                                                                                   |</span>
+<span id="cb4-84"><a href="#cb4-84"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-85"><a href="#cb4-85"></a>| 2.     | year                   | Year - Year of observation.                                                                                                                                                                                                      |</span>
+<span id="cb4-86"><a href="#cb4-86"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-87"><a href="#cb4-87"></a>| 3.     | population             | Population - Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources.                                                                                                       |</span>
+<span id="cb4-88"><a href="#cb4-88"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-89"><a href="#cb4-89"></a>| 4.     | gdp                    | GDP - Gross domestic product measured in international-\$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population. |</span>
+<span id="cb4-90"><a href="#cb4-90"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-91"><a href="#cb4-91"></a>| 5.     | renewables_electricity | Electricity generation from renewables - Measured in terawatt-hours.                                                                                                                                                             |</span>
+<span id="cb4-92"><a href="#cb4-92"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-93"><a href="#cb4-93"></a>| 6.     | electricity_generation | Total electricity generation - Measured in terawatt-hours.                                                                                                                                                                       |</span>
+<span id="cb4-94"><a href="#cb4-94"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-95"><a href="#cb4-95"></a>| 7.     | fossil_electricity     | Electricity generation from fossil fuels - Measured in terawatt-hours.                                                                                                                                                           |</span>
+<span id="cb4-96"><a href="#cb4-96"></a>+--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-97"><a href="#cb4-97"></a></span>
+<span id="cb4-98"><a href="#cb4-98"></a><span class="fu">## Why the dataset</span></span>
+<span id="cb4-99"><a href="#cb4-99"></a></span>
+<span id="cb4-100"><a href="#cb4-100"></a>This data set was formed from the combination of multiple data sets related to topics on energy consumption, economic growth, and population growth over the years for different regions around the world. This data set provides in-depth information on energy since it covers most if not all the topics related to energy and energy consumption as well as other related areas. The data set was built upon a statistical review of world energy by the Energy Institute, International energy data by the United States Information Administration, Energy from fossil fuels from the Shift Dataportal, Yearly Electricity Data,  European Electricity Review (Ember), Combined Electricity, Energy Mix, Fossil fuel production, Primary Energy consumption, Electricity mix, Energy data set, Population, Regions, Income groups and GDP. All these reliable and updated information sources come together to make this data set the best one for this analysis.</span>
+<span id="cb4-101"><a href="#cb4-101"></a></span>
+<span id="cb4-102"><a href="#cb4-102"></a><span class="fu">## Question 01</span></span>
+<span id="cb4-103"><a href="#cb4-103"></a></span>
+<span id="cb4-104"><a href="#cb4-104"></a>Is it possible to predict a nation&#39;s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?</span>
+<span id="cb4-105"><a href="#cb4-105"></a></span>
+<span id="cb4-106"><a href="#cb4-106"></a><span class="fu">### The Importance of this Question</span></span>
+<span id="cb4-107"><a href="#cb4-107"></a></span>
+<span id="cb4-108"><a href="#cb4-108"></a>Predicting a country&#39;s power consumption is a difficult yet important taking on, necessary for guaranteeing sustained progress and energy stability. This subject explores the intricate relationship between economic progress, population growth, and sustainable energy consumption by examining a nation&#39;s population size, Gross Domestic Product (GDP), and the proportion of electricity generated from renewable sources. The research can provide valuable guidance for policy decisions, energy planning, and infrastructure investment to fulfill future energy demands in a sustainable manner.</span>
+<span id="cb4-109"><a href="#cb4-109"></a></span>
+<span id="cb4-110"><a href="#cb4-110"></a><span class="fu">### Dependency Columns</span></span>
+<span id="cb4-111"><a href="#cb4-111"></a></span>
+<span id="cb4-112"><a href="#cb4-112"></a>In order to investigate this research issue, the following data columns are essential:</span>
+<span id="cb4-113"><a href="#cb4-113"></a></span>
+<span id="cb4-114"><a href="#cb4-114"></a>Population **(population)** which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes.</span>
+<span id="cb4-115"><a href="#cb4-115"></a></span>
+<span id="cb4-116"><a href="#cb4-116"></a>A larger Gross Domestic Product **(gdp)** frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions.</span>
+<span id="cb4-117"><a href="#cb4-117"></a></span>
+<span id="cb4-118"><a href="#cb4-118"></a>The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable &quot;**renewable_energy** / **electricity generation**&quot;. Assessing the proportion of renewable energy in a nation&#39;s entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns.</span>
+<span id="cb4-119"><a href="#cb4-119"></a></span>
+<span id="cb4-120"><a href="#cb4-120"></a>Energy Consumption (**energy_consumption)**: Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as &quot;**electricity_consumption**&quot; it would be more directly applicable to the subject at hand.</span>
+<span id="cb4-121"><a href="#cb4-121"></a></span>
+<span id="cb4-122"><a href="#cb4-122"></a>The variable **years** is used to analysis time series.</span>
+<span id="cb4-123"><a href="#cb4-123"></a></span>
+<span id="cb4-124"><a href="#cb4-124"></a><span class="fu">### Analysis plan</span></span>
+<span id="cb4-125"><a href="#cb4-125"></a></span>
+<span id="cb4-126"><a href="#cb4-126"></a><span class="fu">#### **Data Preparation and Analysis**</span></span>
+<span id="cb4-127"><a href="#cb4-127"></a></span>
+<span id="cb4-128"><a href="#cb4-128"></a>**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.</span>
+<span id="cb4-129"><a href="#cb4-129"></a></span>
+<span id="cb4-130"><a href="#cb4-130"></a>**Feature Engineering:** To get the percentage of electricity generated from renewable sources, divide the value of **renewable electricity** by the value of **electricity generatio**n. If we find it to be beneficial, we can standardize or normalize the appropriate columns.</span>
+<span id="cb4-131"><a href="#cb4-131"></a></span>
+<span id="cb4-132"><a href="#cb4-132"></a>**Exploratory Data Analysis** is the process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data.</span>
+<span id="cb4-133"><a href="#cb4-133"></a></span>
+<span id="cb4-134"><a href="#cb4-134"></a>**Descriptive Statistics:** Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data.</span>
+<span id="cb4-135"><a href="#cb4-135"></a></span>
+<span id="cb4-136"><a href="#cb4-136"></a>**Correlation Analysis:** aims to ascertain the magnitude and orientation of the association between the dependent variable **energy consumption** and independent variables.</span>
+<span id="cb4-137"><a href="#cb4-137"></a></span>
+<span id="cb4-138"><a href="#cb4-138"></a>**Time series analysis:** For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends.</span>
+<span id="cb4-139"><a href="#cb4-139"></a></span>
+<span id="cb4-140"><a href="#cb4-140"></a>**Regression analysis:** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables.</span>
+<span id="cb4-141"><a href="#cb4-141"></a></span>
+<span id="cb4-142"><a href="#cb4-142"></a>**Multiple Regression:** Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.</span>
+<span id="cb4-143"><a href="#cb4-143"></a></span>
+<span id="cb4-144"><a href="#cb4-144"></a><span class="fu">#### **Data Visualization**</span></span>
+<span id="cb4-145"><a href="#cb4-145"></a></span>
+<span id="cb4-146"><a href="#cb4-146"></a>**Line Graphs:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.</span>
+<span id="cb4-147"><a href="#cb4-147"></a></span>
+<span id="cb4-148"><a href="#cb4-148"></a>**Scatterplots** are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables.</span>
+<span id="cb4-149"><a href="#cb4-149"></a></span>
+<span id="cb4-150"><a href="#cb4-150"></a>**Bar and pie charts** are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.</span>
+<span id="cb4-151"><a href="#cb4-151"></a></span>
+<span id="cb4-152"><a href="#cb4-152"></a>**Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.</span>
+<span id="cb4-153"><a href="#cb4-153"></a></span>
+<span id="cb4-154"><a href="#cb4-154"></a><span class="fu">## Question 02</span></span>
+<span id="cb4-155"><a href="#cb4-155"></a></span>
+<span id="cb4-156"><a href="#cb4-156"></a>What countries or regions are practicing sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?</span>
+<span id="cb4-157"><a href="#cb4-157"></a></span>
+<span id="cb4-158"><a href="#cb4-158"></a><span class="fu">### The Importance of this Question:</span></span>
+<span id="cb4-159"><a href="#cb4-159"></a></span>
+<span id="cb4-160"><a href="#cb4-160"></a>The goal of this question is to analyze the energy practices of various countries and determine which countries are practicing sustainable energy practices and reducing the energy consumption of nonrenewable energy sources. Sustainable energy. This question seeks to determine which countries rely more on non-renewable energy sources compared to that of renewable energy sources. An analysis will also be done to determine which countries based on the current information is moving in the trajectory of using renewable energy sources using regression analysis. For this data the countries will be divided into countries with larger and smaller populations to handle any form of bias that may occur due to the population sizes of the various countries. A log transformation can also be done to the population to resolve this issue.</span>
+<span id="cb4-161"><a href="#cb4-161"></a></span>
+<span id="cb4-162"><a href="#cb4-162"></a><span class="fu">### Dependency Columns:</span></span>
+<span id="cb4-163"><a href="#cb4-163"></a></span>
+<span id="cb4-164"><a href="#cb4-164"></a>To complete the analysis of this question, the following data columns are essential.</span>
+<span id="cb4-165"><a href="#cb4-165"></a></span>
+<span id="cb4-166"><a href="#cb4-166"></a>**Population:** This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.</span>
+<span id="cb4-167"><a href="#cb4-167"></a></span>
+<span id="cb4-168"><a href="#cb4-168"></a>**Energy consumed:** These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.</span>
+<span id="cb4-169"><a href="#cb4-169"></a></span>
+<span id="cb4-170"><a href="#cb4-170"></a>**Greenhouse gas emissions:** This will determine which regions or countries produce the most gree house gases and cause pollution.</span>
+<span id="cb4-171"><a href="#cb4-171"></a></span>
+<span id="cb4-172"><a href="#cb4-172"></a>**Renewable and non-renewable consumption:** The renewable and non renewable consumption columns and all other related columns will be used to determine the countries practicing sustainable energy practices.</span>
+<span id="cb4-173"><a href="#cb4-173"></a></span>
+<span id="cb4-174"><a href="#cb4-174"></a><span class="fu">### Analysis plan</span></span>
+<span id="cb4-175"><a href="#cb4-175"></a></span>
+<span id="cb4-176"><a href="#cb4-176"></a><span class="fu">#### **Data Preparation and Analysis**</span></span>
+<span id="cb4-177"><a href="#cb4-177"></a></span>
+<span id="cb4-178"><a href="#cb4-178"></a>**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.</span>
+<span id="cb4-179"><a href="#cb4-179"></a></span>
+<span id="cb4-180"><a href="#cb4-180"></a>**Feature Engineering:** This will be done to get the proportion of renewable sources of energy used relative to total energy and the proportion of non renewabke energy sources of energy used relative to total energy consumption.</span>
+<span id="cb4-181"><a href="#cb4-181"></a></span>
+<span id="cb4-182"><a href="#cb4-182"></a>**Exploratory Data Analysis:** This is the process of analyzing and visualizing the data to gain insights and understand the underlying patterns and relationships in the data.</span>
+<span id="cb4-183"><a href="#cb4-183"></a></span>
+<span id="cb4-184"><a href="#cb4-184"></a>**Descriptive Statistics:** Generate a statistical summary for each of the dependence columns in order to ascertain the magnitude and association between the renewable and non-renewable sources.</span>
+<span id="cb4-185"><a href="#cb4-185"></a></span>
+<span id="cb4-186"><a href="#cb4-186"></a>**Regression analysis**: A form of regression analysis will be done to determine which countries are on the right path to maximizing sustainable energy practices.</span>
+<span id="cb4-187"><a href="#cb4-187"></a></span>
+<span id="cb4-188"><a href="#cb4-188"></a><span class="fu">#### **Data Visualization**</span></span>
+<span id="cb4-189"><a href="#cb4-189"></a></span>
+<span id="cb4-190"><a href="#cb4-190"></a>**Maps:** The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources.</span>
+<span id="cb4-191"><a href="#cb4-191"></a></span>
+<span id="cb4-192"><a href="#cb4-192"></a>**Line graphs:** Line graphs will be used to determine the patterns in the use of certain renewable and non-renewable energy sources over the years for certain regions.</span>
+<span id="cb4-193"><a href="#cb4-193"></a></span>
+<span id="cb4-194"><a href="#cb4-194"></a>**Density plots:** Density plots will be used to visualize the distribution of data for renewable and non-renewable energy sources across continents and or other forms of regional boundaries.</span>
+<span id="cb4-195"><a href="#cb4-195"></a></span>
+<span id="cb4-196"><a href="#cb4-196"></a><span class="fu">## Project Timeline</span></span>
+<span id="cb4-197"><a href="#cb4-197"></a></span>
+<span id="cb4-198"><a href="#cb4-198"></a><span class="fu">### Project Tasks</span></span>
+<span id="cb4-199"><a href="#cb4-199"></a></span>
+<span id="cb4-200"><a href="#cb4-200"></a>This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.</span>
+<span id="cb4-201"><a href="#cb4-201"></a></span>
+<span id="cb4-202"><a href="#cb4-202"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-203"><a href="#cb4-203"></a>| Task Name                        | Status        | Assignee | Due        | Priority | Summary                                                                                                             |</span>
+<span id="cb4-204"><a href="#cb4-204"></a>+==================================+===============+==========+============+==========+=====================================================================================================================+</span>
+<span id="cb4-205"><a href="#cb4-205"></a>| Dataset                          | Complete      | All (6)  | March 27th | High     | Brainstorming and selecting appropriate dataset.                                                                    |</span>
+<span id="cb4-206"><a href="#cb4-206"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-207"><a href="#cb4-207"></a>| Questions                        | Complete      | All (6)  | March 29th | High     | Determining questions to answer in analysis.                                                                        |</span>
+<span id="cb4-208"><a href="#cb4-208"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-209"><a href="#cb4-209"></a>| Proposal                         | Complete      | All (6)  | April 3rd  | High     | Brainstorming and working on data analysis and proposal.                                                            |</span>
+<span id="cb4-210"><a href="#cb4-210"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-211"><a href="#cb4-211"></a>| Peer evaluation: *proposal*      | *in progress* | All (6)  | April 3rd  | High     | Performing evaluations on different teams&#39; project proposals.                                                       |</span>
+<span id="cb4-212"><a href="#cb4-212"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-213"><a href="#cb4-213"></a>| Proposal feedback                | *backlog*     | All (6)  | TBD        | High     | Discuss feedback given on our proposal and make necessary adjustments.                                              |</span>
+<span id="cb4-214"><a href="#cb4-214"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-215"><a href="#cb4-215"></a>| Instructor review: *proposal*    | *backlog*     | All (6)  | April 10th | High     | Instructor will review the proposal and provide feedback on a later date.                                           |</span>
+<span id="cb4-216"><a href="#cb4-216"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-217"><a href="#cb4-217"></a>| Peer evaluation: *code*          | *backlog*     | All (6)  | TBD        | High     | Performing evaluations on different teams&#39; project code.                                                            |</span>
+<span id="cb4-218"><a href="#cb4-218"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-219"><a href="#cb4-219"></a>| Code feedback                    | *backlog*     | All (6)  | TBD        | High     | Discuss feedback given on our code and make necessary adjustments.                                                  |</span>
+<span id="cb4-220"><a href="#cb4-220"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-221"><a href="#cb4-221"></a>| About                            | *backlog*     | All (6)  | April 17th | High     | Fill in individual information about yourself in the **About.qmd**                                                  |</span>
+<span id="cb4-222"><a href="#cb4-222"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-223"><a href="#cb4-223"></a>| Write-up                         | *backlog*     | TBD (2)  | May 2nd    | High     |                                                                                                                     |</span>
+<span id="cb4-224"><a href="#cb4-224"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-225"><a href="#cb4-225"></a>| Presentation                     | *backlog*     | TBD (2)  | May 2nd    | High     | Build a presentation with all visualizations, descriptions, and talking points needed to answer analysis questions. |</span>
+<span id="cb4-226"><a href="#cb4-226"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-227"><a href="#cb4-227"></a>| Dashboard                        | *backlog*     | TBD (2)  | May 2nd    | High     | Build an interactive Python Visualization Dashboard using Panel.                                                    |</span>
+<span id="cb4-228"><a href="#cb4-228"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-229"><a href="#cb4-229"></a>| Final checks                     | *backlog*     | All (6)  | May 3rd    | Med      | Clean-up all clutter/mistakes found in write-up, presentation, and dashboard.                                       |</span>
+<span id="cb4-230"><a href="#cb4-230"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-231"><a href="#cb4-231"></a>| Presentation delegating          | *backlog*     | All (6)  | May 3rd    | High     | Determine who will speak to what slides.                                                                            |</span>
+<span id="cb4-232"><a href="#cb4-232"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-233"><a href="#cb4-233"></a>| Presentation practice            | *backlog*     | All (6)  | May 3rd    | High     | Do a mock presentation to ensure smooth transitions and correct interpretations of graphs and information.          |</span>
+<span id="cb4-234"><a href="#cb4-234"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-235"><a href="#cb4-235"></a>| Presentation                     | *backlog*     | All (6)  | May 6th    | High     | Present findings in 5 minutes.                                                                                      |</span>
+<span id="cb4-236"><a href="#cb4-236"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-237"><a href="#cb4-237"></a>| Team Member Evaluations          | *backlog*     | All (6)  | May 6th    | High     | Give feedback on each team member.                                                                                  |</span>
+<span id="cb4-238"><a href="#cb4-238"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-239"><a href="#cb4-239"></a>| Peer evaluation: *presentations* | *backlog*     | All (6)  | May 7th    | High     | Performing evaluations on different teams&#39; project presentations.                                                   |</span>
+<span id="cb4-240"><a href="#cb4-240"></a>+----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb4-241"><a href="#cb4-241"></a></span>
+<span id="cb4-242"><a href="#cb4-242"></a><span class="fu"># Repo Organization</span></span>
+<span id="cb4-243"><a href="#cb4-243"></a></span>
+<span id="cb4-244"><a href="#cb4-244"></a>The following folders comprise the project repository</span>
+<span id="cb4-245"><a href="#cb4-245"></a></span>
+<span id="cb4-246"><a href="#cb4-246"></a><span class="ss">-   </span>**.github/:** This directory is designated for files associated with GitHub, encompassing workflows, actions, and templates tailored for issues.</span>
+<span id="cb4-247"><a href="#cb4-247"></a></span>
+<span id="cb4-248"><a href="#cb4-248"></a><span class="ss">-   </span>**\_extra/:** Reserved for miscellaneous files that don&#39;t neatly fit into other project categories, providing a catch-all space for various supplementary documents.</span>
+<span id="cb4-249"><a href="#cb4-249"></a></span>
+<span id="cb4-250"><a href="#cb4-250"></a><span class="ss">-   </span>**\_freeze/:** Within this directory lie frozen environment files containing comprehensive information regarding the project&#39;s environment configuration and dependencies.</span>
+<span id="cb4-251"><a href="#cb4-251"></a></span>
+<span id="cb4-252"><a href="#cb4-252"></a><span class="ss">-   </span>**data/:** Specifically allocated for storing i data files crucial for the project&#39;s functionality, encompassing input files, datasets, and other essential data resources.</span>
+<span id="cb4-253"><a href="#cb4-253"></a></span>
+<span id="cb4-254"><a href="#cb4-254"></a><span class="ss">-   </span>**images/:** Serving as a repository for visual assets employed throughout the project, including diagrams, charts, and screenshots, this directory maintains visual elements integral to project documentation and presentation.</span>
+<span id="cb4-255"><a href="#cb4-255"></a></span>
+<span id="cb4-256"><a href="#cb4-256"></a><span class="ss">-   </span>**.gitignore:** This file functions to specify exclusions from version control, ensuring that designated files and directories remain untracked by Git, thus streamlining the versioning process.</span>
+<span id="cb4-257"><a href="#cb4-257"></a></span>
+<span id="cb4-258"><a href="#cb4-258"></a><span class="ss">-   </span>**README.md:** Serving as the primary hub of project information, this README document furnishes essential details encompassing project setup, usage instructions, and an overarching overview of project objectives and scope.</span>
+<span id="cb4-259"><a href="#cb4-259"></a></span>
+<span id="cb4-260"><a href="#cb4-260"></a><span class="ss">-   </span>**\_quarto.yml:** Acting as a pivotal configuration file for Quarto, this document encapsulates various settings and options governing the construction and rendering of Quarto documents, facilitating customization and control over document output.</span>
+<span id="cb4-261"><a href="#cb4-261"></a></span>
+<span id="cb4-262"><a href="#cb4-262"></a><span class="ss">-   </span>**about.qmd:** This Quarto Markdown file supplements project documentation by providing additional contextual information, elucidating project purpose, contributor insights, and other pertinent project details.</span>
+<span id="cb4-263"><a href="#cb4-263"></a></span>
+<span id="cb4-264"><a href="#cb4-264"></a><span class="ss">-   </span>**index.qmd:** index.qmd: This serves as the main documentation page for our project. This Quarto Markdown file provides detailed descriptions of our project, including all code and visualization .</span>
+<span id="cb4-265"><a href="#cb4-265"></a></span>
+<span id="cb4-266"><a href="#cb4-266"></a><span class="fu"># References</span></span>
+<span id="cb4-267"><a href="#cb4-267"></a></span>
+<span id="cb4-268"><a href="#cb4-268"></a><span class="sc">\[</span>1<span class="sc">\]</span> The Data source link is attached here: <span class="ot">&lt;https://ourworldindata.org/energy&gt;</span></span>
+<span id="cb4-269"><a href="#cb4-269"></a></span>
+<span id="cb4-270"><a href="#cb4-270"></a><span class="sc">\[</span>2<span class="sc">\]</span> Github Link: <span class="ot">&lt;https://github.com/owid/energy-data&gt;</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
