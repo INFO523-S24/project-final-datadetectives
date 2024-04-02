@@ -5,7 +5,7 @@ author:
   - name: "DataDetectives - Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption"
 format:
   html:
     code-tools: true
@@ -27,7 +27,13 @@ import numpy as np
 import pandas as pd
 ```
 
-# Dataset
+## Introduction
+
+In an era marked by escalating demands and environmental concerns, the question of predicting a nation’s power consumption becomes increasingly pivotal. The Our World in data energy data set covers a range of information on primary energy consumption, per capita energy, growth rates, energy mix, electricity composition, and other relevant factors This data set contains information from the year 1900 to 2022. By delving into these factors, this project aims to unravel the complex interplay between economic and population growth as well as sustainable energy practices.
+
+## Dataset
+
+The Our World Our Data Energy dataset.
 
 ```{python}
 #| label: load-dataset
@@ -42,13 +48,20 @@ data.head()
 
 ### Dataset Description:
 
-text here
+This dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic project, and population information across the years from 1900s to 2022
 
-### Dimension:
+### Dimensions
+
+```{python}
+#| message: false
+#| warning: false
+
+data.shape
+```
 
 This `owid-energy-data.csv` data-set contains 215,90 rows and 129 columns.
 
-### Provenance:
+### Provenance
 
 This information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: [LINK](https://ourworldindata.org/energy)
 
@@ -76,34 +89,51 @@ This data-set has about 129 columns but we will work on few columns, that is why
 | 7.     | fossil_electricity     | Electricity generation from fossil fuels - Measured in terawatt-hours.                                                                                                                                                           |
 +--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-# Introduction
+## Why the dataset
 
-### Why we are choosing this data-set?
+This data set was formed from the combination of multiple data sets related to topics on energy consumption, economic growth, and population growth over the years for different regions around the world. This data set provides in-depth information on energy since it covers most if not all the topics related to energy and energy consumption as well as other related areas. The data set was built upon a statistical review of world energy by the Energy Institute, International energy data by the United States Information Administration, Energy from fossil fuels from the Shift Dataportal, Yearly Electricity Data,  European Electricity Review (Ember), Combined Electricity, Energy Mix, Fossil fuel production, Primary Energy consumption, Electricity mix, Energy data set, Population, Regions, Income groups and GDP. All these reliable and updated information sources come together to make this data set the best one for this analysis.
 
-text here
-
-### Idea of Analysis
-
-text here
-
-# Question 01:
+## Question 01
 
 **Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?**
 
-### The Importance of this Question:
+### The Importance of this Question
 
 Predicting a country's power consumption is a difficult yet important taking on, necessary for guaranteeing sustained progress and energy stability. This subject explores the intricate relationship between economic progress, population growth, and sustainable energy consumption by examining a nation's population size, Gross Domestic Product (GDP), and the proportion of electricity generated from renewable sources. The research can provide valuable guidance for policy decisions, energy planning, and infrastructure investment to fulfill future energy demands in a sustainable manner.
 
-### Dependency Columns:
+### Dependency Columns
 
-In order to investigate this research issue, the following data columns are essential: Population (population) which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes. A larger Gross Domestic Product (`gdp`) frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions. The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable "`renewables_electricity` / `electricity_generation`". Assessing the proportion of renewable energy in a nation's entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns. Energy Consumption (`energy_consumption`): Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as "`electricity_consumption`" it would be more directly applicable to the subject at hand. The variable `years` is used to analysis time series.
+In order to investigate this research issue, the following data columns are essential:
+
+Population **(population)** which functions as a surrogate for energy demand, as a larger population often necessitates greater energy consumption for residential, commercial, and industrial purposes.
+
+A larger Gross Domestic Product **(gdp)** frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions.
+
+The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable "**renewable_energy** / **electricity generation**". Assessing the proportion of renewable energy in a nation's entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns.
+
+Energy Consumption (**energy_consumption)**: Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as "**electricity_consumption**" it would be more directly applicable to the subject at hand.
+
+The variable **years** is used to analysis time series.
 
 ### Analysis plan:
 
-**Data Preparation and Analysis:** ***`Data Cleaning:`*** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner. Feature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of r`enewables_electricity` by the value of `electricity_generation`. If we find it to be beneficial, we can standardize or normalize the appropriate columns. ***`Exploratory Data Analysis (EDA):`*** is a process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data. Descriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable (`energy_consumption`) and independent variables. ***`Time series analysis :`*** For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends. ***`Regression analysis:`*** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.
+#### **Data Preparation and Analysis**
 
-\
-**Data Visualization:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time. ***`Scatter plots:`*** are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables. ***`Bar charts and pie charts:`*** are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.
+**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner. Feature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of **renewable electricity** by the value of **electricity generatio**n. If we find it to be beneficial, we can standardize or normalize the appropriate columns.
+
+**Exploratory Data Analysis** is the process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data. Descriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable **energy consumption** and independent variables.
+
+**Time series analysis:** For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends.
+
+**Regression analysis:** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.
+
+####  **Data Visualization**
+
+**Line Graphs:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.
+
+**Scatterplots** are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables.
+
+**Bar and pie charts** are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.
 
 **Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.
 
@@ -177,23 +207,23 @@ text here
 
 This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.
 
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-| Task Name                                               | Status                              | Assignee | Due        | Priority | Summary                                     |
-+=========================================================+=====================================+==========+============+==========+=============================================+
-| Dataset and question selection                          | Explored and finalized the dataset  | All      | March 24th | High     | Selected dataset and question to be solved. |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-| Brainstorming and working on data analysis and proposal | Completed the proposal              | All      | April 1st  | High     | Proposal ready for review.                  |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-| Review peer evaluations on proposal                     | *in progress*                       | All      | April 8th  | High     |                                             |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                     |          | April 15th |          |                                             |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                     |          | April 22nd |          |                                             |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                     |          | April 29th |          |                                             |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
-|                                                         |                                     |          | May 6th    |          |                                             |
-+---------------------------------------------------------+-------------------------------------+----------+------------+----------+---------------------------------------------+
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+| Task Name                                               | Status                             | Assignee | Due        | Priority | Summary                                     |
++=========================================================+====================================+==========+============+==========+=============================================+
+| Dataset and question selection                          | Explored and finalized the dataset | All      | March 24th | High     | Selected dataset and question to be solved. |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+| Brainstorming and working on data analysis and proposal | Completed the proposal             | All      | April 1st  | High     | Proposal ready for review.                  |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+| Review peer evaluations on proposal                     | *in progress*                      | All      | April 8th  | High     |                                             |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+|                                                         |                                    |          | April 15th |          |                                             |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+|                                                         |                                    |          | April 22nd |          |                                             |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+|                                                         |                                    |          | April 29th |          |                                             |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
+|                                                         |                                    |          | May 6th    |          |                                             |
++---------------------------------------------------------+------------------------------------+----------+------------+----------+---------------------------------------------+
 
 # Repo Organization
 
