@@ -59,7 +59,7 @@ This dataset provides information on energy consumption for various regions arou
 data.shape
 ```
 
-This `owid-energy-data.csv` data-set contains 215,90 rows and 129 columns.
+This **owid-energy-data.csv** dataset contains 215,90 rows and 129 columns.
 
 ### Provenance
 
@@ -95,7 +95,7 @@ This data set was formed from the combination of multiple data sets related to t
 
 ## Question 01
 
-**Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?**
+Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
 ### The Importance of this Question
 
@@ -179,7 +179,7 @@ To complete the analysis of this question, the following data columns are essent
 
 **Regression analysis**: A form of regression analysis will be done to determine which countries are on the right path to maximizing sustainable energy practices.
 
-#### Data Visualization
+#### **Data Visualization**
 
 **Maps:** The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources.
 
@@ -237,7 +237,7 @@ To complete the analysis of this question, the following data columns are essent
 
 \- Do peer evaluations for both team members and other teams' projects
 
-# Plan of Attack
+## Project Timeline
 
 ## Project Tasks
 
