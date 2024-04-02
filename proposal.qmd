@@ -214,7 +214,7 @@ This document outlines the tasks for our project, including their status, assign
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | About                            | *backlog*     | All (6)  | April 17th | High     | Fill in individual information about yourself in the **About.qmd**                                                  |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
-| Write-up                         | *backlog*     | TBD (2)  | May 2nd    | High     |                                                                                                                     |
+| Write-up                         | *backlog*     | TBD (2)  | May 2nd    | High     | 1000 to 2000 words long description of project.                                                                     |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | Presentation                     | *backlog*     | TBD (2)  | May 2nd    | High     | Build a presentation with all visualizations, descriptions, and talking points needed to answer analysis questions. |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
@@ -222,7 +222,7 @@ This document outlines the tasks for our project, including their status, assign
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | Final checks                     | *backlog*     | All (6)  | May 3rd    | Med      | Clean-up all clutter/mistakes found in write-up, presentation, and dashboard.                                       |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
-| Presentation delegating          | *backlog*     | All (6)  | May 3rd    | High     | Determine who will speak to what slides.                                                                            |
+| Presentation delegation          | *backlog*     | All (6)  | May 3rd    | High     | Determine who will speak to what slides.                                                                            |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | Presentation practice            | *backlog*     | All (6)  | May 3rd    | High     | Do a mock presentation to ensure smooth transitions and correct interpretations of graphs and information.          |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
