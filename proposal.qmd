@@ -115,19 +115,27 @@ Energy Consumption (**energy_consumption)**: Although this column may cover all 
 
 The variable **years** is used to analysis time series.
 
-### Analysis plan:
+### Analysis plan
 
 #### **Data Preparation and Analysis**
 
-**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner. Feature Engineering: To get the percentage of electricity generated from renewable sources, divide the value of **renewable electricity** by the value of **electricity generatio**n. If we find it to be beneficial, we can standardize or normalize the appropriate columns.
+**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.
 
-**Exploratory Data Analysis** is the process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data. Descriptive Statistics: Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data. Correlation Analysis: aims to ascertain the magnitude and orientation of the association between the dependent variable **energy consumption** and independent variables.
+**Feature Engineering:** To get the percentage of electricity generated from renewable sources, divide the value of **renewable electricity** by the value of **electricity generatio**n. If we find it to be beneficial, we can standardize or normalize the appropriate columns.
+
+**Exploratory Data Analysis** is the process of analyzing and visualizing data to gain insights and understand the underlying patterns and relationships in the data.
+
+**Descriptive Statistics:** Generate a statistical summary for each of the dependence columns in order to gain insight into the distribution of the data.
+
+**Correlation Analysis:** aims to ascertain the magnitude and orientation of the association between the dependent variable **energy consumption** and independent variables.
 
 **Time series analysis:** For time-series data, examine trends, seasonality, and patterns over time for each variable, particularly energy consumption, to comprehend past shifts and forecast future trends.
 
-**Regression analysis:** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables. Multiple Regression: Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.
+**Regression analysis:** Begin by employing a basic linear regression model to comprehend the correlation between energy use and the independent variables.
 
-####  **Data Visualization**
+**Multiple Regression:** Apply multiple regression analysis to consider multiple independent variables concurrently, comprehending their combined influence on energy usage.
+
+#### **Data Visualization**
 
 **Line Graphs:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.
 
@@ -137,19 +145,47 @@ The variable **years** is used to analysis time series.
 
 **Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.
 
-# Questions 02:
+## Questions 02
+
+What countries or regions are practicing sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
 ### The Importance of this Question:
 
-text here
+The goal of this question is to analyze the energy practices of various countries and determine which countries are practicing sustainable energy practices and reducing the energy consumption of nonrenewable energy sources. Sustainable energy. This question seeks to determine which countries rely more on non-renewable energy sources compared to that of renewable energy sources. An analysis will also be done to determine which countries based on the current information is moving in the trajectory of using renewable energy sources using regression analysis. For this data the countries will be divided into countries with larger and smaller populations to handle any form of bias that may occur due to the population sizes of the various countries. A log transformation can also be done to the population to resolve this issue.
 
 ### Dependency Columns:
 
-text here
+To complete the analysis of this question, the following data columns are essential.
 
-### Analysis plan:
+**Population:** This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.
 
-text here
+**Energy consumed:** These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.
+
+**Greenhouse gas emissions:** This will determine which regions or countries produce the most gree house gases and cause pollution.
+
+**Renewable and non-renewable consumption:** The renewable and non renewable consumption columns and all other related columns will be used to determine the countries practicing sustainable energy practices.
+
+### Analysis plan
+
+#### **Data Preparation and Analysis**
+
+**Data Cleaning** helps to verify that the data is devoid of anomalies and to address any missing or incorrect values in a suitable manner.
+
+**Feature Engineering:** This will be done to get the proportion of renewable sources of energy used relative to total energy and the proportion of non renewabke energy sources of energy used relative to total energy consumption.
+
+**Exploratory Data Analysis:** This is the process of analyzing and visualizing the data to gain insights and understand the underlying patterns and relationships in the data.
+
+**Descriptive Statistics:** Generate a statistical summary for each of the dependence columns in order to ascertain the magnitude and association between the renewable and non-renewable sources.
+
+**Regression analysis**: A form of regression analysis will be done to determine which countries are on the right path to maximizing sustainable energy practices.
+
+#### Data Visualization
+
+**Maps:** The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources.
+
+**Line graphs:** Line graphs will be used to determine the patterns in the use of certain renewable and non-renewable energy sources over the years for certain regions.
+
+**Density plots:** Density plots will be used to visualize the distribution of data for renewable and non-renewable energy sources across continents and or other forms of regional boundaries.
 
 # Project Timeline
 
