@@ -15,4 +15,4 @@ This project was developed by **Data Detectives** For [INFO 523 - Data Mining an
 
 -   Valerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence
 
--   
+-   Abhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety
