@@ -5,16 +5,14 @@ editor: visual
 jupyter: python3
 ---
 
-This project was developed by **\[Data Detectives\]** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
+This project was developed by **Data Detectives** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
--   Team member 1: One sentence description of Team member 1 (e.g., year, major, etc.).
+-   Ayesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning
 
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
+-   Alyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.
 
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
+-   Toluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.
 
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
-   
--   Team member 5: One sentence description of Team member 5 (e.g., year, major, etc.).
-   
--   Team member 6: One sentence description of Team member 6 (e.g., year, major, etc.).
+-   Valerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence
+
+-   

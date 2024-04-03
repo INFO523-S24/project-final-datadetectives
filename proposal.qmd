@@ -29,7 +29,7 @@ import pandas as pd
 
 ## Introduction
 
-In an era marked by escalating demands and environmental concerns, the question of predicting a nation’s power consumption becomes increasingly pivotal. The Our World in data energy data set covers a range of information on primary energy consumption, per capita energy, growth rates, energy mix, electricity composition, and other relevant factors This data set contains information from the year 1900 to 2022. By delving into these factors, this project aims to unravel the complex interplay between economic and population growth as well as sustainable energy practices.
+In an era marked by escalating demands and environmental concerns, the question of predicting a nation’s power consumption becomes increasingly pivotal. The Our World in data energy data set covers a range of information on primary energy consumption, per capita energy, growth rates, energy mix, electricity composition, and other relevant factors This data set contains information from the year 1900 to 2022. By delving into these factors. This project aims to unravel the complex interplay between economic and population growth as well as sustainable energy practices by creating a dashboard.
 
 ## Dataset
 
