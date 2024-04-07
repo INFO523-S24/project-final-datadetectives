@@ -48,7 +48,7 @@ data.loc[7392:7397]
 
 ### Dataset Description:
 
-This dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic product, and population information across the years from 1900s to 2022
+This dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic product, and population information across the years from 1900s to 2022.
 
 ### Dimensions
 
@@ -78,7 +78,7 @@ This data-set has about 129 columns but we will work on few columns, that is why
 +--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2.     | year                   | Year of observation.                                                                                                                                                                                                      |
 +--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3.     | population             | Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources.                                                                                                       |
+| 3.     | population             | Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources. Data range does go from 10,000 BCE to 2100 but is pulled and presented based off of year (year of obervation) variable.                                                                                                       |
 +--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 4.     | gdp                    | Gross domestic product (GDP) measured in international-\$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population. |
 +--------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
