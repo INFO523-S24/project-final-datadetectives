@@ -56,6 +56,7 @@ This dataset provides information on energy consumption for various regions arou
 ```{python}
 #| message: false
 #| warning: false
+#| echo: false
 
 data.shape
 ```
@@ -72,25 +73,25 @@ This information is created by Our World in Data (OWID), a renowned institution 
 
 This data-set has about 129 columns but we will work on few columns, that is why we only provided the important data descriptions. Code book Insights is shown below:
 
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| **Index** | **Column Name**        | **Descriptions**                                                                                                                                                                                                                       |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1.        | country                | Geographic location                                                                                                                                                                                                                    |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2.        | year                   | Year of observation.                                                                                                                                                                                                                   |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3.        | population             | Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources. Data range does go from 10,000 BCE to 2100 but is pulled and presented based on the year (year of observation) variable. |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 4.        | gdp                    | Gross domestic product (GDP) measured in international-\$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population.       |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 5.        | renewables_electricity | Electricity generation from renewables (terawatt-hours)                                                                                                                                                                                |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 6.        | electricity_generation | Total electricity generation (terawatt-hours)                                                                                                                                                                                          |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 7.        | fossil_electricity     | Electricity generation from fossil fuels (terawatt-hours)                                                                                                                                                                              |
-+-----------+------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Index** | **Column Name**        | **Data Type** | **Descriptions**                                                                                                                                                                                                                       |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1.        | country                | string        | Geographic location                                                                                                                                                                                                                    |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2.        | year                   | integer       | Year of observation.                                                                                                                                                                                                                   |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3.        | population             | interger      | Population by country, available from 10,000 BCE to 2100, based on data and estimates from different sources. Data range does go from 10,000 BCE to 2100 but is pulled and presented based on the year (year of observation) variable. |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 4.        | gdp                    | double        | Gross domestic product (GDP) measured in international-\$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population.       |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 5.        | renewables_electricity | double        | Electricity generation from renewables (terawatt-hours)                                                                                                                                                                                |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6.        | electricity_generation | double        | Total electricity generation (terawatt-hours)                                                                                                                                                                                          |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 7.        | fossil_electricity     | double        | Electricity generation from fossil fuels (terawatt-hours)                                                                                                                                                                              |
++-----------+------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-## Why the dataset
+## Why this dataset?
 
 This data set was formed from the combination of multiple data sets related to topics on energy consumption, economic growth, and population growth over the years for different regions around the world. This data set provides in-depth information on energy since it covers most if not all the topics related to energy and energy consumption as well as other related areas. The data set was built upon a statistical review of world energy by the Energy Institute, International energy data by the United States Information Administration, Energy from fossil fuels from the Shift Dataportal, Yearly Electricity Data,  European Electricity Review (Ember), Combined Electricity, Energy Mix, Fossil fuel production, Primary Energy consumption, Electricity mix, Energy data set, Population, Regions, Income groups and GDP. All these reliable and updated information sources come together to make this data set the best one for this analysis.
 
@@ -110,7 +111,7 @@ Population **(population)** which functions as a surrogate for energy demand, as
 
 A larger Gross Domestic Product **(gdp)** frequently corresponds to an augmented consumption of energy as a result of industrialization, commercial endeavors, and improved living conditions.
 
-The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable ***renewable_energy / electricity_generation***. Assessing the proportion of renewable energy in a nation's entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns.
+The proportion of electricity generated by renewable sources, expressed as a percentage of total electricity generation, is represented by the variable **renewable_energy / electricity_generation**. Assessing the proportion of renewable energy in a nation's entire electricity mix is vital for understanding its transition to sustainable energy sources and the effects on overall energy consumption patterns.
 
 Energy Consumption (**energy_consumption)**: Although this column may cover all forms of energy use, including electricity and more, it is essential for the study. If there is a particular column that contains data on electricity consumption, such as ***Energy Consumption*** it would be more directly applicable to the subject at hand.
 
@@ -118,50 +119,58 @@ The variable ***year*** is used to analysis time series.
 
 ### Analysis plan
 
-**Data Cleaning**:
+#### **Data Cleaning**:
 
--  We will Verify the dataset for any anomalies or missing values and address them appropriately using techniques like imputation or removal of incomplete records.
+-   We will Verify the dataset for any anomalies or missing values and address them appropriately using techniques like imputation or removal of incomplete records.
 
-**Feature Engineering**:
+#### **Feature Engineering**:
 
-- We will  Calculate the percentage of electricity generated from renewable sources by dividing the renewable electricity consumption by the total electricity generation.
-- Standardize or normalize the relevant columns if deemed beneficial for analysis.
+-   We will Calculate the percentage of electricity generated from renewable sources by dividing the renewable electricity consumption by the total electricity generation.
+-   Standardize or normalize the relevant columns if deemed beneficial for analysis.
 
-**Exploratory Data Analysis (EDA)**:
+#### **Exploratory Data Analysis (EDA)**:
 
--  We will Analyze and visualize the dataset to identify underlying patterns and relationships.
-- Explore the distribution of variables like **<font color="black"><i>population size</i></font>**, **<font color="black"><i>GDP</i></font>**, **<font color="black"><i>renewable energy percentage</i></font>**, and **<font color="black"><i>energy consumption</i></font>** across different countries and years.
+-   We will Analyze and visualize the dataset to identify underlying patterns and relationships.
+-   Explore the distribution of variables like <font color="black"><i>population size</i></font>, <font color="black"><i>GDP</i></font>, <font color="black"><i>renewable energy percentage</i></font>, and <font color="black"><i>energy consumption</i></font> across different countries and years.
 
-**Descriptive Statistics**:
+#### **Descriptive Statistics**:
 
--  We will Generate statistical summaries for each dependence column to understand the distribution and central tendencies of the data.
-- Calculate measures such as mean, median, standard deviation, and correlation coefficients.
+-   We will Generate statistical summaries for each dependence column to understand the distribution and central tendencies of the data.
+-   Calculate measures such as mean, median, standard deviation, and correlation coefficients.
 
 **Correlation Analysis**:
 
--  We will Determine the magnitude and direction of the association between **<font color="black"><i>energy consumption</i></font>** and independent variables like **<font color="black"><i>population size</i></font>**, **<font color="black"><i>GDP</i></font>**, and **<font color="black"><i>renewable energy percentage</i></font>** using correlation analysis.
+-   We will Determine the magnitude and direction of the association between <font color="black"><i>energy consumption</i></font> and independent variables like <font color="black"><i>population size</i></font>, <font color="black"><i>GDP</i></font>, and <font color="black"><i>renewable energy percentage</i></font> using correlation analysis.
 
-**Time Series Analysis**:
+#### **Time Series Analysis**:
 
--  We will Investigate trends, seasonality, and patterns over time for variables like **<font color="black"><i>energy consumption</i></font>** to understand past shifts and forecast future trends.
+-   We will Investigate trends, seasonality, and patterns over time for variables like <font color="black"><i>energy consumption</i></font> to understand past shifts and forecast future trends.
 
-**Regression Analysis**:
+#### **Regression Analysis**:
 
--  We will Utilize basic linear regression to comprehend the correlation between **<font color="black"><i>energy consumption</i></font>** and independent variables individually.
+-   We will Utilize basic linear regression to comprehend the correlation between <font color="black"><i>energy consumption</i></font> and independent variables individually.
 
-**Multiple Regression**:
+#### **Multiple Regression**:
 
-- we will Apply multiple regression analysis to simultaneously consider multiple independent variables, such as **<font color="black"><i>population size</i></font>**, **<font color="black"><i>GDP</i></font>**, and **<font color="black"><i>renewable energy percentage</i></font>**, to predict **<font color="black"><i>energy usage</i></font>** more accurately.
+-   we will Apply multiple regression analysis to simultaneously consider multiple independent variables, such as <font color="black"><i>population size</i></font>, <font color="black"><i>GDP</i></font>, and <font color="black"><i>renewable energy percentage</i></font>, to predict <font color="black"><i>energy usage</i></font> more accurately.
 
-#### **Data Visualization**
+### **Data Visualization**
 
-**Line Graphs:** For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.
+#### **Line Graphs:**
 
-**Scatterplots** are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables.
+For time series data, create graphs that illustrate the patterns of energy consumption, population growth, GDP, and the proportion of renewable energy over a period of time.
 
-**Bar and pie charts** are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.
+#### **Scatterplots**:
 
-**Model Evaluation:** Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.
+Are used to visually represent the correlation between energy use and each of the independent variables. Heat-maps are a useful tool for visualizing the correlation matrix, as they effectively emphasize the strength of correlations between variables.
+
+#### **Bar and pie charts**:
+
+Are used to visually represent the breakdown of energy sources, with a specific emphasis on differentiating between renewable and non-renewable energy. We are not decided yet that which techniques will be used here.
+
+#### **Model Evaluation:**
+
+Evaluate the models by employing suitable metrics such as R-squared and RMSE for regression analysis to assess their performance and accuracy in predicting energy consumption.
 
 ## Question 02
 
@@ -175,51 +184,58 @@ The goal of this question is to analyze the energy practices of various countrie
 
 To complete the analysis of this question, the following data columns are essential.
 
-**Population:** This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.
+#### **Population:** 
 
-**Energy consumed:** These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.
+This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.
 
-**Greenhouse gas emissions:** This will determine which regions or countries produce the most green house gases and cause pollution.
+#### **Energy consumed:** 
 
-**Renewable and non-renewable consumption:** The renewable and non renewable consumption columns and all other related columns will be used to determine the countries engaging in sustainable energy practices.
+These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.
+
+#### **Greenhouse gas emissions:** 
+
+This will determine which regions or countries produce the most green house gases and cause pollution.
+
+#### **Renewable and non-renewable consumption:**
+
+The renewable and non renewable consumption columns and all other related columns will be used to determine the countries engaging in sustainable energy practices.
 
 ### Analysis plan
 
-**Data Preparation and Analysis**
+#### **Data Preparation and Analysis**
 
-- We have missing values in our dataset. Here, we will employ advanced machine learning imputation techniques like iterative imputation to obtain a reliable dataset. Then, we will check for skewness in important columns like <font color="black"><i><b>population</b></i></font>, <font color="black"><i><b>GDP</b></i></font>, <font color="black"><i><b>energy consumed</b></i></font>, <font color="black"><i><b>renewable</b></i></font>, and <font color="black"><i><b>non-renewable consumption</b></i></font>.
+-   We have missing values in our dataset. Here, we will employ advanced machine learning imputation techniques like iterative imputation to obtain a reliable dataset. Then, we will check for skewness in important columns like <font color="black"><i><b>population</b></i></font>, <font color="black"><i><b>GDP</b></i></font>, <font color="black"><i><b>energy consumed</b></i></font>, <font color="black"><i><b>renewable</b></i></font>, and <font color="black"><i><b>non-renewable consumption</b></i></font>.
 
-**Feature Engineering**
+#### **Feature Engineering**
 
 This step involves calculating the proportions of renewable and non-renewable energy sources relative to total energy consumption.
 
-- Calculate proportion of renewable energy: $$
-\frac{{\text{{Solar consumption}} + \text{{Wind consumption}}}}{{\text{{Total energy consumption}}}}
-$$
+-   Calculate proportion of renewable energy: $$
+    \frac{{\text{{Solar consumption}} + \text{{Wind consumption}}}}{{\text{{Total energy consumption}}}}
+    $$
 
-- Calculate proportion of non-renewable energy:$$
-\frac{{\text{{Biofuel consumption}}}}{{\text{{Total energy consumption}}}}
-$$
-
+-   Calculate proportion of non-renewable energy:$$
+    \frac{{\text{{Biofuel consumption}}}}{{\text{{Total energy consumption}}}}
+    $$
 
 These metrics reveal the usage of renewable and non-renewable energy relative to total consumption.
 
-**Exploratory Data Analysis (EDA)**:
+#### **Exploratory Data Analysis (EDA)**:
 
--  We will Analyze the distribution of <font color="black"><i><b>renewable</b></i></font> and <font color="black"><i><b>non-renewable</b></i></font> energy consumption across countries using histograms.
-- Visualize trends in <font color="black"><i><b>renewable energy</b></i></font> adoption over time using line plots.
-- Investigate correlations between <font color="black"><i><b>GDP</b></i></font> and <font color="black"><i><b>renewable energy</b></i></font> usage through scatter plots.
-- Examine the relationship between <font color="black"><i><b>population size</b></i></font> and <font color="black"><i><b>greenhouse gas emissions</b></i></font> using scatter plots.
+-   We will Analyze the distribution of <font color="black"><i><b>renewable</b></i></font> and <font color="black"><i><b>non-renewable</b></i></font> energy consumption across countries using histograms.
+-   Visualize trends in <font color="black"><i><b>renewable energy</b></i></font> adoption over time using line plots.
+-   Investigate correlations between <font color="black"><i><b>GDP</b></i></font> and <font color="black"><i><b>renewable energy</b></i></font> usage through scatter plots.
+-   Examine the relationship between <font color="black"><i><b>population size</b></i></font> and <font color="black"><i><b>greenhouse gas emissions</b></i></font> using scatter plots.
 
 This phase involves analyzing and visualizing the dataset to discern patterns and relationships, providing valuable insights into sustainable energy practices and the transition towards renewable energy sources.
 
-**Descriptive Statistics**:
+#### **Descriptive Statistics**:
 
-- We will Generate a statistical summary for each of the dependence columns, such as <font color="black"><i><b>renewable energy consumption</b></i></font> and <font color="black"><i><b>non-renewable energy consumption</b></i></font>, to ascertain their magnitude and association. This involves calculating measures such as mean, median, standard deviation, and correlation coefficients between these variables.
+-   We will Generate a statistical summary for each of the dependence columns, such as <font color="black"><i><b>renewable energy consumption</b></i></font> and <font color="black"><i><b>non-renewable energy consumption</b></i></font>, to ascertain their magnitude and association. This involves calculating measures such as mean, median, standard deviation, and correlation coefficients between these variables.
 
-**Regression Analysis**:
+#### **Regression Analysis**:
 
-- We will utilize regression analysis with predictors such as <font color="black"><i><b>renewable energy consumption</b></i></font>, <font color="black"><i><b>GDP</b></i></font>, <font color="black"><i><b>population size</b></i></font>, and <font color="black"><i><b>greenhouse gas emissions</b></i></font> to identify countries maximizing sustainable energy practices. This analysis aims to determine the relationship between these variables and sustainable energy practices, providing insights for effective policy-making and intervention strategies.
+-   We will utilize regression analysis with predictors such as <font color="black"><i><b>renewable energy consumption</b></i></font>, <font color="black"><i><b>GDP</b></i></font>, <font color="black"><i><b>population size</b></i></font>, and <font color="black"><i><b>greenhouse gas emissions</b></i></font> to identify countries maximizing sustainable energy practices. This analysis aims to determine the relationship between these variables and sustainable energy practices, providing insights for effective policy-making and intervention strategies.
 
 #### **Data Visualization**
 
@@ -228,12 +244,6 @@ This phase involves analyzing and visualizing the dataset to discern patterns an
 **Line graphs:** Line graphs will be used to determine the patterns in the use of certain renewable and non-renewable energy sources over the years for certain regions.
 
 **Density plots:** Density plots will be used to visualize the distribution of data for renewable and non-renewable energy sources across continents and or other forms of regional boundaries.
-
-## Project Timeline
-
-### Project Tasks
-
-This document outlines the tasks for our project, including their status, assignees, due dates, priorities, and summaries.
 
 ## Project Timeline
 
