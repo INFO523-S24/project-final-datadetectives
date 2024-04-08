@@ -60,7 +60,7 @@ This dataset provides information on energy consumption for various regions arou
 data.shape
 ```
 
-This **owid-energy-data.csv** dataset contains 215,90 rows and 129 columns.
+This **owid-energy-data.csv** dataset contains 21,590 rows and 129 columns.
 
 ### Provenance
 
@@ -165,11 +165,11 @@ The variable ***year*** is used to analysis time series.
 
 ## Question 02
 
-What countries or regions are practicing sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
+What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
 ### The Importance of this Question:
 
-The goal of this question is to analyze the energy practices of various countries and determine which countries are practicing sustainable energy practices and reducing the energy consumption of nonrenewable energy sources. Sustainable energy. This question seeks to determine which countries rely more on non-renewable energy sources compared to that of renewable energy sources. An analysis will also be done to determine which countries based on the current information is moving in the trajectory of using renewable energy sources using regression analysis. For this data the countries will be divided into countries with larger and smaller populations to handle any form of bias that may occur due to the population sizes of the various countries. A log transformation can also be done to the population to resolve this issue.
+The goal of this question is to analyze the energy practices of various countries and determine which countries are practicing sustainable energy and reducing the energy consumption of nonrenewable energy sources. Sustainable energy. This question seeks to determine which countries rely more on non-renewable energy sources compared to that of renewable energy sources. An analysis will also be done to determine which countries based on the current information is moving in the trajectory of using renewable energy sources using regression analysis. For this data the countries will be divided into countries with larger and smaller populations to handle any form of bias that may occur due to the population sizes of the various countries. A log transformation can also be done to the population to resolve this issue.
 
 ### Dependency Columns:
 
@@ -179,9 +179,9 @@ To complete the analysis of this question, the following data columns are essent
 
 **Energy consumed:** These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.
 
-**Greenhouse gas emissions:** This will determine which regions or countries produce the most gree house gases and cause pollution.
+**Greenhouse gas emissions:** This will determine which regions or countries produce the most green house gases and cause pollution.
 
-**Renewable and non-renewable consumption:** The renewable and non renewable consumption columns and all other related columns will be used to determine the countries practicing sustainable energy practices.
+**Renewable and non-renewable consumption:** The renewable and non renewable consumption columns and all other related columns will be used to determine the countries engaging in sustainable energy practices.
 
 ### Analysis plan
 
@@ -223,7 +223,7 @@ This phase involves analyzing and visualizing the dataset to discern patterns an
 
 #### **Data Visualization**
 
-**Maps:** The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources.If external data is needed, we will incorporate it as well.
+**Maps:** The use of maps will be employed to visualize the hotspots of countries which utilize renewable energy the most and those that focus on non-renewable energy sources. If external data is needed, we will incorporate it as well.
 
 **Line graphs:** Line graphs will be used to determine the patterns in the use of certain renewable and non-renewable energy sources over the years for certain regions.
 
