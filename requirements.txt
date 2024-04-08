@@ -2,4 +2,4 @@ jupyter
 nbformat
 pandas
 numpy
-yaml
+pyyaml
