@@ -184,15 +184,15 @@ The goal of this question is to analyze the energy practices of various countrie
 
 To complete the analysis of this question, the following data columns are essential.
 
-#### **Population:** 
+#### **Population:**
 
 This functions as a surrogate for energy demand as a larger population often necessitates a greater energy consumption for residential commercial and industrial purposes.
 
-#### **Energy consumed:** 
+#### **Energy consumed:**
 
 These columns pertaining to the total amount of energy comsumed for each country will be assessed for the purpose of this analysis to determine the proportion of sustainable electrical energy sources from the total electricity consumption.
 
-#### **Greenhouse gas emissions:** 
+#### **Greenhouse gas emissions:**
 
 This will determine which regions or countries produce the most green house gases and cause pollution.
 
@@ -260,11 +260,11 @@ This document outlines the tasks for our project, including their status, assign
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | Proposal                         | Complete      | All (6)  | April 3rd  | High     | Brainstorming and working on data analysis and proposal.                                                            |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
-| Peer evaluation: *proposal*      | *in progress* | All (6)  | April 3rd  | High     | Performing evaluations on different teams' project proposals.                                                       |
+| Peer evaluation: *proposal*      | Complete      | All (6)  | April 3rd  | High     | Performing evaluations on different teams' project proposals.                                                       |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
-| Proposal feedback                | *backlog*     | All (6)  | TBD        | High     | Discuss feedback given on our proposal and make necessary adjustments.                                              |
+| Proposal feedback                | Complete      | All (6)  | April 8th  | High     | Discuss feedback given on our proposal and make necessary adjustments.                                              |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
-| Instructor review: *proposal*    | *backlog*     | All (6)  | April 10th | High     | Instructor will review the proposal and provide feedback on a later date.                                           |
+| Instructor review: *proposal*    | *in progress* | All (6)  | April 10th | High     | Instructor will review the proposal and provide feedback on a later date.                                           |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
 | Peer evaluation: *code*          | *backlog*     | All (6)  | TBD        | High     | Performing evaluations on different teams' project code.                                                            |
 +----------------------------------+---------------+----------+------------+----------+---------------------------------------------------------------------------------------------------------------------+
