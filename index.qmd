@@ -22,6 +22,31 @@ jupyter: python3
 
 Add project abstract here.
 
+# Question 1
+Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
+
+
+```{python}
+#| label: question-1-columns
+#| echo: false
+
+#cell library
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data/owid-energy-data.csv')
+
+#columns to keep
+keep = (['year', 'population', 'gdp', 'electricity_generation', 
+      'primary_energy_consumption', 'renewables_electricity'])
+
+#data for q1
+q1_data = data[keep]
+
+#making new CSV file
+q1_data.to_csv('data/q1_energy_data.csv')
+```
+
 # Repo Organization
 
 The following folders comprise the project repository
