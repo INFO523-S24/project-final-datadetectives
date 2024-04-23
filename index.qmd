@@ -27,7 +27,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 
 ```{python}
-#| label: question-1-columns
+#| label: question
 #| echo: false
 
 #cell library
@@ -51,7 +51,7 @@ q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv', index=False)
 ```
 
 ```{python}
-#| label: question-1-columns
+#| label: question1
 #| echo: false
 
 # Load the dataset
@@ -78,7 +78,7 @@ data.to_csv('data/q1_energy_data_processed.csv', index=False)
 
 
 ```{python}
-#| label: question-1-columns
+#| label: question2
 #| echo: false
 
 import matplotlib.pyplot as plt
@@ -101,7 +101,7 @@ plt.show()
 
 
 ```{python}
-#| label: question-1-columns
+#| label: question3
 #| echo: false
 
 import matplotlib.pyplot as plt
@@ -140,7 +140,7 @@ plt.show()
 
 
 ```{python}
-#| label: question-1-columns
+#| label: question4
 #| echo: false
 #| warning: false
 
