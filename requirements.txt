@@ -4,3 +4,4 @@ pandas
 numpy
 PyYAML
 scikit-learn
+statsmodels
