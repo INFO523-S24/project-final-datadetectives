@@ -1,5 +1,6 @@
 jupyter
 nbformat
+statsmodels
 pandas
 numpy
 PyYAML
