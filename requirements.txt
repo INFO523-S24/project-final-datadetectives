@@ -3,5 +3,4 @@ nbformat
 pandas
 numpy
 PyYAML
-statsmodels
 scikit-learn
