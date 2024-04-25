@@ -35,6 +35,7 @@ jobs:
       
       - name: Install Missing Packages
         run: |
+          pip install -r requirements.txt
           missing = checklist::install_missing_pkgs(dir = "./", glob = "*.qmd")
         shell: Rscript {0}
 
