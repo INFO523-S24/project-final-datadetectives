@@ -60,7 +60,7 @@ data = pd.read_csv('data/q1_energy_data_cleaned.csv')
 # Calculate the percentage of electricity generated from renewable sources
 data['renewables_percentage'] = (data['renewables_electricity'] / data['electricity_generation']) * 100
 
-# Standardize or normalize the relevant columns (if needed)
+# Standardize or normalize the relevant columns (if needed) 
 # Since the columns are already of type 'double', normalization might be beneficial
 # Here's an example of Min-Max normalization
 # You can choose to apply normalization to specific columns as needed
@@ -286,6 +286,99 @@ print('Multiple Regression Model:')
 print(f'R-squared: {r_squared}')
 print(f'RMSE: {rmse}')
 ```
+
+
+
+# Question 2
+What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
+
+```{python}
+#| label: MAP1
+#| echo: false
+#| warning: false
+
+import pandas as pd
+import plotly.express as px
+import geopandas as gpd
+
+# Load the data
+data = pd.read_csv('data/owid-energy-data.csv')
+
+# Load world shapefile for mapping
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merge world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Ensure data is filtered from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Calculate the share of renewable energy consumption
+world['renewables_share'] = world['renewables_electricity'] / world['electricity_generation']
+
+# Plot the animated map
+fig = px.choropleth(world, 
+                    locations='iso_a3',
+                    color='renewables_share',
+                    hover_name='name',
+                    animation_frame='year',  
+                    range_color=(0, 1),  
+                    projection='natural earth',
+                    color_continuous_scale=px.colors.sequential.Plasma,
+                    title='Share of Renewable Energy Consumption (%)')
+
+fig.show()
+```
+
+
+```{python}
+#| label: MAP2
+#| echo: false
+#| warning: false
+
+import pandas as pd
+import plotly.express as px
+import geopandas as gpd
+
+# Load the data
+data = pd.read_csv('data/owid-energy-data.csv')
+
+# Load world shapefile for mapping
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merge world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Ensure data is filtered from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Calculate the share of renewable energy consumption
+world['renewables_share'] = world['renewables_electricity'] / world['electricity_generation']
+
+# Define color palette
+colorscale = [
+    (0, "purple"),  
+    (0.5, "white"),  
+    (1, "green")  
+]
+
+# Plot the animated map
+fig = px.choropleth(world, 
+                    locations='iso_a3',
+                    color='renewables_share',
+                    hover_name='name',
+                    animation_frame='year',  
+                    range_color=(0, 1),  
+                    projection='natural earth',
+                    color_continuous_scale=colorscale,
+                    title='Share of Renewable Energy Consumption (%)')
+
+fig.show()
+
+
+
+```
+
 
 
 # Repo Organization
