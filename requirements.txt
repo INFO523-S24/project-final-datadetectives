@@ -5,5 +5,5 @@ numpy
 PyYAML
 scikit-learn
 statsmodels
-geopandas
+geopandas==0.8.1
 plotly==5.21.0
