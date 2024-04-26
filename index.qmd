@@ -374,12 +374,83 @@ fig = px.choropleth(world,
                     title='Share of Renewable Energy Consumption (%)')
 
 fig.show()
+```
+
+
+```{python}
+# Create renewable energy dataset as a subset of the data
+wind_data = data[['country', 'year', 'wind_consumption']]
+solar_data = data[['country', 'year', 'solar_consumption']]
+hydro_data = data[['country', 'year', 'hydro_consumption']]
+
+# remove all missing values
+wind_data_clean = wind_data.dropna()
+solar_data_clean = solar_data.dropna()
+hydro_data_clean = hydro_data.dropna()
+
+# Group the data by year and sum the wind consumption for each year across all countries
+grouped_wind_data = wind_data_clean.groupby('year')['wind_consumption'].sum()
+grouped_solar_data = solar_data_clean.groupby('year')['solar_consumption'].sum()
+grouped_hydro_data = hydro_data_clean.groupby('year')['hydro_consumption'].sum()
+
+# Plot each energy type with appropriate labels and colors
+plt.figure(figsize=(12, 10))
+plt.plot(grouped_wind_data.index, grouped_wind_data.values, marker='o', color='skyblue', label='Wind')
+plt.plot(grouped_solar_data.index, grouped_solar_data.values, marker='o', color='goldenrod', label='Solar')
+plt.plot(grouped_hydro_data.index, grouped_hydro_data.values, marker='o', color='seagreen', label='Hydro')
+plt.xlabel('Year')
+plt.ylabel('Energy Consumption (in terawatt-hours)')  
+plt.title('Global Renewable Energy Consumption')  
+plt.grid(True)
+plt.legend()  # Add a legend to differentiate the lines
+
+plt.tight_layout()  # Adjust the plot to ensure everything fits without overlap
+plt.show()
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
 
 
 
 ```
 
+```{python}
 
+```
+
+```{python}
+import matplotlib.dates as mdates
+
+# Create electriciy dataset as a subset of the data
+electricity_data = data[['country', 'year', 'greenhouse_gas_emissions']]
+
+# remove all missing values
+electricity_data_clean = electricity_data.dropna()
+
+# Convert 'year' to datetime for better handling in matplotlib
+electricity_data_clean['year'] = pd.to_datetime(electricity_data_clean['year'], format='%Y')
+
+# Sorting the data
+electricity_data_clean.sort_values('year', inplace = True)
+
+# Trend plot
+plt.figure(figsize=(10, 6))
+plt.fill_between(electricity_data_clean['year'], electricity_data_clean['greenhouse_gas_emissions'], color="skyblue", alpha=0.4)
+plt.plot(electricity_data_clean['year'], electricity_data_clean['greenhouse_gas_emissions'], marker='o', color='skyblue')
+plt.gcf().autofmt_xdate()  # Automatic rotation of the dates
+myFmt = mdates.DateFormatter('%Y')
+plt.gca().xaxis.set_major_formatter(myFmt)
+
+plt.xlabel('Year')
+plt.ylabel('Emissions from Electricity generation (in megatonnes of CO2 equivalents)')
+plt.title('Trend of Global Greenhouse Gas Emissions from Electricity Generation')
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
 
 # Repo Organization
 
