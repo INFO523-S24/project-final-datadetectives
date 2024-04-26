@@ -6,4 +6,4 @@ PyYAML
 scikit-learn
 statsmodels
 geopandas
-plotly
+plotly==5.21.0

@@ -1,0 +1,12 @@
+{
+  "hash": "0a744dae2db11a1c5b170ba3d5afaee7",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Data detective\"\nformat: dashboard\n---\n\n## Row {height=70%}\n\n## Row {height=30%}\n\n### Column {.tabset}\n\n### Column\n\n",
+    "supporting": [
+      "dashboard_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
