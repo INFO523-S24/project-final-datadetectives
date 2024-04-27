@@ -23,8 +23,8 @@ jupyter: python3
 Add project abstract here.
 
 # Question 1
-Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
+Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
 ```{python}
 #| label: question
@@ -76,7 +76,6 @@ data.to_csv('data/q1_energy_data_processed.csv', index=False)
 
 ```
 
-
 ```{python}
 #| label: question2
 #| echo: false
@@ -97,8 +96,6 @@ plt.ylim(0, 90)  # Set y-axis limits
 plt.show()
 
 ```
-
-
 
 ```{python}
 #| label: question3
@@ -136,8 +133,6 @@ plt.tight_layout()
 plt.show()
 
 ```
-
-
 
 ```{python}
 #| label: question4
@@ -287,9 +282,8 @@ print(f'R-squared: {r_squared}')
 print(f'RMSE: {rmse}')
 ```
 
-
-
 # Question 2
+
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
 ```{python}
@@ -329,7 +323,6 @@ fig = px.choropleth(world,
 
 fig.show()
 ```
-
 
 ```{python}
 #| label: MAP2
@@ -375,7 +368,6 @@ fig = px.choropleth(world,
 
 fig.show()
 ```
-
 
 ```{python}
 # Create renewable energy dataset as a subset of the data
@@ -450,6 +442,180 @@ plt.grid(True)
 
 plt.tight_layout()
 plt.show()
+```
+
+Density plots for renewable and non-renewable energy for the continents
+
+Data wrangling
+
+```{python}
+#| label: data_wrang_density
+#| message: false
+#| warning: false
+
+## loading the data set
+import pandas as pd
+energy = pd.read_csv('data/owid-energy-data.csv') 
+
+## performing data wrangling operations on the data set to make it suitable for the analysis
+
+## selecting the necessary columns for this analysis
+energy2 = energy[['year','country','iso_code', 'biofuel_consumption', 'coal_consumption', 'fossil_fuel_consumption', 'gas_consumption', 'hydro_consumption', 'nuclear_consumption', 'oil_consumption', 'other_renewable_consumption', 'renewables_consumption', 'solar_consumption', 'wind_consumption']]
+#energy2.to_csv('/Users/valerie/Desktop/energy2_data.csv', index=False)
+
+### removing the rows with only missing values in it with the exception of the year column
+energy2_cleaned = energy2.dropna(subset = energy2.columns.difference(['year']), how = 'all')
+
+
+### we remove the rows in the country column that are not countries but rather regions or continents
+
+### loading the data set for the country code
+country_codes = pd.read_csv('data/country_codes.csv')
+
+# filtering the energy data set by removing regions which are not countries from the country column in the data set
+
+## first we select the valid country codes
+valid_country_codes = set(country_codes['Alpha-3 code'])
+
+
+## filtering the country column in the data set
+energy_filtered = energy2_cleaned[energy2_cleaned['iso_code'].isin(valid_country_codes)]
+
+
+###removing all rows with NA values except the iso_codes, year and country columns in the data set
+energy_wrangled = energy_filtered.dropna(subset = energy_filtered.columns.difference(['year', 'iso_code', 'country']), how = 'all')
+
+
+### removing the values with na values in the data set
+energy_wrangled = energy_wrangled.fillna(0)
+energy_wrangled.to_csv('/Users/valerie/Desktop/energy_wrangled.csv', index = False)
+
+
+# Select columns to check for 0 values
+columns_to_check = energy_wrangled.columns.difference(['year', 'iso_code', 'country'])
+
+# Filter rows with 0 values in all columns except 'year', 'country', and 'iso_code'
+energy_wrangled = energy_wrangled[(energy_wrangled[columns_to_check] != 0).any(axis = 1)]
+
+### The next step is feature engineering where new columns in the data set are created
+
+## note that there is a column for the renewable energy consumption total
+### creating a column for the total consumption of non-renewable energy
+energy_wrangled['non_renewables_consumption'] = energy_wrangled['coal_consumption'] + energy_wrangled['fossil_fuel_consumption'] + energy_wrangled['gas_consumption'] +  energy_wrangled['nuclear_consumption'] + energy_wrangled['oil_consumption']
+
+### rounding the rows in the newly column to 3 decimal places
+energy_wrangled['non_renewables_consumption'] = energy_wrangled['non_renewables_consumption'].round(3)
+
+### a new column for the total consumption is created 
+energy_wrangled['total_consumption'] = energy_wrangled['non_renewables_consumption'] + energy_wrangled['renewables_consumption']
+
+#### making sure that the total consumption is in two decimal places 
+energy_wrangled['total_consumption'] = energy_wrangled['total_consumption'].round(3)
+
+
+
+
+### the next step is to feature engineer and group the data into continents
+
+### generating a function that will group the countries into their respective continents
+def group_countries_by_continent(iso_code):
+    continents = {
+        'Africa': ['DZA', 'AGO', 'BEN', 'BWA', 'BFA', 'BDI', 'CPV', 'CMR', 'CAF', 'TCD', 'COM', 'COG', 'COD', 'DJI', 'EGY', 'GNQ', 'ERI', 'SWZ', 'ETH', 'GAB', 'GMB', 'GHA', 'GIN', 'GNB', 'CIV', 'KEN', 'LSO', 'LBR', 'LBY', 'MDG', 'MWI', 'MLI', 'MRT', 'MUS', 'MAR', 'MOZ', 'NAM', 'NER', 'NGA', 'RWA', 'STP', 'SEN', 'SYC', 'SLE', 'SOM', 'ZAF', 'SSD', 'SDN', 'TZA', 'TGO', 'TUN', 'UGA', 'ZMB', 'ZWE'],
+        'Asia': ['AFG', 'ARM', 'AZE', 'BHR', 'BGD', 'BTN', 'BRN', 'KHM', 'CHN', 'CYP', 'GEO', 'IND', 'IDN', 'IRN', 'IRQ', 'ISR', 'JPN', 'JOR', 'KAZ', 'KWT', 'KGZ', 'LAO', 'LBN', 'MYS', 'MDV', 'MNG', 'MMR', 'NPL', 'PRK', 'OMN', 'PAK', 'PSE', 'PHL', 'QAT', 'SAU', 'SGP', 'KOR', 'LKA', 'SYR', 'TWN', 'TJK', 'THA', 'TLS', 'TKM', 'ARE', 'UZB', 'VNM', 'YEM', 'TUR', 'THA'],
+        'Europe': ['ALB', 'AND', 'AUT', 'BLR', 'BEL', 'BIH', 'BGR', 'HRV', 'CZE', 'DNK', 'EST', 'FIN', 'FRA', 'DEU', 'GRC', 'HUN', 'ISL', 'IRL', 'ITA', 'XKX', 'LVA', 'LIE', 'LTU', 'LUX', 'MLT', 'MDA', 'MCO', 'MNE', 'NLD', 'MKD', 'NOR', 'POL', 'PRT', 'ROU', 'RUS', 'SMR', 'SRB', 'SVK', 'SVN', 'ESP', 'SWE', 'CHE', 'UKR', 'GBR', 'VAT'],
+        'North America': ['ATG', 'BHS', 'BRB', 'BLZ', 'CAN', 'CRI', 'CUB', 'DMA', 'DOM', 'SLV', 'GRL', 'GRD', 'GTM', 'HTI', 'HND', 'JAM', 'MEX', 'NIC', 'PAN', 'PRI', 'KNA', 'LCA', 'VCT', 'TTO', 'USA'],
+        'South America': ['ARG', 'BOL', 'BRA', 'CHL', 'COL', 'ECU', 'FLK', 'GUF', 'GUY', 'PRY', 'PER', 'SUR', 'URY', 'VEN'],
+        'Antarctica': ['ATA'],
+        'Europe': ['ALB', 'AND', 'AUT', 'BLR', 'BEL', 'BIH', 'BGR', 'HRV', 'CZE', 'DNK', 'EST', 'FIN', 'FRA', 'DEU', 'GRC', 'HUN', 'ISL', 'IRL', 'ITA', 'XKX', 'LVA', 'LIE', 'LTU', 'LUX', 'MLT', 'MDA', 'MCO', 'MNE', 'NLD', 'MKD', 'NOR', 'POL', 'PRT', 'ROU', 'RUS', 'SMR', 'SRB', 'SVK', 'SVN', 'ESP', 'SWE', 'CHE', 'UKR', 'GBR', 'VAT'],
+        'Australia': ['AUS', 'NZL', 'PNG', 'FJI', 'SLB', 'VUT', 'NZL']
+    }
+    
+    for continent, countries in continents.items():
+        if iso_code in countries:
+            return continent
+    
+    return None  # Return None if ISO code not found in any continent
+
+# Apply the function to create the 'continents' column in energy_wrangled DataFrame
+energy_wrangled['continents'] = energy_wrangled['iso_code'].apply(group_countries_by_continent)
+
+### removing hong kong since it is not a country from the data set
+energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
+
+
+```
+
+Visualizing the density plots
+
+```{r}
+#| label: density1
+#| message: false
+#| warning: false
+
+## loading the required packages
+if (!require ('pacman')) install.packages('pacman')
+p_load(
+  tidyverse,
+  here,
+  scales,
+  ggridges
+)
+quest2_density <- read_csv(here('data', 'question 2_density plot.csv'))
+### assigning the colors to the various continents in the data set
+quest2_density$Fill_Color <- ifelse(quest2_density$continents == 'Africa', '#458b74',
+                                    ifelse(quest2_density$continents == 'Asia', '#eb4c42',
+                                           ifelse(quest2_density$continents == 'Europe', '#56a0d3',
+                                                  ifelse(quest2_density$continents == 'North America', '#996515',
+                                                         ifelse(quest2_density$continents == 'South America', '#bf00ff',  # Replaced color name with valid hexadecimal code
+                                                                ifelse(quest2_density$continents == 'Australia', '#eead0e',
+                                                                       'black'))))))  # Default color if none of the conditions match
+
+# Plotting the density plot for the renewables
+
+quest2_density |>
+  ggplot() +
+  geom_density_ridges(aes(x = renewables_consumption, y = continents, fill = Fill_Color),
+                      bandwidth = 100, alpha = 0.7) +
+  theme_minimal() +
+  theme(legend.position = 'none',
+        plot.title.position = 'plot') +
+  labs(
+    x = 'Consumption of Renewable Energy',
+    y = 'Continent',
+    title = 'The Distribution of Renewable Energy Consumption Across the Continents'
+  ) +
+  scale_fill_identity() +
+  scale_x_continuous(
+    labels = comma
+  )
+
+```
+
+The visualization for the non-renewable consumption of energy
+
+```{r}
+#| label: density 2
+#| message: false
+#| warning: false
+
+quest2_density |>
+  ggplot() +
+  geom_density_ridges(aes(x = non_renewables_consumption, y = continents, fill = Fill_Color),
+                      bandwidth = 100, alpha = 0.7) +
+  theme_minimal() +
+  theme(legend.position = 'none',
+        plot.title.position = 'plot') +
+  labs(
+    x = 'Consumption of Renewable Energy',
+    y = 'Continent',
+    title = 'The Distribution of Non-Renewable Energy Consumption Across the Continents'
+    
+  ) +
+  scale_fill_identity() +
+  scale_x_continuous(
+    labels = comma
+  )
+
 ```
 
 # Repo Organization
