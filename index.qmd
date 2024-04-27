@@ -545,22 +545,133 @@ energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 
 ```
 
-Visualizing the density plots
+Visualizing the density plots for renewable consumption
 
 ```{python}
 #| label: density1_redone
-sns.kdeplot(data = energy_wrangled, x = 'renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.5, linewidth = 0.2)
-plt.xlim(right = 1600)
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider, Button
+import seaborn as sns
+
+# Extract unique years from the 'year' column
+years = energy_wrangled['year'].unique()
+
+# Create a figure and axes
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Initialize with the first year
+current_year = years[0]
+
+# Function to update the plot for the selected year
+def update_plot(year):
+    # Filter data for the selected year
+    data_year = energy_wrangled[energy_wrangled['year'] == year]
+    
+    # Clear the previous plot
+    ax.clear()
+    
+    # Plot the KDE plot for the selected year
+    sns.kdeplot(data = data_year, x = 'renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.3, linewidth = 0.2, ax = ax)
+    
+    
+    # Set title
+    ax.set_title(f'Density Plot of Renewables Consumption by Continent for Year {year}')
+    #### Set the x label
+    ax.set_xlabel('Renewable Energy Consumption')
+
+# Create a slider for the years
+slider_ax = plt.axes([0.1, 0.0, 0.65, 0.03], facecolor='lightgoldenrodyellow')
+slider = Slider(slider_ax, 'Year', years[0], years[-1], valinit=current_year, valstep=1)
+
+# Create a button for playing the animation
+button_ax = plt.axes([0.8, 0.02, 0.1, 0.03])
+button = Button(button_ax, 'Play', color='lightblue', hovercolor='skyblue')
+
+# Function to update the plot when the slider value changes
+def update(val):
+    update_plot(int(val))
+
+# Function to handle button click events
+def on_button_click(event):
+    global current_year
+    current_year = slider.val + 1 if slider.val < years[-1] else years[0]
+    slider.set_val(current_year)
+
+# Link the slider and button to their respective update functions
+slider.on_changed(update)
+button.on_clicked(on_button_click)
+
+# Initialize the plot with the first year
+update_plot(current_year)
+
+# Show the plot
 plt.show()
+
 ```
 
 The visualization for the non-renewable consumption of energy
 
 ```{python}
 #| label: density2_redone
-sns.kdeplot(data = energy_wrangled, x = 'non_renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.5, linewidth = 0.2)
-plt.xlim(right = 21000)
+
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider, Button
+import seaborn as sns
+
+# Extract unique years from the 'year' column
+years = energy_wrangled['year'].unique()
+
+# Create a figure and axes
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Initialize with the first year
+current_year = years[0]
+
+# Function to update the plot for the selected year
+def update_plot(year):
+    # Filter data for the selected year
+    data_year = energy_wrangled[energy_wrangled['year'] == year]
+    
+    # Clear the previous plot
+    ax.clear()
+    
+    # Plot the KDE plot for the selected year
+    sns.kdeplot(data = data_year, x = 'non_renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.3, linewidth = 0.2, ax = ax)
+    
+    
+    # Set title
+    ax.set_title(f'Density Plot of Non-Renewables Consumption by Continent for Year {year}')
+    #### Set the x label
+    ax.set_xlabel('Non-Renewable Energy Consumption')
+
+# Create a slider for the years
+slider_ax = plt.axes([0.1, 0.0, 0.65, 0.03], facecolor='lightgoldenrodyellow')
+slider = Slider(slider_ax, 'Year', years[0], years[-1], valinit=current_year, valstep=1)
+
+# Create a button for playing the animation
+button_ax = plt.axes([0.8, 0.02, 0.1, 0.03])
+button = Button(button_ax, 'Play', color='lightblue', hovercolor='skyblue')
+
+# Function to update the plot when the slider value changes
+def update(val):
+    update_plot(int(val))
+
+# Function to handle button click events
+def on_button_click(event):
+    global current_year
+    current_year = slider.val + 1 if slider.val < years[-1] else years[0]
+    slider.set_val(current_year)
+
+# Link the slider and button to their respective update functions
+slider.on_changed(update)
+button.on_clicked(on_button_click)
+
+# Initialize the plot with the first year
+update_plot(current_year)
+
+# Show the plot
 plt.show()
+
 ```
 
 # Repo Organization
