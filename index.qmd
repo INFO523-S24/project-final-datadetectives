@@ -545,22 +545,6 @@ energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 
 ```
 
-```{r}
-#| label: cran_mirror
-#| message: false
-#| warning: false
-
-missing = checklist::install_missing_pkgs(dir = "./", glob = "*.qmd")
-
-# options(repos = c(CRAN = "https://cloud.r-project.org"))
-# 
-# # Install missing packages
-# install.packages("checklist")
-# # Now you can use checklist package
-# library(checklist)
-
-```
-
 Visualizing the density plots
 
 ```{r}
@@ -568,70 +552,84 @@ Visualizing the density plots
 #| message: false
 #| warning: false
 
-## loading the required packages
-if (!require ('pacman')) install.packages('pacman')
-p_load(
-  tidyverse,
-  here,
-  scales,
-  ggridges
-)
-quest2_density <- read_csv(here('data', 'question 2_density plot.csv'))
-### assigning the colors to the various continents in the data set
-quest2_density$Fill_Color <- ifelse(quest2_density$continents == 'Africa', '#458b74',
-                                    ifelse(quest2_density$continents == 'Asia', '#eb4c42',
-                                           ifelse(quest2_density$continents == 'Europe', '#56a0d3',
-                                                  ifelse(quest2_density$continents == 'North America', '#996515',
-                                                         ifelse(quest2_density$continents == 'South America', '#bf00ff',  # Replaced color name with valid hexadecimal code
-                                                                ifelse(quest2_density$continents == 'Australia', '#eead0e',
-                                                                       'black'))))))  # Default color if none of the conditions match
+# ## loading the required packages
+# if (!require ('pacman')) install.packages('pacman')
+# p_load(
+#   tidyverse,
+#   here,
+#   scales,
+#   ggridges
+# )
+# quest2_density <- read_csv(here('data', 'question 2_density plot.csv'))
+# ### assigning the colors to the various continents in the data set
+# quest2_density$Fill_Color <- ifelse(quest2_density$continents == 'Africa', '#458b74',
+#                                     ifelse(quest2_density$continents == 'Asia', '#eb4c42',
+#                                            ifelse(quest2_density$continents == 'Europe', '#56a0d3',
+#                                                   ifelse(quest2_density$continents == 'North America', '#996515',
+#                                                          ifelse(quest2_density$continents == 'South America', '#bf00ff',  # Replaced color name with valid hexadecimal code
+#                                                                 ifelse(quest2_density$continents == 'Australia', '#eead0e',
+#                                                                        'black'))))))  # Default color if none of the conditions match
+# 
+# # Plotting the density plot for the renewables
+# 
+# quest2_density |>
+#   ggplot() +
+#   geom_density_ridges(aes(x = renewables_consumption, y = continents, fill = Fill_Color),
+#                       bandwidth = 100, alpha = 0.7) +
+#   theme_minimal() +
+#   theme(legend.position = 'none',
+#         plot.title.position = 'plot') +
+#   labs(
+#     x = 'Consumption of Renewable Energy',
+#     y = 'Continent',
+#     title = 'The Distribution of Renewable Energy Consumption Across the Continents'
+#   ) +
+#   scale_fill_identity() +
+#   scale_x_continuous(
+#     labels = comma
+#   )
 
-# Plotting the density plot for the renewables
+```
 
-quest2_density |>
-  ggplot() +
-  geom_density_ridges(aes(x = renewables_consumption, y = continents, fill = Fill_Color),
-                      bandwidth = 100, alpha = 0.7) +
-  theme_minimal() +
-  theme(legend.position = 'none',
-        plot.title.position = 'plot') +
-  labs(
-    x = 'Consumption of Renewable Energy',
-    y = 'Continent',
-    title = 'The Distribution of Renewable Energy Consumption Across the Continents'
-  ) +
-  scale_fill_identity() +
-  scale_x_continuous(
-    labels = comma
-  )
-
+```{python}
+#| label: density1_redone
+sns.kdeplot(data = energy_wrangled, x = 'renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.5, linewidth = 0.2)
+plt.xlim(right = 1600)
+plt.show()
 ```
 
 The visualization for the non-renewable consumption of energy
 
-```{r}
-#| label: density 2
-#| message: false
-#| warning: false
+```{# {r}
+# #| label: density 2
+# #| message: false
+# #| warning: false
+# 
+# quest2_density |>
+#   ggplot() +
+#   geom_density_ridges(aes(x = non_renewables_consumption, y = continents, fill = Fill_Color),
+#                       bandwidth = 100, alpha = 0.7) +
+#   theme_minimal() +
+#   theme(legend.position = 'none',
+#         plot.title.position = 'plot') +
+#   labs(
+#     x = 'Consumption of Renewable Energy',
+#     y = 'Continent',
+#     title = 'The Distribution of Non-Renewable Energy Consumption Across the Continents'
+#     
+#   ) +
+#   scale_fill_identity() +
+#   scale_x_continuous(
+#     labels = comma
+#   )
 
-quest2_density |>
-  ggplot() +
-  geom_density_ridges(aes(x = non_renewables_consumption, y = continents, fill = Fill_Color),
-                      bandwidth = 100, alpha = 0.7) +
-  theme_minimal() +
-  theme(legend.position = 'none',
-        plot.title.position = 'plot') +
-  labs(
-    x = 'Consumption of Renewable Energy',
-    y = 'Continent',
-    title = 'The Distribution of Non-Renewable Energy Consumption Across the Continents'
-    
-  ) +
-  scale_fill_identity() +
-  scale_x_continuous(
-    labels = comma
-  )
+```
 
+```{python}
+#| label: density2_redone
+sns.kdeplot(data = energy_wrangled, x = 'non_renewables_consumption', hue = 'continents', multiple = 'stack', alpha = 0.5, linewidth = 0.2)
+plt.xlim(right = 21000)
+plt.show()
 ```
 
 # Repo Organization
