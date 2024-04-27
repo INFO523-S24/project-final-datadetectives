@@ -550,12 +550,14 @@ energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 #| message: false
 #| warning: false
 
-options(repos = c(CRAN = "https://cloud.r-project.org"))
+missing = checklist::install_missing_pkgs(dir = "./", glob = "*.qmd")
 
-# Install missing packages
-install.packages("checklist")
-# Now you can use checklist package
-library(checklist)
+# options(repos = c(CRAN = "https://cloud.r-project.org"))
+# 
+# # Install missing packages
+# install.packages("checklist")
+# # Now you can use checklist package
+# library(checklist)
 
 ```
 
