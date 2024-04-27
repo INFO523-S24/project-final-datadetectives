@@ -654,4 +654,4 @@ The following folders comprise the project repository
 
 -   **about.qmd:** This Quarto Markdown file supplements project documentation by providing additional contextual information, elucidating project purpose, contributor insights, and other pertinent project details.
 
--   **index.qmd:** index.qmd: This serves as the main documentation page for our project. This Quarto Markdown file provides detailed descriptions of our project, including all code and visualization .
+-   **index.qmd:** index.qmd: This serves as the main documentation page for our project. This Quarto Markdown file provides detailed descriptions of our project, including all code and visualization.
