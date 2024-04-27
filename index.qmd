@@ -545,6 +545,20 @@ energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 
 ```
 
+```{r}
+#| label: cran_mirror
+#| message: false
+#| warning: false
+
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+# Install missing packages
+install.packages("checklist")
+# Now you can use checklist package
+library(checklist)
+
+```
+
 Visualizing the density plots
 
 ```{r}
