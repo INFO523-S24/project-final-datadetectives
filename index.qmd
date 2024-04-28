@@ -20,8 +20,7 @@ jupyter: python3
 
 ## Abstract
 
-This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning.
-The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth.
+This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth.
 
 # Question 1
 
@@ -50,9 +49,6 @@ q1_data_cleaned = q1_data.dropna()
 # Save the cleaned dataset to a new CSV file
 q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv', index=False)
 ```
-
-
-
 
 ```{python}
 #| label: question1
@@ -491,7 +487,7 @@ energy_wrangled = energy_filtered.dropna(subset = energy_filtered.columns.differ
 
 ### removing the values with na values in the data set
 energy_wrangled = energy_wrangled.fillna(0)
-energy_wrangled.to_csv('/Users/valerie/Desktop/energy_wrangled.csv', index = False)
+
 
 
 # Select columns to check for 0 values
