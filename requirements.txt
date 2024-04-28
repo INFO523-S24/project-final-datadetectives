@@ -6,5 +6,5 @@ PyYAML
 scikit-learn
 statsmodels
 geopandas == 0.8.1
-plotly == 5.5.0
+plotly == 5.21.0
 seaborn
