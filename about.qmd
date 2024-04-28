@@ -9,6 +9,8 @@ This project was developed by **Data Detectives** For [INFO 523 - Data Mining an
 
 -   Ayesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning
 
+-   Shreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR
+
 -   Alyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.
 
 -   Toluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.
