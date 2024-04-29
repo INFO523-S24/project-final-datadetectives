@@ -1,8 +1,8 @@
 {
-  "hash": "0587680eea2fdbef2e5a1fb1532f16f4",
+  "hash": "5be44fda99e39aabe13d2aa058e0b235",
   "result": {
     "engine": "jupyter",
-    "markdown": "---\ntitle: About\nformat: html\neditor: visual\n---\n\nThis project was developed by **Data Detectives** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\n-   Ayesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning\n\n-   Alyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.\n\n-   Toluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.\n\n-   Valerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence\n\n-   Abhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety\n\n",
+    "markdown": "---\ntitle: About\nformat: html\neditor: visual\n---\n\nThis project was developed by **Data Detectives** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\n-   Ayesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning\n\n-   Shreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR\n\n-   Alyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.\n\n-   Toluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.\n\n-   Valerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence\n\n-   Abhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety\n\n",
     "supporting": [
       "about_files\\figure-html"
     ],
