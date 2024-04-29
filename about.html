@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.540">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -156,6 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This project was developed by <strong>Data Detectives</strong> For <a href="https://datamineaz.org/">INFO 523 - Data Mining and Discovery</a> at the University of Arizona, taught by Dr.&nbsp;Greg Chism. The team is comprised of the following team members.</p>
 <ul>
 <li><p>Ayesha Khatun: First year PhD student, School of Information, Major areas are&nbsp; Natural Language Processing and Machine Learning</p></li>
+<li><p>Shreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR</p></li>
 <li><p>Alyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.</p></li>
 <li><p>Toluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.</p></li>
 <li><p>Valerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence</p></li>
@@ -470,12 +471,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
