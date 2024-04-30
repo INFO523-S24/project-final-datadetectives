@@ -1,9 +1,9 @@
 ---
-title: "Project title"
+title: "Global Energy Trends"
 subtitle: "INFO 523 - Spring 2023 - Project Final"
-author: "Author names"
+author: "Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
 title-slide-attributes:
-  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
+  data-background-image: images/cartoon_globe.jpg
   data-background-size: stretch
   data-background-opacity: "0.7"
   data-slide-number: none
