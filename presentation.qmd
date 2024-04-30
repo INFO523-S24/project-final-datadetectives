@@ -5,10 +5,12 @@ author: "Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
 title-slide-attributes:
   data-background-image: images/cartoon_globe.jpg
   data-background-size: stretch
-  data-background-opacity: "0.7"
+  data-background-opacity: "0.3"
   data-slide-number: none
 format:
   revealjs:
+    transition: slide
+    background-transition: slide
     theme:  ['data/customtheming.scss']
   
 editor: visual
@@ -64,14 +66,13 @@ q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv',
 index = False)
 ```
 
-# Question 1 {.center}
+# Question 1
 
 ---
 
 ### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
-![](images/population.jpg) {.absolute bottom = 0 left = 0 width = 30px} 
-![](images/gdp.png) {.absolute bottom = 0 left = 200 width = 30px} 
-![](images/electricity.png) {.absolute bottom = 0 right = 0 width = 30px}
+
+![](images/electricity.png){left = 350, bottom = 0, width = 30px}
 
 ---
 
@@ -82,7 +83,7 @@ index = False)
 
 -   **`population`** and **`gdp`** are directly linked to energy demand 
 -   **`renewables_electricity` / `electricity_generation`** are used to create a percentage
--   **`primary_energy_consumption`** is critical for analysis
+-   **`primary_energy_consumption`** is the **target variable**
 -   **`year`** is used to perfrom time series analysis
 
 ### Analysis Plan
@@ -102,7 +103,14 @@ index = False)
 
 :::
 
-# Question 2 {.center}
+## Distribution Plot
+
+## Scatterplots
+
+## Time Series Analysis Plot
+
+
+# Question 2
 
 ---
 
@@ -116,10 +124,20 @@ index = False)
 ### Columns
 
 -   **`X`**
+-   **`X`**
+-   **`X`**
 
 ### Analysis Plan
 
+- xxx
+- xxx
+- xxx
+
 ### Visualizations
+
+- xxx
+- xxx
+- xxx
 
 :::
 
