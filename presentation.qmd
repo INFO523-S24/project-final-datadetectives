@@ -11,11 +11,14 @@ format:
   revealjs:
     transition: slide
     background-transition: slide
+    code-tools: true
     theme:  ['data/customtheming.scss']
   
 editor: visual
 jupyter: python3
 execute:
+  warning: false
+  message: false
   echo: false
 ---
 
