@@ -72,7 +72,7 @@ index = False)
 
 ### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-![](images/electricity.png){left = 350, bottom = 0, width = 30px}
+![](images/electricity.png){.absolute bottom = "0px" right= "350px"}
 
 ---
 
@@ -105,10 +105,15 @@ index = False)
 
 ## Distribution Plot
 
+![](images/Q1%20plots/Q1_dist_plot.png){.nostretch fig-align = "center" width = "600px"}
+
 ## Scatterplots
+
+![](images/Q1%20plots/Q1_scatter.png){.nostretch fig-align = "center" width = "600px"}
 
 ## Time Series Analysis Plot
 
+![](images/Q1%20plots/Q1_time_series_plot.png){.nostretch fig-align = "center" width = "600px"}
 
 # Question 2
 
@@ -140,6 +145,18 @@ index = False)
 - xxx
 
 :::
+
+## Plot
+
+![]()
+
+## Plot
+
+![]()
+
+## Plot
+
+![]()
 
 ## References 
 
