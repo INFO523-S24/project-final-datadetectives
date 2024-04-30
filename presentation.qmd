@@ -26,7 +26,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 ```
 
 ```{python}
@@ -65,14 +64,14 @@ q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv',
 index = False)
 ```
 
-# Question 1 
+# Question 1 {.center}
 
 ---
 
 ### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
-![](images/population.jpg) {.absolute bottom = 0 left = 0 width = '50'} 
-![](images/gdp.png) {.absolute bottom = 0 left = 200 width = '50'} 
-![](images/electricity.png) {.absolute bottom = 0 right = 0 width = '50'}
+![](images/population.jpg) {.absolute bottom = 0 left = 0 width = 30px} 
+![](images/gdp.png) {.absolute bottom = 0 left = 200 width = 30px} 
+![](images/electricity.png) {.absolute bottom = 0 right = 0 width = 30px}
 
 ---
 
@@ -83,22 +82,46 @@ index = False)
 
 -   **`population`** and **`gdp`** are directly linked to energy demand 
 -   **`renewables_electricity` / `electricity_generation`** are used to create a percentage
--   **`primary_energy_consumption`** : 
--   **`year`** : to perfrom time series analysis
+-   **`primary_energy_consumption`** is critical for analysis
+-   **`year`** is used to perfrom time series analysis
 
 ### Analysis Plan
 
+- Data cleaning
+- Normalizing the data
+- EDA
+- Descriptive Statistics
+- Correlation Analysis
+- Time Series Analysis
+
 ### Visualizations
+
+- Histogram
+- Scatterplots
+- Time series analysis plot
 
 :::
 
-# Question 2
+# Question 2 {.center}
 
 ---
 
 ## place question here 
 
 ---
+
+## Next steps
+
+::: panel-tabset
+### Columns
+
+-   **`X`**
+
+### Analysis Plan
+
+### Visualizations
+
+:::
 
 ## References 
 
