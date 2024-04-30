@@ -74,7 +74,7 @@ index = False)
 
 Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-<img src="/images/electricity.png" alt = "electricity" class = "center" width="500">
+<img src="/images/electricity.png" alt = "electricity" width="500">
 
 ---
 
@@ -107,21 +107,21 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ## Distribution Plot
 
-<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" class = "center" width="600">
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" width="650">
 
 ## Scatterplots
 
-<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" class = "center" width="600">
+<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" width="600">
 
 ## Time Series Analysis Plot
 
-<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" class = "center" width="600">
+<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" width="600">
 
 # Question 2
 
 ---
 
-## place question here 
+What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
 ---
 
