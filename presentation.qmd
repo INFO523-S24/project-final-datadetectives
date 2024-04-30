@@ -11,7 +11,6 @@ format:
   revealjs:
     transition: slide
     background-transition: slide
-    code-tools: true
     theme:  ['data/customtheming.scss']
   
 editor: visual
@@ -75,7 +74,7 @@ index = False)
 
 ### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-![](images/electricity.png){.absolute bottom = "0px" right= "350px"}
+<img src="/images/electricity.png" alt = "electricity"  width="450">
 
 ---
 
@@ -108,15 +107,15 @@ index = False)
 
 ## Distribution Plot
 
-![](images/Q1%20plots/Q1_dist_plot.png){.nostretch fig-align = "center" width = "600px"}
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" width="500">
 
 ## Scatterplots
 
-![](images/Q1%20plots/Q1_scatter.png){.nostretch fig-align = "center" width = "600px"}
+<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" width="500">
 
 ## Time Series Analysis Plot
 
-![](images/Q1%20plots/Q1_time_series_plot.png){.nostretch fig-align = "center" width = "600px"}
+<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" width="500">
 
 # Question 2
 
@@ -166,4 +165,4 @@ index = False)
 - [Revealjs](https://quarto.org/docs/presentations/revealjs/)
 - [Data](https://ourworldindata.org/energy)
 - [TidyTuesday - GH](https://github.com/owid/energy-data)
-- 
+- [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
