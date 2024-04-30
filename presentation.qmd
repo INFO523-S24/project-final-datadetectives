@@ -24,13 +24,15 @@ execute:
 # Load packages here
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 ```
 
 ```{python}
 #| label: setup
 #| include: false
-#| 
+
 # Set up plot theme and figure resolution
 sns.set_theme(style="whitegrid")
 sns.set_context("notebook", font_scale=1.1)
@@ -42,16 +44,38 @@ plt.rcParams['figure.figsize'] = (6, 6 * 0.618)
 ```
 
 ```{python}
-#| label: load-data
+#| label: load-data Q1 
 #| include: false
-# Load data in Python
-mtcars = sns.load_dataset('mpg').dropna()  # mtcars dataset is similar to the mpg dataset from seaborn
-mtcars['speed'] = mtcars['horsepower'] / mtcars['weight']
 
-penguins = sns.load_dataset('penguins').dropna()
+# Load data for Question 1 in Python
+data = pd.read_csv('data/owid-energy-data.csv')
+
+#columns to keep
+keep = (['year', 'population', 'gdp', 'electricity_generation', 
+      'primary_energy_consumption', 'renewables_electricity'])
+
+#data for q1
+q1_data = data[keep]
+
+# Drop rows with any empty values
+q1_data_cleaned = q1_data.dropna()
+
+# Save the cleaned dataset to a new CSV file
+q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv', 
+index = False)
 ```
 
-# Using Quarto for presentations
+# Question 1 
+
+### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
+
+![](images/population.jpg)
+![](images/gdp.png)
+![](images/electricity.png)
+
+# Question 2
+
+### place question here 
 
 ## Quarto
 
