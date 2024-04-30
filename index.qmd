@@ -120,7 +120,7 @@ fig, axes = plt.subplots(1,
                          figsize=(12, 
                          6)) 
 
-for i, column in enumerate(features):
+for i, column in enumerate(feature_labels):
     if column in ['population', 'gdp']:
         sns.scatterplot(ax = axes[i], 
         x = data[column] / 1e6, 
