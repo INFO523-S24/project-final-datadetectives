@@ -72,9 +72,9 @@ index = False)
 
 ---
 
-### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
+Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-<img src="/images/electricity.png" alt = "electricity"  width="450">
+<img src="/images/electricity.png" alt = "electricity" class = "center" width="500">
 
 ---
 
@@ -107,15 +107,15 @@ index = False)
 
 ## Distribution Plot
 
-<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" width="500">
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" class = "center" width="600">
 
 ## Scatterplots
 
-<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" width="500">
+<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" class = "center" width="600">
 
 ## Time Series Analysis Plot
 
-<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" width="500">
+<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" class = "center" width="600">
 
 # Question 2
 
@@ -166,3 +166,4 @@ index = False)
 - [Data](https://ourworldindata.org/energy)
 - [TidyTuesday - GH](https://github.com/owid/energy-data)
 - [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
+- [HTML tips](https://www.w3schools.com/howto/howto_css_image_center.asp)
