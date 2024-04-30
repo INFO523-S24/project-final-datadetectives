@@ -294,9 +294,71 @@ fig.show()
 
 ```
 
+```{python}
+#| label: Bar plot
+#| echo: false
+#| warning: false
+
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Droping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+world = world.dropna(subset=columns_to_drop_na)
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean',
+    'greenhouse_gas_emissions': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculate renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Setting year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Calculate mean renewable energy share and greenhouse gas emissions by country
+country_stats = world.groupby('name').agg({
+    'renewable_energy_share': 'mean',
+    'greenhouse_gas_emissions': 'mean'
+}).reset_index()
+
+# Identify top countries with the highest mean renewable energy share
+top_renewable_countries = country_stats.nlargest(10, 'renewable_energy_share')
+
+# Identify top countries with the lowest mean greenhouse gas emissions
+top_low_emissions_countries = country_stats.nsmallest(10, 'greenhouse_gas_emissions')
+
+# Create bar plots
+fig_renewable = px.bar(top_renewable_countries, x='name', y='renewable_energy_share', labels={'renewable_energy_share': 'Mean Renewable Energy Share (%)'}, title='Top 10 Countries with Highest Mean Renewable Energy Share')
+fig_emissions = px.bar(top_low_emissions_countries, x='name', y='greenhouse_gas_emissions', labels={'greenhouse_gas_emissions': 'Mean Greenhouse Gas Emissions'}, title='Top 10 Countries with Lowest Mean Greenhouse Gas Emissions')
+
+# Show plots
+fig_renewable.show()
+fig_emissions.show()
+
+
+
+```
+
+
 
 
 ```{python}
+
 # Create renewable energy dataset as a subset of the data
 wind_data = data[['country', 'year', 'wind_consumption']]
 solar_data = data[['country', 'year', 'solar_consumption']]
