@@ -73,6 +73,11 @@ index = False)
 ![](images/gdp.png)
 ![](images/electricity.png)
 
+### Analysis Plan
+
+::: panel-tabset
+
+
 # Question 2
 
 ### place question here 
@@ -156,9 +161,6 @@ plt.show()
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
-```{python}
-penguins.head().to_html()
-```
 
 ## Images
 
