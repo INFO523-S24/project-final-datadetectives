@@ -67,21 +67,22 @@ index = False)
 
 # Question 1 
 
+
 ### Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-![](images/population.jpg)
-![](images/gdp.png)
-![](images/electricity.png)
+![](images/population.jpg) {width = 100px}
+![](images/gdp.png) {width = 100px}
+![](images/electricity.png) {width = 100px}
 
 ## Analysis Plan
 
 ::: panel-tabset
 ### Columns
 
--   **FTHG** and **FTAG** are crucial indicators
--   **FTR** serves as the target variable
--   **HS**, **AS**, **HST**,and **AST** reflect attacking performance.
--   **HF**, **AF**, **HY**, **AY**, **HR**,and **AR** all indicate team discipline and aggresion
+-   **`population`** and **`gdp`** : directly linked to energy demand 
+-   **`renewables_electricity` / `electricity_generation`** : created percentage
+-   **`primary_energy_consumption`** : 
+-   **`year`** : to perfrom time series analysis
 
 ### Analysis Plan
 

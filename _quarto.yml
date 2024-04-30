@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "<img src='/images/data_detective_logo.png' alt='DD_Logo' style='width: 4em; height: 5em; border-radius: 30%;'> <b>Global Energy Trends</b>"
+  title: "<img src='/images/data_detective_logo.png' alt='DD_Logo' style='width: 4em; height: 4em; border-radius: 30%;'> <b>Global Energy Trends</b>"
   navbar:
     right:
       - icon: github
