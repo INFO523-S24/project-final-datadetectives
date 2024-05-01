@@ -237,6 +237,7 @@ Indicating possible relationships between these variables and a country's power 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
 ```{python}
+
 #| label: MAP1
 #| echo: false
 #| warning: false
@@ -280,7 +281,7 @@ fig = px.choropleth(world,
                     locations='iso_a3',
                     color='renewable_energy_share',
                     hover_name='name',
-                    hover_data={'iso_a3': False, 'year': True, 'renewable_energy_share': True},
+                    hover_data={'iso_a3': False, 'renewable_energy_share': True},
                     animation_frame=world['year'].dt.year,  
                     range_color=(0, 7),  
                     projection='natural earth',
@@ -396,6 +397,8 @@ fig.show()
 
 
 ```
+
+
 ```{python}
 
 
