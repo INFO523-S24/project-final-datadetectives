@@ -148,9 +148,7 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 :::
 
-## Interactive Dashboard
-
-### [:male-detective:](https://info523-s24.github.io/project-final-datadetectives/dashboard.html)
+# [Interactive Dashboard Time!](https://info523-s24.github.io/project-final-datadetectives/dashboard.html)
 
 ## References 
 
