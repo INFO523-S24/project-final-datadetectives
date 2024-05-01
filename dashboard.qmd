@@ -2,14 +2,6 @@
 title: "Data detective - Interactive Dashboard"
 format: dashboard
 ---
-    
-## Row {height=70%}
-
-```{python}
-
-```
-
-## Row {height=30%}
 
 ### Column {.tabset}
 
@@ -170,7 +162,102 @@ fig.frames = frames
 fig.show()
 ```
 
-### Column
+### Column {.tabset}
 
+#### Renewable
 ```{python}
+#| label: density1_redone
+#| output: false
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.animation import FuncAnimation
+from matplotlib.ticker import FuncFormatter
+from IPython.display import HTML
+
+# Extract unique years from the 'year' column
+years = energy_wrangled['year'].unique()
+
+# Function to format the x-axis labels with commas
+def format_with_commas(value, pos):
+    return "{:,}".format(int(value))
+
+# Function to update the plot for the selected year
+def update_plot(year):
+    # Filter data for the selected year
+    data_year = energy_wrangled[energy_wrangled['year'] == year]
+
+    # Clear the previous plot
+    plt.clf()
+
+    # Plot the KDE plot for the selected year
+    sns.kdeplot(data=data_year, x='renewables_consumption', hue='continents', multiple='stack', alpha=0.3, linewidth=0.2)
+
+    # Set title
+    plt.title(f'Density Plot of Renewables Consumption by Continent for Year {year}')
+    # Set the x label
+    plt.xlabel('Renewable Energy Consumption')
+    # Set the x-axis tick formatter
+    plt.gca().xaxis.set_major_formatter(FuncFormatter(format_with_commas))
+
+# Initialize the plot with the first year
+update_plot(years[0])
+
+# Create a FuncAnimation object without controls (slider, play/pause button)
+ani2 = FuncAnimation(plt.gcf(), update_plot, frames=years, interval=1000)
+
+# Convert the animation to HTML format
+html_animation2 = ani2.to_jshtml()
+
+HTML(html_animation2)
 ```
+
+#### Non-renewables
+```{python}
+#| label: density2_redone
+#| output: false
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.animation import FuncAnimation
+from matplotlib.ticker import FuncFormatter
+
+# Extract unique years from the 'year' column
+years = energy_wrangled['year'].unique()
+
+# Function to format the x-axis labels with commas
+def format_with_commas(value, pos):
+    return "{:,}".format(int(value))
+
+# Function to update the plot for the selected year
+def update_plot(year):
+    # Filter data for the selected year
+    data_year = energy_wrangled[energy_wrangled['year'] == year]
+
+    # Clear the previous plot
+    plt.clf()
+
+    # Plot the KDE plot for the selected year
+    sns.kdeplot(data=data_year, x='non_renewables_consumption', hue='continents', multiple='stack', alpha=0.3, linewidth=0.2)
+
+    # Set title
+    plt.title(f'Density Plot of Non-Renewables Consumption by Continent for Year {year}')
+    # Set the x label
+    plt.xlabel('Non-Renewable Energy Consumption')
+    # Set the x-axis tick formatter
+    plt.gca().xaxis.set_major_formatter(FuncFormatter(format_with_commas))
+
+# Initialize the plot with the first year
+update_plot(years[0])
+
+# Create a FuncAnimation object without controls (slider, play/pause button)
+ani = FuncAnimation(plt.gcf(), update_plot, frames=years, interval=1000)
+
+# Convert the animation to HTML format
+html_animation = ani.to_jshtml()
+
+# Display the HTML animation
+HTML(html_animation)
+```
+
