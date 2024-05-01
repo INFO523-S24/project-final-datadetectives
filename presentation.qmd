@@ -131,7 +131,7 @@ What countries or regions are engaging in sustainable energy practices and relyi
 ### Columns
 
 -   **`X`**
--   **`X`**
+-   **`X`** 
 -   **`X`**
 
 ### Analysis Plan
@@ -148,17 +148,9 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 :::
 
-## Plot
+## Interactive Dashboard
 
-
-
-## Plot
-
-
-
-## Plot
-
-
+### [:male-detective:](https://info523-s24.github.io/project-final-datadetectives/dashboard.html)
 
 ## References 
 

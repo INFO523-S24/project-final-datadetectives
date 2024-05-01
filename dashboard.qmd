@@ -7,6 +7,13 @@ format: dashboard
 
 ```{python}
 
+```
+
+## Row {height=30%}
+
+### Column {.tabset}
+
+```{python}
 #| label: MAP1
 #| echo: false
 #| warning: false
@@ -61,20 +68,106 @@ fig = px.choropleth(world,
 fig.update_xaxes(dtick='M1', tickformat='%Y')
 
 fig.show()
-
-
-```
-
-## Row {height=30%}
-
-### Column {.tabset}
-
-```{python}
-#| title: Chart 2
 ```
 
 ```{python}
-#| title: Chart 3
+#| label: BAR5
+#| echo: false
+#| warning: false
+import pandas as pd
+import geopandas as gpd
+import plotly.graph_objects as go
+
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Droping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculate renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Setting year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Calculate mean renewable energy share by country
+country_stats = world.groupby('name')['renewable_energy_share'].mean().reset_index()
+
+# Identify top 10 countries with the highest mean renewable energy share
+top_10_countries = country_stats.nlargest(10, 'renewable_energy_share')['name'].tolist()
+
+# Filter data for top 10 countries
+top_10_world = world[world['name'].isin(top_10_countries)]
+
+# Sort data by renewable energy share
+top_10_world = top_10_world.sort_values(by='renewable_energy_share', ascending=False)
+
+# Plotting the animated bar plot with Plotly Graph Objects
+fig = go.Figure()
+
+# Create bar traces for each year
+for year, df in top_10_world.groupby('year'):
+    fig.add_trace(go.Bar(
+        x=df['name'],
+        y=df['renewable_energy_share'],
+        name=str(year.year),
+        hoverinfo='x+y',
+        hovertemplate='<b>%{x}</b><br>Renewable Energy Share: %{y:.2f}%<extra></extra>',
+        visible=False if year != top_10_world['year'].min() else True,
+        marker=dict(color='rgba(50, 171, 96, 0.6)')
+    ))
+
+# Add play button and slider
+fig.update_layout(
+    updatemenus=[dict(
+        type="buttons",
+        buttons=[dict(label="Play",
+                      method="animate",
+                      args=[None, {"frame": {"duration": 500, "redraw": True}, "fromcurrent": True, "transition": {"duration": 300, "easing": "quadratic-in-out"}}]
+        )]
+    )],
+    title='Top 10 Countries with Highest Mean Renewable Energy Share',
+    xaxis=dict(title='Country'),
+    yaxis=dict(title='Mean Renewable Energy Share (%)', range=[0, 20])
+)
+
+# Set initial layout
+fig.update_layout(showlegend=True,)
+
+# Create frames for each year
+frames = [go.Frame(
+    data=[go.Bar(
+        x=df['name'],
+        y=df['renewable_energy_share'],
+        name=str(year.year),
+        hoverinfo='x+y',
+        hovertemplate='<b>%{x}</b><br>Renewable Energy Share: %{y:.2f}%<extra></extra>',
+        marker=dict(color='rgba(50, 171, 96, 0.6)')
+    )],
+    name=str(year.year)
+) for year, df in top_10_world.groupby('year')]
+
+# Add frames to the figure
+fig.frames = frames
+
+fig.show()
 ```
 
 ### Column
