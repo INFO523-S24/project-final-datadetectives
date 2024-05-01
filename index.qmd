@@ -499,41 +499,7 @@ import matplotlib.pyplot as plt
 
 ```
 
-```{python}
 
-```
-
-```{python}
-import matplotlib.dates as mdates
-
-# Create electriciy dataset as a subset of the data
-electricity_data = data[['country', 'year', 'greenhouse_gas_emissions']]
-
-# remove all missing values
-electricity_data_clean = electricity_data.dropna()
-
-# Convert 'year' to datetime for better handling in matplotlib
-electricity_data_clean['year'] = pd.to_datetime(electricity_data_clean['year'], format='%Y')
-
-# Sorting the data
-electricity_data_clean.sort_values('year', inplace = True)
-
-# Trend plot
-plt.figure(figsize=(10, 6))
-plt.fill_between(electricity_data_clean['year'], electricity_data_clean['greenhouse_gas_emissions'], color="skyblue", alpha=0.4)
-plt.plot(electricity_data_clean['year'], electricity_data_clean['greenhouse_gas_emissions'], marker='o', color='skyblue')
-plt.gcf().autofmt_xdate()  # Automatic rotation of the dates
-myFmt = mdates.DateFormatter('%Y')
-plt.gca().xaxis.set_major_formatter(myFmt)
-
-plt.xlabel('Year')
-plt.ylabel('Emissions from Electricity generation (in megatonnes of CO2 equivalents)')
-plt.title('Trend of Global Greenhouse Gas Emissions from Electricity Generation')
-plt.grid(True)
-
-plt.tight_layout()
-plt.show()
-```
 
 ### Data Wrangling for Density Plot
 
