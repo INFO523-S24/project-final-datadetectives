@@ -258,6 +258,8 @@ energy_wrangled['continents'] = energy_wrangled['iso_code'].apply(group_countrie
 ### removing hong kong since it is not a country from the data set
 energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 
+```
+
 ### Column {.tabset}
 
 #### Renewable
