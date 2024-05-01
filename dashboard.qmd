@@ -1,11 +1,68 @@
 ---
-title: "Data detective"
+title: "Data detective - Interactive Dashboard"
 format: dashboard
 ---
     
 ## Row {height=70%}
 
 ```{python}
+
+#| label: MAP1
+#| echo: false
+#| warning: false
+import pandas as pd
+import geopandas as gpd
+import plotly.express as px
+
+# Loading data
+data = pd.read_csv("data/owid-energy-data.csv")
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Droping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculate renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Setting year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Plotting the animated map
+fig = px.choropleth(world, 
+                    locations='iso_a3',
+                    color='renewable_energy_share',
+                    hover_name='name',
+                    hover_data={'iso_a3': False, 'renewable_energy_share': True},
+                    animation_frame=world['year'].dt.year,  
+                    range_color=(0, 7),  
+                    projection='natural earth',
+                    color_continuous_scale=px.colors.sequential.Plasma,
+                    title='Share of Renewable Energy Consumption (%)')
+
+# Setting x-axis format to display only the year
+fig.update_xaxes(dtick='M1', tickformat='%Y')
+
+fig.show()
+
+
 ```
 
 ## Row {height=30%}
