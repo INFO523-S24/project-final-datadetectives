@@ -148,7 +148,11 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 :::
 
-# [Interactive Dashboard Time!](https://info523-s24.github.io/project-final-datadetectives/dashboard.html)
+## Plot
+
+## Plot
+
+## Plot
 
 ## References 
 
@@ -156,3 +160,5 @@ What countries or regions are engaging in sustainable energy practices and relyi
 - [Data](https://ourworldindata.org/energy)
 - [TidyTuesday - GH](https://github.com/owid/energy-data)
 - [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
+
+## Thank you! 
