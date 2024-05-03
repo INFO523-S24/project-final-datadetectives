@@ -775,7 +775,7 @@ The results from this analysis reveals that the increase in renewable energy con
 
 ## Cluster
 
-Here, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices.
+Here, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices. Clusters are created here to categorize these regional boundaries into clusters based on how much renewable and non-renewable energy they consume.
 
 The required packages for the cluster analysis are imported.
 
@@ -978,6 +978,8 @@ print("Silhouette Score:", rounded_score)
 ```
 
 The silhouette score of 0.96 implies that the clustering here is a good one. it means that the data points are well clustered and are closer to the center of their respective clusters compared to other clusters. This indicates that there is a clear separation between clusters with good cohesion within clusters.
+
+This analysis is concluded with the creation of two clusters that determine whether a regional boundary is consuming more of renewable energy or more of non-renewable energy. When a regional boundary is assigned the cluster 1 it means they are consuming more of renewable energy than non-renewable energy and when a regional boundary is assigned the cluster -1, it means they are consuming more of non-renewable energy compred to renewable energy. From the DBSCAN visualization, it is observed that more regional boundaries are currently consuming more of non-renewable than renewable energy.
 
 # Repo Organization
 
