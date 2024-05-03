@@ -21,9 +21,8 @@ jupyter: python3
 ## Abstract
 
 This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth.
----
 
-# Question 1
+Question 1
 
 Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
@@ -101,8 +100,10 @@ plt.ylim(0,
 plt.show()
 
 ```
-- A right-skewed distribution is shown by the distribution's shape, which shows that most values are low and that frequency drops off quickly as values rise. In order to train the model to identify patterns and to validate its correctness by contrasting the projected values with the actual data shown in the plot, the historical data represented in this histogram would be crucial.
----
+
+-   
+
+    A right-skewed distribution is shown by the distribution's shape, which shows that most values are low and that frequency drops off quickly as values rise. In order to train the model to identify patterns and to validate its correctness by contrasting the projected values with the actual data shown in the plot, the historical data represented in this histogram would be crucial.
 
 ```{python}
 #| label: question3
@@ -160,8 +161,10 @@ plt.show()
 
 
 ```
-- The relationship between primary energy consumption and the GDP, population size, and the proportion of power derived from renewable sources is represented graphically in this plot. If persistent patterns are seen over time, one might utilize the spread and trends of the scatter points to deduce that there might be correlations between these parameters and a country's power consumption, which could be used to anticipate energy usage.
----
+
+-   
+
+    The relationship between primary energy consumption and the GDP, population size, and the proportion of power derived from renewable sources is represented graphically in this plot. If persistent patterns are seen over time, one might utilize the spread and trends of the scatter points to deduce that there might be correlations between these parameters and a country's power consumption, which could be used to anticipate energy usage.
 
 ```{python}
 #| label: question4
@@ -231,8 +234,10 @@ plt.tight_layout(pad = 5.0,
           h_pad = 1.0)
 plt.show()
 ```
-- Indicating possible relationships between these variables and a country's power consumption, the graphic shows how the population, GDP, percentage of renewable electricity, and energy consumption have changed over time. For example, if GDP and population growth are accompanied by an upward trend in the primary energy consumption curve, this could indicate that energy demand is driven by economic activity and demographic growth. On the other hand, while a rise in the proportion of power derived from renewable sources may not necessarily translate into reduced energy usage, it may suggest a change in the composition of energy sources. Time periods in which the growth of energy consumption slows down or deviates from trends in GDP and population may be linked to advancements in energy efficiency or structural adjustments in the economy. examining these patterns and connections across time. In order to forecast future power consumption patterns, data demonstrating a high historical association between these variables can be used to develop a predictive model through the analysis of such trends and relationships across time.
----
+
+-   
+
+    Indicating possible relationships between these variables and a country's power consumption, the graphic shows how the population, GDP, percentage of renewable electricity, and energy consumption have changed over time. For example, if GDP and population growth are accompanied by an upward trend in the primary energy consumption curve, this could indicate that energy demand is driven by economic activity and demographic growth. On the other hand, while a rise in the proportion of power derived from renewable sources may not necessarily translate into reduced energy usage, it may suggest a change in the composition of energy sources. Time periods in which the growth of energy consumption slows down or deviates from trends in GDP and population may be linked to advancements in energy efficiency or structural adjustments in the economy. examining these patterns and connections across time. In order to forecast future power consumption patterns, data demonstrating a high historical association between these variables can be used to develop a predictive model through the analysis of such trends and relationships across time.
 
 # Question 2
 
@@ -296,9 +301,10 @@ fig.update_xaxes(dtick='M1', tickformat='%Y')
 fig.show()
 
 ```
-- The animated map shows the share of renewable energy consumption over two decades, from 2000 to 2022. Playing the animation reveals the countries that have the highest share of renewable consumption, such as China, India, Brazil, and the United States. Over the two decades, there hasn’t been much change in countries that practice renewable energy
----
 
+-   
+
+    The animated map shows the share of renewable energy consumption over two decades, from 2000 to 2022. Playing the animation reveals the countries that have the highest share of renewable consumption, such as China, India, Brazil, and the United States. Over the two decades, there hasn’t been much change in countries that practice renewable energy
 
 ```{python}
 
@@ -422,7 +428,6 @@ fig.show()
 ```
 
 -The second plot explores the country with the highest mean renewable energy share. China has the highest renewable share of 22.75%, followed by India with 14.23%, Brazil and the United States with 9% and 3.28% respectively. Over the decade, the top countries remain the same, with only the top country’s percentage share increasing, indicating that they are working more towards renewable practices
----
 
 ```{python}
 
@@ -497,9 +502,9 @@ fig_high_emissions.show()
 
 ```
 
-- This plot shows the mean greenhouse gas emissions over two decades. Here, China, despite practicing more renewable energy consumption and share, emits the most greenhouse gases. The same trend is seen for the United States and India
----
+-   
 
+    This plot shows the mean greenhouse gas emissions over two decades. Here, China, despite practicing more renewable energy consumption and share, emits the most greenhouse gases. The same trend is seen for the United States and India
 
 ```{python}
 
@@ -540,8 +545,6 @@ import matplotlib.pyplot as plt
 
 
 ```
-
-
 
 ### Data Wrangling for Density Plot
 
@@ -611,7 +614,7 @@ energy_wrangled['total_consumption'] = energy_wrangled['non_renewables_consumpti
 #### making sure that the total consumption is in two decimal places 
 energy_wrangled['total_consumption'] = energy_wrangled['total_consumption'].round(3)
 
-
+energy_wrangled['consumption_ratio'] = (energy_wrangled['non_renewables_consumption'] / energy_wrangled['renewables_consumption']).round(3)
 
 
 ### the next step is to feature engineer and group the data into continents
@@ -643,6 +646,8 @@ energy_wrangled = energy_wrangled[energy_wrangled['iso_code'] != 'HKG']
 
 
 ```
+
+Ratio of Non-renewable Energy Consumption to Renewable Energy Consumption Plot
 
 ### Renewables Consumption Plot
 
@@ -701,6 +706,8 @@ html_animation2 = ani2.to_jshtml()
 
 HTML(html_animation2)
 ```
+
+The density plots for the consumption of renewable energy represent the distribution of renewable energy consumption over the years from 1965 to the year 2022. It shows the distribution of energy consumption for the seven continents and how the distribution of this type of energy consumption changes with time. From the y axis, we notice that not much of renewable is consumed especially when we view this in relation to the density plot on non renewable energy consumption which shows large amounts of energy being consumed. The world has recently been focusing on a shift from the consumption of more of non-renewable energy to renewable energy as a form of sustainable energy practices. From the animated density plot, we can see that over the years more and more of renewable energy is being consumed as the times progress. The major continents that have increased their consumption of renewable energy over time are Europe, Asia, and North America. The 3 continents have increased their consumption of non-renewable energy over time compared to the others. Consumption of renewable energy increased from 100s to 1000s of energy being consumed on a yearly basis. This is a good sign that most of these continents are beginning to exploit the use of renewable energy as recommended under sustainable energy practices.
 
 ### Non-renewables consumption Plot
 
@@ -761,6 +768,216 @@ HTML(html_animation)
 #| label: html_animation
 HTML(html_animation)
 ```
+
+There has also been an increase in the consumption of non-renewable energy consumption across the continents over the years. This could be attributed to an increase in population and others. Under sustainable energy practices, it is recommended to have more reliance on renewable than non-renewable energy sources such that the future generation will also have some of the non-renewable energy sources left to use. The continents that saw major increases in the use of non-renewable energy over the years are the very same continents that were the major consumers of renewable energy, that is Europe, Asia, and North America.
+
+The results from this analysis reveals that the increase in renewable energy consumption is also matched by an increase in the consumption of non renewable energy. Overtime, we hope that the consumption of renewable energy will surpass that of renewable energy as recommended under sustainable energy practices.
+
+## Cluster
+
+Here, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices.
+
+The required packages for the cluster analysis are imported.
+
+```{python}
+#| label: setup
+
+
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import calinski_harabasz_score
+from sklearn.cluster import KMeans
+from scipy.cluster import hierarchy
+from scipy.spatial.distance import pdist
+from sklearn.neighbors import NearestNeighbors
+from sklearn.cluster import DBSCAN
+from sklearn.mixture import GaussianMixture
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import adjusted_rand_score
+from matplotlib.patches import Ellipse
+```
+
+The data is dealt with appropriately for missing values and duplicates. The numerical features in the data set are also standardized and categorical variables encoded. For this analysis.
+
+```{python}
+#| label: wrangling_clusters
+
+energy = pd.read_csv('data/owid-energy-data.csv')
+energy_copy = energy.copy()
+
+### to handle missing values we first replace all NA values with the number 0
+energy_copy = energy_copy.fillna(0)
+### now we remove all rows with only 0 values with the exception of the major rows
+# Select columns to check for 0 values
+columns_to_check = energy_copy.columns.difference(['year', 'iso_code', 'country', 'population', 'gdp'])
+# Filter rows with 0 values in all columns except 'year', 'country', and 'iso_code'
+energy_copy = energy_copy[(energy_copy[columns_to_check] != 0).any(axis = 1)]
+# Check for duplicate rows
+duplicate_rows = energy[energy.duplicated()]
+#### creating new columns in the energy data set
+### creating new columns in the energy dataset for the renewable and non renewable energy consumption
+### creating a column for the total consumption of non-renewable energy
+energy_copy['non_renewables_consumption'] = energy_copy['coal_consumption'] + energy_copy['fossil_fuel_consumption'] + energy_copy['gas_consumption'] +  energy_copy['nuclear_consumption'] + energy_copy['oil_consumption']
+### a new column for the total consumption is created 
+energy_copy['total_consumption'] = energy_copy['non_renewables_consumption'] + energy_copy['renewables_consumption']
+##### selecting the numerical columns in the data set
+numerical_cols = energy.select_dtypes(include = 'number').columns
+### scaling the numerical columns in the data set
+minmax_scaler = MinMaxScaler()
+energy_copy[numerical_cols] = minmax_scaler.fit_transform(energy_copy[numerical_cols])
+# Encoding the categorical variables
+categorical_columns = energy_copy.select_dtypes(include = ['object', 'category']).columns.tolist()
+energy_copy[categorical_columns] = energy_copy[categorical_columns].astype(str)
+# looping through the categorical variables to encode them
+label_encoders = {columns: LabelEncoder() for columns in categorical_columns}
+for columns in categorical_columns:
+    energy_copy[columns] = label_encoders[columns].fit_transform(energy_copy[columns])
+### selecting the relevant columns for this analysis.
+energy_features = energy_copy[['year','country','iso_code',  'renewables_consumption', 'non_renewables_consumption', 'total_consumption', 'carbon_intensity_elec','electricity_generation']]
+
+
+
+```
+
+#### Selecting the Features for clustering
+
+The necessary features required for developing the clusters in the data set for renewable and non-renewable energy consumption are selected.
+
+The data set is scaled and encoded for the purpose of this analysis to ensure accurate results are derived from this analysis. 
+
+A K means clustering is performed on the features of the data set to divide the data set into clusters. This method of clustering is chosen because of simplicity, speed and efficiency.
+
+The Calinksi-Harabasz method is used here to determine the optimal number of clusters for this analysis.
+
+```{python}
+#| label: calinski
+#| warning: false
+
+#### determining the optimal number of clusters using the Calinki-Harabsz method
+### initializing the lists to store scores 
+
+ch_scores = []
+for n_clusters in range(2, 11):
+    kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+    kmeans.fit(energy_features)
+    ch_score = calinski_harabasz_score(energy_features, kmeans.labels_)
+    ch_scores.append(ch_score)
+```
+
+A visualization is provided below to help determine what the appropriate number of clusters should be based on this method.
+
+```{python}
+#| label: calinski_plot
+
+### creating the plot for the ch scores 
+plt.figure(figsize = (10, 6))
+sns.lineplot(x = range(2, 11), y = ch_scores, marker = 'o')
+plt.xlabel('Number of Clusters (K)')
+plt.ylabel('Calinski-Harabasz Score')
+plt.title('Calinski-Harabasz Score vs. Number of Clusters')
+plt.grid(True)
+plt.show()
+```
+
+From this visualization 8 is the optimal number of clusters for this analysis. Using the optimal number of clusters from the Calinski method of cluster selection, the k means clustering is performed.
+
+```{python}
+#| label: k_means
+
+#### using the k means algorithm
+k = 8
+### performing the k means clustering
+kmeans = KMeans(n_clusters = k, random_state = 12)
+clusters = kmeans.fit_predict(energy_features)
+energy_copy['cluster'] = clusters
+```
+
+The results from the k means cluster algorithm are visualized below.
+
+```{python}
+#| label: k_means_plot
+
+plt.figure(figsize=(10, 8))
+sns.scatterplot(x='renewables_consumption', y = 'non_renewables_consumption', hue = 'cluster', data = energy_copy, palette = 'Set1', legend = 'full')
+plt.xlabel('Renewables Consumption')
+plt.ylabel('Non-Renewables Consumption')
+plt.title('K-Means Clustering of Energy Consumption')
+plt.legend(title='Cluster')
+plt.show()
+```
+
+A DBSCAN is performed to ensure refine the clusters and ensure that these clusters are well separated by outliers.
+
+This is done by first calculating the distance to the nearest neighbour and then visualizing the plot.
+
+```{python}
+#| label: nearest_neighbor
+
+
+## calculating the average distance to the closest neighbor
+#### the number of neighbors taken into consideration for this analysis is 5
+neighbors = NearestNeighbors(n_neighbors = 5)
+neighbors_fit = neighbors.fit(energy_features)
+distances, indices = neighbors_fit.kneighbors(energy_features)
+avg_distances = np.mean(distances[:, 1:], axis = 1)
+
+## sorting the average distances
+avg_distances_sorted = np.sort(avg_distances)
+```
+
+The minimum number of samples are chosen and the DBSCAN is performed to determine if there are any outliers in the clusters and the clusters are refined for more accuracy.
+
+```{python}
+#| label: minval&eps
+### setting the min_samples parameter 
+eps = 17500
+### the number 5 is selected for this analysis
+min_samples = 5
+### initializing the dbscan with the chosen parameters
+dbscan = DBSCAN(eps = eps, min_samples = min_samples)
+## fitting the DBSCAN to the features of the energy data set
+clusters = dbscan.fit_predict(energy_features)
+```
+
+```{python}
+#| label: dbscan_viz
+
+### visualizing the clusters
+plt.figure(figsize = (10, 6))
+sns.scatterplot(x = 'renewables_consumption', y='non_renewables_consumption', hue = clusters, data = energy_copy, palette = 'viridis')
+plt.title('DBSCAN Clustering')
+plt.xlabel('Renewables Consumption')
+plt.ylabel('Non-Renewables Consumption')
+plt.legend(title = 'Clusters')
+plt.show()
+```
+
+The number of outliers are also calculated after the dscan is performed.
+
+```{python}
+#| label: outliers
+
+outliers = energy_features[clusters == -1]  
+num_outliers = len(outliers)
+print(f'Number of outliers detected: {num_outliers}')
+```
+
+The silhouette scores for this analysis is found as a form of cluster validation of this analysis.
+
+```{python}
+#| label: sillhouette_score
+
+silhouette_avg = silhouette_score(energy_features, clusters)
+rounded_score = round(silhouette_avg, 2)
+print("Silhouette Score:", rounded_score)
+```
+
+The silhouette score of 0.96 implies that the clustering here is a good one. it means that the data points are well clustered and are closer to the center of their respective clusters compared to other clusters. This indicates that there is a clear separation between clusters with good cohesion within clusters.
 
 # Repo Organization
 
