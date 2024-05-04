@@ -18,7 +18,7 @@
     "href": "proposal.html#dataset",
     "title": "Global Energy Trends",
     "section": "Dataset",
-    "text": "Dataset\nThe Our World Our Data Energy dataset.\n\n\nCode\nimport pandas as pd\n\n# Load the dataset\ndata = pd.read_csv('data/owid-energy-data.csv')\n\n# Display a few rows of the dataset\ndata.loc[7392:7397]\n\n\n\n\n\n\n\n\n\ncountry\nyear\niso_code\npopulation\ngdp\nbiofuel_cons_change_pct\nbiofuel_cons_change_twh\nbiofuel_cons_per_capita\nbiofuel_consumption\nbiofuel_elec_per_capita\n...\nsolar_share_elec\nsolar_share_energy\nwind_cons_change_pct\nwind_cons_change_twh\nwind_consumption\nwind_elec_per_capita\nwind_electricity\nwind_energy_per_capita\nwind_share_elec\nwind_share_energy\n\n\n\n\n7392\nFrance\n1996\nFRA\n57623180.0\n1.774692e+12\n49.895\n0.867\n45.209\n2.605\n33.493\n...\n0.000\n0.000\n57.613\n0.008\n0.022\n0.174\n0.01\n0.381\n0.002\n0.001\n\n\n7393\nFrance\n1997\nFRA\n57839364.0\n1.817073e+12\n30.777\n0.802\n58.902\n3.407\n37.345\n...\n0.000\n0.000\n49.773\n0.011\n0.033\n0.173\n0.01\n0.569\n0.002\n0.001\n\n\n7394\nFrance\n1998\nFRA\n58080344.0\n1.882613e+12\n-14.134\n-0.482\n50.367\n2.925\n36.673\n...\n0.000\n0.000\n75.202\n0.025\n0.058\n0.344\n0.02\n0.993\n0.004\n0.002\n\n\n7395\nFrance\n1999\nFRA\n58352208.0\n1.950262e+12\n4.348\n0.127\n52.312\n3.053\n40.101\n...\n0.000\n0.000\n89.486\n0.052\n0.109\n0.685\n0.04\n1.872\n0.008\n0.004\n\n\n7396\nFrance\n2000\nFRA\n58665456.0\n2.031950e+12\n19.585\n0.598\n62.223\n3.650\n42.274\n...\n0.002\n0.000\n29.925\n0.033\n0.142\n0.852\n0.05\n2.419\n0.009\n0.005\n\n\n7397\nFrance\n2001\nFRA\n59014776.0\n2.077915e+12\n1.373\n0.050\n62.705\n3.700\n48.293\n...\n0.002\n0.001\n172.917\n0.243\n0.385\n2.203\n0.13\n6.521\n0.024\n0.012\n\n\n\n\n6 rows × 129 columns\n\n\n\n\nDataset Description:\nThis dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic product, and population information across the years from 1900s to 2022.\n\n\nDimensions\n\n\n(21590, 129)\n\n\nThis owid-energy-data.csv dataset contains 21,590 rows and 129 columns.\n\n\nProvenance\nThis information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: LINK\nGithub Link\n\n\nCode book Insights:\nThis data-set has about 129 columns but we will work on few columns, that is why we only provided the important data descriptions. Code book Insights is shown below:\n\n\n\n\n\n\n\n\n\nIndex\nColumn Name\nData Type\nDescriptions\n\n\n\n\n\ncountry\nstring\nGeographic location\n\n\n\n\n\nyear\ninteger\nYear of observation.\n\n\n\n\n\npopulation\ninterger\nPopulation by country, available from 10,000 BCE to 2100, based on data and estimates from different sources. Data range does go from 10,000 BCE to 2100 but is pulled and presented based on the year (year of observation) variable.\n\n\n\n\n\ngdp\ndouble\nGross domestic product (GDP) measured in international-$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population.\n\n\n\n\n\nrenewables_electricity\ndouble\nElectricity generation from renewables (terawatt-hours)\n\n\n\n\n\nelectricity_generation\ndouble\nTotal electricity generation (terawatt-hours)\n\n\n\n\n\nfossil_electricity\ndouble\nElectricity generation from fossil fuels (terawatt-hours)"
+    "text": "Dataset\nThe Our World Our Data Energy dataset.\n\n\nCode\nimport pandas as pd\n\n# Load the dataset\ndata = pd.read_csv('data/owid-energy-data.csv')\n\n# Display a few rows of the dataset\ndata.loc[7392:7397]\n\n\n\n\n\n\n\n\n\n\ncountry\nyear\niso_code\npopulation\ngdp\nbiofuel_cons_change_pct\nbiofuel_cons_change_twh\nbiofuel_cons_per_capita\nbiofuel_consumption\nbiofuel_elec_per_capita\n...\nsolar_share_elec\nsolar_share_energy\nwind_cons_change_pct\nwind_cons_change_twh\nwind_consumption\nwind_elec_per_capita\nwind_electricity\nwind_energy_per_capita\nwind_share_elec\nwind_share_energy\n\n\n\n\n7392\nFrance\n1996\nFRA\n57623180.0\n1.774692e+12\n49.895\n0.867\n45.209\n2.605\n33.493\n...\n0.000\n0.000\n57.613\n0.008\n0.022\n0.174\n0.01\n0.381\n0.002\n0.001\n\n\n7393\nFrance\n1997\nFRA\n57839364.0\n1.817073e+12\n30.777\n0.802\n58.902\n3.407\n37.345\n...\n0.000\n0.000\n49.773\n0.011\n0.033\n0.173\n0.01\n0.569\n0.002\n0.001\n\n\n7394\nFrance\n1998\nFRA\n58080344.0\n1.882613e+12\n-14.134\n-0.482\n50.367\n2.925\n36.673\n...\n0.000\n0.000\n75.202\n0.025\n0.058\n0.344\n0.02\n0.993\n0.004\n0.002\n\n\n7395\nFrance\n1999\nFRA\n58352208.0\n1.950262e+12\n4.348\n0.127\n52.312\n3.053\n40.101\n...\n0.000\n0.000\n89.486\n0.052\n0.109\n0.685\n0.04\n1.872\n0.008\n0.004\n\n\n7396\nFrance\n2000\nFRA\n58665456.0\n2.031950e+12\n19.585\n0.598\n62.223\n3.650\n42.274\n...\n0.002\n0.000\n29.925\n0.033\n0.142\n0.852\n0.05\n2.419\n0.009\n0.005\n\n\n7397\nFrance\n2001\nFRA\n59014776.0\n2.077915e+12\n1.373\n0.050\n62.705\n3.700\n48.293\n...\n0.002\n0.001\n172.917\n0.243\n0.385\n2.203\n0.13\n6.521\n0.024\n0.012\n\n\n\n\n6 rows × 129 columns\n\n\n\n\n\nDataset Description:\nThis dataset provides information on energy consumption for various regions around the world as well as information on energy consumption, gross domestic product, and population information across the years from 1900s to 2022.\n\n\nDimensions\n\n\n(21590, 129)\n\n\nThis owid-energy-data.csv dataset contains 21,590 rows and 129 columns.\n\n\nProvenance\nThis information is created by Our World in Data (OWID), a renowned institution acknowledged for its meticulous, evidence-based study on global matters. The dataset might integrate data from several worldwide sources, such as government agencies, research institutes, and industry publications, to offer a comprehensive perspective on global energy patterns. The data source link is attached here: LINK\nGithub Link\n\n\nCode book Insights:\nThis data-set has about 129 columns but we will work on few columns, that is why we only provided the important data descriptions. Code book Insights is shown below:\n\n\n\n\n\n\n\n\n\nIndex\nColumn Name\nData Type\nDescriptions\n\n\n\n\n\ncountry\nstring\nGeographic location\n\n\n\n\n\nyear\ninteger\nYear of observation.\n\n\n\n\n\npopulation\ninterger\nPopulation by country, available from 10,000 BCE to 2100, based on data and estimates from different sources. Data range does go from 10,000 BCE to 2100 but is pulled and presented based on the year (year of observation) variable.\n\n\n\n\n\ngdp\ndouble\nGross domestic product (GDP) measured in international-$ using 2011 prices to adjust for price changes over time (inflation) and price differences between countries. Calculated by multiplying GDP per capita with population.\n\n\n\n\n\nrenewables_electricity\ndouble\nElectricity generation from renewables (terawatt-hours)\n\n\n\n\n\nelectricity_generation\ndouble\nTotal electricity generation (terawatt-hours)\n\n\n\n\n\nfossil_electricity\ndouble\nElectricity generation from fossil fuels (terawatt-hours)"
   },
   {
     "objectID": "proposal.html#why-this-dataset",
@@ -67,14 +67,21 @@
     "href": "index.html#cluster",
     "title": "Global Energy Trends",
     "section": "Cluster",
-    "text": "Cluster\nHere, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices. Clusters are created here to categorize these regional boundaries into clusters based on how much renewable and non-renewable energy they consume.\nThe required packages for the cluster analysis are imported.\nThe data is dealt with appropriately for missing values and duplicates. The numerical features in the data set are also standardized and categorical variables encoded. For this analysis.\n\nSelecting the Features for clustering\nThe necessary features required for developing the clusters in the data set for renewable and non-renewable energy consumption are selected.\nThe data set is scaled and encoded for the purpose of this analysis to ensure accurate results are derived from this analysis. \nA K means clustering is performed on the features of the data set to divide the data set into clusters. This method of clustering is chosen because of simplicity, speed and efficiency.\nThe Calinksi-Harabasz method is used here to determine the optimal number of clusters for this analysis.\nA visualization is provided below to help determine what the appropriate number of clusters should be based on this method.\n\n\n\n\n\n\n\n\n\nFrom this visualization 8 is the optimal number of clusters for this analysis. Using the optimal number of clusters from the Calinski method of cluster selection, the k means clustering is performed.\nThe results from the k means cluster algorithm are visualized below.\n\n\n\n\n\n\n\n\n\nA DBSCAN is performed to ensure refine the clusters and ensure that these clusters are well separated by outliers.\nThis is done by first calculating the distance to the nearest neighbour and then visualizing the plot.\nThe minimum number of samples are chosen and the DBSCAN is performed to determine if there are any outliers in the clusters and the clusters are refined for more accuracy.\n\n\n\n\n\n\n\n\n\nThe number of outliers are also calculated after the dscan is performed.\n\n\nNumber of outliers detected: 1\n\n\nThe silhouette scores for this analysis is found as a form of cluster validation of this analysis.\n\n\nSilhouette Score: 0.96\n\n\nThe silhouette score of 0.96 implies that the clustering here is a good one. it means that the data points are well clustered and are closer to the center of their respective clusters compared to other clusters. This indicates that there is a clear separation between clusters with good cohesion within clusters.\nThis analysis is concluded with the creation of two clusters that determine whether a regional boundary is consuming more of renewable energy or more of non-renewable energy. When a regional boundary is assigned the cluster 1 it means they are consuming more of renewable energy than non-renewable energy and when a regional boundary is assigned the cluster -1, it means they are consuming more of non-renewable energy compred to renewable energy. From the DBSCAN visualization, it is observed that more regional boundaries are currently consuming more of non-renewable than renewable energy. The number 0 in the visualization is used to represent the outlier."
+    "text": "Cluster\nHere, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices. Clusters are created here to categorize these regional boundaries into clusters based on how much renewable and non-renewable energy they consume.\nThe required packages for the cluster analysis are imported.\nThe data is dealt with appropriately for missing values and duplicates. The numerical features in the data set are also standardized and categorical variables encoded. For this analysis.\n\nSelecting the Features for clustering\nThe necessary features required for developing the clusters in the data set for renewable and non-renewable energy consumption are selected.\nThe data set is scaled and encoded for the purpose of this analysis to ensure accurate results are derived from this analysis. \nA K means clustering is performed on the features of the data set to divide the data set into clusters. This method of clustering is chosen because of simplicity, speed and efficiency.\nThe Calinksi-Harabasz method is used here to determine the optimal number of clusters for this analysis.\nA visualization is provided below to help determine what the appropriate number of clusters should be based on this method.\n\n\n\n\n\n\n\n\n\nFrom this visualization 8 is the optimal number of clusters for this analysis. Using the optimal number of clusters from the Calinski method of cluster selection, the k means clustering is performed.\nThe results from the k means cluster algorithm are visualized below.\n\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nA DBSCAN is performed to ensure refine the clusters and ensure that these clusters are well separated by outliers.\nThis is done by first calculating the distance to the nearest neighbour and then visualizing the plot.\nThe minimum number of samples are chosen and the DBSCAN is performed to determine if there are any outliers in the clusters and the clusters are refined for more accuracy.\n\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nThe number of outliers are also calculated after the dscan is performed.\n\n\nNumber of outliers detected: 1\n\n\nThe silhouette scores for this analysis is found as a form of cluster validation of this analysis.\n\n\nSilhouette Score: 0.96\n\n\nThe silhouette score of 0.96 implies that the clustering here is a good one. it means that the data points are well clustered and are closer to the center of their respective clusters compared to other clusters. This indicates that there is a clear separation between clusters with good cohesion within clusters.\nThis analysis is concluded with the creation of two clusters that determine whether a regional boundary is consuming more of renewable energy or more of non-renewable energy. When a regional boundary is assigned the cluster 1 it means they are consuming more of renewable energy than non-renewable energy and when a regional boundary is assigned the cluster -1, it means they are consuming more of non-renewable energy compred to renewable energy. From the DBSCAN visualization, it is observed that more regional boundaries are currently consuming more of non-renewable than renewable energy. The number 0 in the visualization is used to represent the outlier."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by Data Detectives For INFO 523 - Data Mining and Discovery at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nAyesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning\nShreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR\nAlyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.\nToluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.\nValerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence\nAbhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety"
   },
   {
     "objectID": "presentation.html#next-steps",
     "href": "presentation.html#next-steps",
     "title": "Global Energy Trends",
     "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\npopulation and gdp are directly linked to energy demand\nrenewables_electricity / electricity_generation are used to create a percentage\nprimary_energy_consumption is the target variable\nyear is used to perfrom time series analysis\n\n\n\n\nData cleaning\nNormalizing the data\nEDA\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\nHistogram\nScatterplots\nTime series analysis plot"
+    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\n\npopulation and gdp are directly linked to energy demand\n\n\n\n\nrenewables_electricity / electricity_generation are used to create a percentage\n\n\n\n\nprimary_energy_consumption is the target variable\n\n\n\n\nyear is used to perfrom time series analysis\n\n\n\n\n\nData cleaning\nNormalizing the data\nEDA\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\n\nHistogram\n\n\n\n\nScatterplots\n\n\n\n\nTime series analysis plot"
   },
   {
     "objectID": "presentation.html#distribution-plot",
@@ -102,28 +109,49 @@
     "href": "presentation.html#next-steps-1",
     "title": "Global Energy Trends",
     "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\nX\nX\nX\n\n\n\n\nxxx\nxxx\nxxx\n\n\n\n\nxxx\nxxx\nxxx"
+    "text": "Next steps\n\nColumnsAnalysis Plan\n\n\n\n\nFor insights into trends in renewable energy share and practices: Solar_consumption, Wind_consumption, Hydro_consumption, Other_renewable_consumption, Renewable_energy_share, Greenhouse_gas_emissions, Renewables_electricity, Electricity_generation, and Year.\n\n\n\n\nFor clustering analysis: Country, Year, Population, GDP, and all energy-related columns.\n\n\n\n\n\n\nWe utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.\n\n\n\n\nA line plot was used to display trends in global energy consumption.\n\n\n\n\nA density plot illustrated renewable energy consumption by continent.\n\n\n\n\nClustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns."
   },
   {
-    "objectID": "presentation.html#plot",
-    "href": "presentation.html#plot",
+    "objectID": "presentation.html#map",
+    "href": "presentation.html#map",
     "title": "Global Energy Trends",
-    "section": "Plot",
-    "text": "Plot"
+    "section": "MAP",
+    "text": "MAP"
   },
   {
-    "objectID": "presentation.html#plot-1",
-    "href": "presentation.html#plot-1",
+    "objectID": "presentation.html#barplot",
+    "href": "presentation.html#barplot",
     "title": "Global Energy Trends",
-    "section": "Plot",
-    "text": "Plot"
+    "section": "Barplot",
+    "text": "Barplot\n\nPlot1Plot2"
   },
   {
-    "objectID": "presentation.html#plot-2",
-    "href": "presentation.html#plot-2",
+    "objectID": "presentation.html#line-plot",
+    "href": "presentation.html#line-plot",
     "title": "Global Energy Trends",
-    "section": "Plot",
-    "text": "Plot"
+    "section": "Line plot",
+    "text": "Line plot"
+  },
+  {
+    "objectID": "presentation.html#density-plot",
+    "href": "presentation.html#density-plot",
+    "title": "Global Energy Trends",
+    "section": "Density plot",
+    "text": "Density plot"
+  },
+  {
+    "objectID": "presentation.html#clustering-plots-k--means-dbscan",
+    "href": "presentation.html#clustering-plots-k--means-dbscan",
+    "title": "Global Energy Trends",
+    "section": "Clustering Plots (K- means, DBSCAN)",
+    "text": "Clustering Plots (K- means, DBSCAN)\n\nK- meansDBSCAN"
+  },
+  {
+    "objectID": "presentation.html#conclusion",
+    "href": "presentation.html#conclusion",
+    "title": "Global Energy Trends",
+    "section": "Conclusion",
+    "text": "Conclusion"
   },
   {
     "objectID": "presentation.html#references",
@@ -138,12 +166,5 @@
     "title": "Global Energy Trends",
     "section": "Thank you!",
     "text": "Thank you!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This project was developed by Data Detectives For INFO 523 - Data Mining and Discovery at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nAyesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning\nShreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR\nAlyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.\nToluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.\nValerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence\nAbhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety"
   }
 ]
