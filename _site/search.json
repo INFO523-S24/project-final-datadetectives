@@ -53,14 +53,21 @@
     "href": "index.html",
     "title": "Global Energy Trends",
     "section": "",
-    "text": "This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth."
+    "text": "This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth.\nQuestion 1\nIs it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?\n\n\n\n\n\n\n\n\n\n\nA right-skewed distribution is shown by the distribution’s shape, which shows that most values are low and that frequency drops off quickly as values rise. In order to train the model to identify patterns and to validate its correctness by contrasting the projected values with the actual data shown in the plot, the historical data represented in this histogram would be crucial.\n\n\n\n\n\n\n\n\n\n\n\nThe relationship between primary energy consumption and the GDP, population size, and the proportion of power derived from renewable sources is represented graphically in this plot. If persistent patterns are seen over time, one might utilize the spread and trends of the scatter points to deduce that there might be correlations between these parameters and a country’s power consumption, which could be used to anticipate energy usage.\n\n\n\n\n\n\n\n\n\n\n\nIndicating possible relationships between these variables and a country’s power consumption, the graphic shows how the population, GDP, percentage of renewable electricity, and energy consumption have changed over time. For example, if GDP and population growth are accompanied by an upward trend in the primary energy consumption curve, this could indicate that energy demand is driven by economic activity and demographic growth. On the other hand, while a rise in the proportion of power derived from renewable sources may not necessarily translate into reduced energy usage, it may suggest a change in the composition of energy sources. Time periods in which the growth of energy consumption slows down or deviates from trends in GDP and population may be linked to advancements in energy efficiency or structural adjustments in the economy. examining these patterns and connections across time. In order to forecast future power consumption patterns, data demonstrating a high historical association between these variables can be used to develop a predictive model through the analysis of such trends and relationships across time."
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
     "title": "Global Energy Trends",
     "section": "",
-    "text": "This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth."
+    "text": "This project utilizes the comprehensive energy dataset from Our World in Data, spanning from 1900 to 2022, to examine the global energy consumption trends regarding economic growth, population dynamics, and the adoption of sustainable energy practices. The primary goal of the project is to design a predictive dashboard that models a nation’s energy consumption based on essential factors such as population size, GDP, and the proportion of electricity derived from renewable sources. The analysis will utilize a range of statistical and machine learning techniques, including time series decomposition, linear regression for key predictors, and regression analysis. We will evaluate the performance of these regression models using R-squared and Root Mean Squared Error (RMSE) metrics to gauge their accuracy and explanatory power. This evaluation is essential for enhancing predictive accuracy and reliability in energy policy formulation and planning. The project will analyze trends in the use of renewable energy at the regional and national levels, with a certain emphasis on emphasizing countries that lead the way in sustainable energy practices and those making progress toward lower greenhouse gas emissions. This analysis will provide crucial insights for industry and researchers dedicated to promoting energy sustainability and promoting economic growth.\nQuestion 1\nIs it possible to predict a nation’s power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?\n\n\n\n\n\n\n\n\n\n\nA right-skewed distribution is shown by the distribution’s shape, which shows that most values are low and that frequency drops off quickly as values rise. In order to train the model to identify patterns and to validate its correctness by contrasting the projected values with the actual data shown in the plot, the historical data represented in this histogram would be crucial.\n\n\n\n\n\n\n\n\n\n\n\nThe relationship between primary energy consumption and the GDP, population size, and the proportion of power derived from renewable sources is represented graphically in this plot. If persistent patterns are seen over time, one might utilize the spread and trends of the scatter points to deduce that there might be correlations between these parameters and a country’s power consumption, which could be used to anticipate energy usage.\n\n\n\n\n\n\n\n\n\n\n\nIndicating possible relationships between these variables and a country’s power consumption, the graphic shows how the population, GDP, percentage of renewable electricity, and energy consumption have changed over time. For example, if GDP and population growth are accompanied by an upward trend in the primary energy consumption curve, this could indicate that energy demand is driven by economic activity and demographic growth. On the other hand, while a rise in the proportion of power derived from renewable sources may not necessarily translate into reduced energy usage, it may suggest a change in the composition of energy sources. Time periods in which the growth of energy consumption slows down or deviates from trends in GDP and population may be linked to advancements in energy efficiency or structural adjustments in the economy. examining these patterns and connections across time. In order to forecast future power consumption patterns, data demonstrating a high historical association between these variables can be used to develop a predictive model through the analysis of such trends and relationships across time."
+  },
+  {
+    "objectID": "index.html#cluster",
+    "href": "index.html#cluster",
+    "title": "Global Energy Trends",
+    "section": "Cluster",
+    "text": "Cluster\nHere, the patterns in the data are identified to help form clusters in the data based on the consumption of renewable and non-renewable energy. The goal here. is to predict which class a country or regional boundary may belong to in relation to their of renewable and non-renewable energy to determine which of these countries and or regional boundaries are taking their energy consumption more in the direction of renewable energy consumption as is required by the sustainable energy practices. Clusters are created here to categorize these regional boundaries into clusters based on how much renewable and non-renewable energy they consume.\nThe required packages for the cluster analysis are imported.\nThe data is dealt with appropriately for missing values and duplicates. The numerical features in the data set are also standardized and categorical variables encoded. For this analysis.\n\nSelecting the Features for clustering\nThe necessary features required for developing the clusters in the data set for renewable and non-renewable energy consumption are selected.\nThe data set is scaled and encoded for the purpose of this analysis to ensure accurate results are derived from this analysis. \nA K means clustering is performed on the features of the data set to divide the data set into clusters. This method of clustering is chosen because of simplicity, speed and efficiency.\nThe Calinksi-Harabasz method is used here to determine the optimal number of clusters for this analysis.\nA visualization is provided below to help determine what the appropriate number of clusters should be based on this method.\n\n\n\n\n\n\n\n\n\nFrom this visualization 8 is the optimal number of clusters for this analysis. Using the optimal number of clusters from the Calinski method of cluster selection, the k means clustering is performed.\nThe results from the k means cluster algorithm are visualized below.\n\n\n\n\n\n\n\n\n\nA DBSCAN is performed to ensure refine the clusters and ensure that these clusters are well separated by outliers.\nThis is done by first calculating the distance to the nearest neighbour and then visualizing the plot.\nThe minimum number of samples are chosen and the DBSCAN is performed to determine if there are any outliers in the clusters and the clusters are refined for more accuracy.\n\n\n\n\n\n\n\n\n\nThe number of outliers are also calculated after the dscan is performed.\n\n\nNumber of outliers detected: 1\n\n\nThe silhouette scores for this analysis is found as a form of cluster validation of this analysis.\n\n\nSilhouette Score: 0.96\n\n\nThe silhouette score of 0.96 implies that the clustering here is a good one. it means that the data points are well clustered and are closer to the center of their respective clusters compared to other clusters. This indicates that there is a clear separation between clusters with good cohesion within clusters.\nThis analysis is concluded with the creation of two clusters that determine whether a regional boundary is consuming more of renewable energy or more of non-renewable energy. When a regional boundary is assigned the cluster 1 it means they are consuming more of renewable energy than non-renewable energy and when a regional boundary is assigned the cluster -1, it means they are consuming more of non-renewable energy compred to renewable energy. From the DBSCAN visualization, it is observed that more regional boundaries are currently consuming more of non-renewable than renewable energy. The number 0 in the visualization is used to represent the outlier."
   },
   {
     "objectID": "about.html",
@@ -74,7 +81,7 @@
     "href": "presentation.html#next-steps",
     "title": "Global Energy Trends",
     "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\npopulation and gdp are directly linked to energy demand\nrenewables_electricity / electricity_generation are used to create a percentage\nprimary_energy_consumption is the target variable\nyear is used to perfrom time series analysis\n\n\n\n\nData cleaning\nNormalizing the data\nEDA\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\nHistogram\nScatterplots\nTime series analysis plot"
+    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\n\npopulation and gdp are directly linked to energy demand\n\n\n\n\nrenewables_electricity / electricity_generation are used to create a percentage\n\n\n\n\nprimary_energy_consumption is the target variable\n\n\n\n\nyear is used to perfrom time series analysis\n\n\n\n\n\nData cleaning\nNormalizing the data\nEDA\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\n\nHistogram\n\n\n\n\nScatterplots\n\n\n\n\nTime series analysis plot"
   },
   {
     "objectID": "presentation.html#distribution-plot",
@@ -102,7 +109,49 @@
     "href": "presentation.html#next-steps-1",
     "title": "Global Energy Trends",
     "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\nX\nX\nX\n\n\n\n\nxxx\nxxx\nxxx\n\n\n\n\nxxx\nxxx\nxxx"
+    "text": "Next steps\n\nColumnsAnalysis Plan\n\n\n\n\nFor insights into trends in renewable energy share and practices: Solar_consumption, Wind_consumption, Hydro_consumption, Other_renewable_consumption, Renewable_energy_share, Greenhouse_gas_emissions, Renewables_electricity, Electricity_generation, and Year.\n\n\n\n\nFor clustering analysis: Country, Year, Population, GDP, and all energy-related columns.\n\n\n\n\n\n\nWe utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.\n\n\n\n\nA line plot was used to display trends in global energy consumption.\n\n\n\n\nA density plot illustrated renewable energy consumption by continent.\n\n\n\n\nClustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns."
+  },
+  {
+    "objectID": "presentation.html#map",
+    "href": "presentation.html#map",
+    "title": "Global Energy Trends",
+    "section": "MAP",
+    "text": "MAP"
+  },
+  {
+    "objectID": "presentation.html#barplot",
+    "href": "presentation.html#barplot",
+    "title": "Global Energy Trends",
+    "section": "Barplot",
+    "text": "Barplot\n\nPlot1Plot2"
+  },
+  {
+    "objectID": "presentation.html#line-plot",
+    "href": "presentation.html#line-plot",
+    "title": "Global Energy Trends",
+    "section": "Line plot",
+    "text": "Line plot"
+  },
+  {
+    "objectID": "presentation.html#density-plot",
+    "href": "presentation.html#density-plot",
+    "title": "Global Energy Trends",
+    "section": "Density plot",
+    "text": "Density plot"
+  },
+  {
+    "objectID": "presentation.html#clustering-plots-k--means-dbscan",
+    "href": "presentation.html#clustering-plots-k--means-dbscan",
+    "title": "Global Energy Trends",
+    "section": "Clustering Plots (K- means, DBSCAN)",
+    "text": "Clustering Plots (K- means, DBSCAN)\n\nK- meansDBSCAN"
+  },
+  {
+    "objectID": "presentation.html#conclusion",
+    "href": "presentation.html#conclusion",
+    "title": "Global Energy Trends",
+    "section": "Conclusion",
+    "text": "Conclusion"
   },
   {
     "objectID": "presentation.html#references",
@@ -110,5 +159,12 @@
     "title": "Global Energy Trends",
     "section": "References",
     "text": "References\n\nRevealjs\nData\nTidyTuesday - GH\nImage formatting"
+  },
+  {
+    "objectID": "presentation.html#thank-you",
+    "href": "presentation.html#thank-you",
+    "title": "Global Energy Trends",
+    "section": "Thank you!",
+    "text": "Thank you!"
   }
 ]
