@@ -43,7 +43,7 @@ sns.set_context("notebook", font_scale=1.1)
 import matplotlib.pyplot as plt
 plt.rcParams['figure.dpi'] = 300
 plt.rcParams['savefig.dpi'] = 300
-plt.rcParams['figure.figsize'] = (6, 6 * 0.618)
+plt.rcParams['figure.figsize'] = (5.7, 5.7 * 0.618)
 ```
 
 ```{python}
@@ -83,11 +83,21 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: panel-tabset
 ### Columns
 
+::: {.fragment .fade-in}
 -   **`population`** and **`gdp`** are directly linked to energy demand 
--   **`renewables_electricity` / `electricity_generation`** are used to create a percentage
--   **`primary_energy_consumption`** is the **target variable**
--   **`year`** is used to perfrom time series analysis
+:::
 
+::: {.fragment .fade-in}
+-   **`renewables_electricity` / `electricity_generation`** are used to create a percentage
+:::
+
+::: {.fragment .fade-in}
+-   **`primary_energy_consumption`** is the **target variable**
+:::
+
+::: {.fragment .fade-in}
+-   **`year`** is used to perfrom time series analysis
+:::
 ### Analysis Plan
 
 - Data cleaning
@@ -99,9 +109,19 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ### Visualizations
 
+::: {.fragment .fade-in}
 - Histogram
+::: 
+   
+::: {.fragment .fade-in}
 - Scatterplots
+::: 
+ 
+::: {.fragment .fade-in}
 - Time series analysis plot
+::: 
+  
+
 
 :::
 
@@ -130,29 +150,338 @@ What countries or regions are engaging in sustainable energy practices and relyi
 ::: panel-tabset
 ### Columns
 
--   **`X`**
--   **`X`** 
--   **`X`**
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- For insights into trends in renewable energy share and practices: **`Solar_consumption`**, **`Wind_consumption`**, **`Hydro_consumption`**, **`Other_renewable_consumption`**, **`Renewable_energy_share`**, **`Greenhouse_gas_emissions`**, **`Renewables_electricity`**, **`Electricity_generation`**, and **`Year`**.
+::::
+
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- For clustering analysis: **`Country`**, **`Year`**, **`Population`**, **`GDP`**, and all energy-related columns.
+::::
+
+
 
 ### Analysis Plan
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- We utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.
+::::
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- A line plot was used to display trends in global energy consumption.
+::::
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- A density plot illustrated renewable energy consumption by continent.
+:::
+:::: {.fragment .fade-in style="font-size: 0.96em"}
+- Clustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns.
+::::
 
-- xxx
-- xxx
-- xxx
 
-### Visualizations
 
-- xxx
-- xxx
-- xxx
+
 
 :::
 
-## Plot
 
-## Plot
 
-## Plot
+## MAP
+
+```{python, figsize=[8, 12.944]}
+
+#| label: MAP1
+#| echo: false
+#| warning: false
+import pandas as pd
+import geopandas as gpd
+import plotly.express as px
+
+# Loading data
+data = pd.read_csv("data/owid-energy-data.csv")
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Droping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculate renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Setting year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Plotting the animated map
+fig = px.choropleth(world, 
+                    locations='iso_a3',
+                    color='renewable_energy_share',
+                    hover_name='name',
+                    hover_data={'iso_a3': False, 'renewable_energy_share': True},
+                    animation_frame=world['year'].dt.year,  
+                    range_color=(0, 7),  
+                    projection='natural earth',
+                    color_continuous_scale=px.colors.sequential.Plasma,
+                    title='Share of Renewable Energy Consumption (%)')
+
+# Setting x-axis format to display only the year
+fig.update_xaxes(dtick='M1', tickformat='%Y')
+
+fig.show()
+
+```
+
+
+
+##  Barplot
+::: panel-tabset
+### Plot1
+
+```{python, figsize=[8, 12.944]}
+
+#| label: BAR1
+#| echo: false
+#| warning: false
+
+import pandas as pd
+import geopandas as gpd
+import plotly.graph_objects as go
+
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Droping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculating renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Making year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Calculating mean renewable energy share by country
+country_stats = world.groupby('name')['renewable_energy_share'].mean().reset_index()
+
+# Identifying top 10 countries with the highest mean renewable energy share
+top_10_countries = country_stats.nlargest(10, 'renewable_energy_share')['name'].tolist()
+
+# Filtering data for top 10 countries
+top_10_world = world[world['name'].isin(top_10_countries)]
+
+# Sorting data by renewable energy share
+top_10_world = top_10_world.sort_values(by='renewable_energy_share', ascending=False)
+# Plotting the animated bar plot with Plotly Graph Objects
+fig = go.Figure()
+
+# Defining custom color scale from light green to dark green
+custom_color_scale = [
+    [0, 'rgba(0, 255, 0, 0.5)'],
+    [0.2, 'rgba(0, 255, 0, 0.6)'],
+    [0.4, 'rgba(0, 255, 0, 0.7)'],
+    [0.6, 'rgba(0, 255, 0, 0.8)'],
+    [0.8, 'rgba(0, 255, 0, 0.9)'],
+    [1, 'rgba(0, 255, 0, 1.0)']
+]
+
+# Creating bar traces for each year
+for year, df in top_10_world.groupby('year'):
+    fig.add_trace(go.Bar(
+        x=df['name'],
+        y=df['renewable_energy_share'],
+        name=str(year.year),
+        hoverinfo='x+y',
+        hovertemplate='<b>%{x}</b><br>Renewable Energy Share: %{y:.2f}%<extra></extra>',
+        visible=False if year != top_10_world['year'].min() else True,
+        marker=dict(
+            color=df['renewable_energy_share'],
+            colorscale=custom_color_scale,
+            colorbar=dict(title='Renewable Energy Share (%)')
+        )
+    ))
+
+# Adding play button and slider
+fig.update_layout(
+    updatemenus=[dict(
+        type="buttons",
+        buttons=[dict(label="Play",
+                      method="animate",
+                      args=[None, {"frame": {"duration": 500, "redraw": True}, "fromcurrent": True, "transition": {"duration": 300, "easing": "quadratic-in-out"}}]
+        )]
+    )],
+    title='Top 10 Countries with Highest Mean Renewable Energy Share',
+    xaxis=dict(title='Country'),
+    yaxis=dict(title='Mean Renewable Energy Share (%)', range=[0, 20])
+)
+
+# Setting initial layout
+fig.update_layout(showlegend=False)
+
+# Creating frames for each year
+frames = [go.Frame(
+    data=[go.Bar(
+        x=df['name'],
+        y=df['renewable_energy_share'],
+        name=str(year.year),
+        hoverinfo='x+y',
+        hovertemplate='<b>%{x}</b><br>Renewable Energy Share: %{y:.2f}%<extra></extra>',
+        marker=dict(
+            color=df['renewable_energy_share'],
+            colorscale=custom_color_scale,
+            colorbar=dict(title='Renewable Energy Share (%)')
+        )
+    )],
+    name=str(year.year)
+) for year, df in top_10_world.groupby('year')]
+
+# Adding frames to the figure
+fig.frames = frames
+
+fig.show()
+
+
+```
+
+
+### Plot2
+```{python, figsize=[8, 20]}
+
+
+#| label: BAR2
+#| echo: false
+#| warning: false
+import pandas as pd
+import geopandas as gpd
+import plotly.express as px
+
+# Read world shapefile
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+
+# Merging world shapefile with energy data
+world = world.merge(data, how='left', left_on='iso_a3', right_on='iso_code')
+
+# Dropping NaN values from columns used in calculations
+columns_to_drop_na = ['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption', 'energy_per_capita']
+world = world.dropna(subset=columns_to_drop_na)
+
+# Filtering data from 2000 to 2023
+world = world[(world['year'] >= 2000) & (world['year'] <= 2023)]
+
+# Grouping by year and country, summing renewable energy consumption and energy per capita
+world = world.groupby(['iso_a3', 'year', 'name']).agg({
+    'solar_consumption': 'sum',
+    'wind_consumption': 'sum',
+    'hydro_consumption': 'sum',
+    'other_renewable_consumption': 'sum',
+    'energy_per_capita': 'mean',
+    'greenhouse_gas_emissions': 'mean'
+}).reset_index()
+
+# Calculating total renewable energy consumption
+world['total_renewable_consumption'] = world['solar_consumption'] + world['wind_consumption'] + world['hydro_consumption'] + world['other_renewable_consumption']
+
+# Calculating renewable energy share
+world['renewable_energy_share'] = (world['total_renewable_consumption'] / world['energy_per_capita']) * 100
+
+# Setting year column as date
+world['year'] = pd.to_datetime(world['year'], format='%Y')
+
+# Calculating mean renewable energy share and greenhouse gas emissions by country
+country_stats = world.groupby('name').agg({
+    'renewable_energy_share': 'mean',
+    'greenhouse_gas_emissions': 'mean'
+}).reset_index()
+
+# Sorting countries by greenhouse gas emissions and selecting top 10
+top_emissions_countries = country_stats.nlargest(10, 'greenhouse_gas_emissions')
+
+# Creating vertical bar plot with color gradient for greenhouse gas emissions
+fig_high_emissions = px.bar(top_emissions_countries, 
+                             x='name', 
+                             y='greenhouse_gas_emissions', 
+                             color='greenhouse_gas_emissions',
+                             labels={'greenhouse_gas_emissions': 'Mean Greenhouse Gas<br>(megatonnes of CO₂ equivalents)'},
+                             title='Top 10 Countries with Highest Mean Greenhouse Gas Emissions',
+                             orientation='v',
+                             color_continuous_scale='Emrld')
+
+# Updating x-axis label for emissions plot
+fig_high_emissions.update_xaxes(title='Country')
+
+# Updating color bar title
+fig_high_emissions.update_coloraxes(colorbar_title='Mean Greenhouse Gas<br>(megatonnes of CO₂ equivalents)')
+
+# Showing plot for most greenhouse gas emissions
+fig_high_emissions.show()
+
+
+```
+
+
+
+
+:::
+
+
+## Line plot
+
+<img src="\images\Q2_line_plot.png" alt="electricity" width="810" height="500">
+
+
+## Density plot
+
+
+
+## Clustering Plots (K- means, DBSCAN)
+
+::: panel-tabset
+### K- means
+
+
+<img src="\images\Q2plot\Q2_Kmean.png" alt = "distribution plot" width="600">
+
+
+
+
+
+### DBSCAN
+
+<img src="/images\Q2plot\Q2_db.png" alt = "distribution plot" width="800">
+
+
+:::
+
+## Conclusion
+
+
 
 ## References 
 
