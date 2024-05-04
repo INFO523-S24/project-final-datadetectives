@@ -453,7 +453,7 @@ fig_high_emissions.show()
 
 ## Line plot
 
-<img src="\images\Q2_line_plot.png" alt="electricity" width="810" height="500">
+<img src="/images/Q2_line_plot.png" alt="electricity" width="810" height="500">
 
 
 ## Density plot
@@ -466,7 +466,7 @@ fig_high_emissions.show()
 ### K- means
 
 
-<img src="\images\Q2plot\Q2_Kmean.png" alt = "distribution plot" width="600">
+<img src="/images/Q2plot/Q2_Kmean.png" alt = "distribution plot" width="600">
 
 
 
@@ -474,7 +474,7 @@ fig_high_emissions.show()
 
 ### DBSCAN
 
-<img src="/images\Q2plot\Q2_db.png" alt = "distribution plot" width="800">
+<img src="/images/Q2plot/Q2_db.png" alt = "distribution plot" width="800">
 
 
 :::
