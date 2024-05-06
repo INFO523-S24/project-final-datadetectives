@@ -88,7 +88,7 @@
     "href": "presentation.html#visualizations",
     "title": "Global Energy Trends",
     "section": "Visualizations",
-    "text": "Visualizations\n\nColumnsAnalysis PlanVisualizations\n\n\n\npopulation and gdp are directly linked to energy demand.\nrenewables_electricity / electricity_generation are used to create a percentage.\nprimary_energy_consumption is the target variable.\nyear is used to perfrom time series analysis.\n\n\n\n\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\nDistribution Plot\nScatter Plot\nTime series plot"
+    "text": "Visualizations\n\nColumnsAnalysis PlanVisualizations\n\n\n\n\npopulation and gdp are directly linked to energy demand.\n\n\n\n\nrenewables_electricity / electricity_generation are used to create a percentage.\n\n\n\n\nprimary_energy_consumption is the target variable.\n\n\n\n\nyear is used to perfrom time series analysis.\n\n\n\n\n\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\nDistribution Plot\nScatter Plot\nTime series analysis plot"
   },
   {
     "objectID": "presentation.html#distribution-plot",
