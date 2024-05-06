@@ -266,10 +266,10 @@ fig.show()
 
 ------------------------------------------------------------------------
 
-## Barplot
+## Barplot 1
 
 ::: panel-tabset
-### Plot1
+### Plot
 
 ```{python, figsize=[8, 12.944]}
 
@@ -392,7 +392,22 @@ fig.show()
 
 ```
 
-### Plot2
+### Insights
+
+This plot reveals the top 10 countries with mean green house emissions.
+
+Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries.
+
+This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom.
+
+:::
+
+------------------------------------------------------------------------
+
+## Barplot 2
+
+::: panel-tabset
+## Plot
 
 ```{python, figsize=[8, 12.4]}
 
@@ -470,26 +485,11 @@ fig_high_emissions.show()
 
 ```
 
-:::
-
-------------------------------------------------------------------------
-
-## Insights
-
-::: panel-tabset
-## Plot 1
+## Insight
 
 This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
 
 However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
-
-## Plot 2
-
-This plot reveals the top 10 countries with mean green house emissions.
-
-Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries.
-
-This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom.
 :::
 
 ------------------------------------------------------------------------
@@ -553,6 +553,7 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 ### DBSCAN
 
 <img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="720"/>
+
 :::
 
 ------------------------------------------------------------------------
