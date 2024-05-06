@@ -487,9 +487,11 @@ fig_high_emissions.show()
 
 ## Insight
 
-This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
+- This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
 
-However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
+- This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
+
+- Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
 :::
 
 ------------------------------------------------------------------------
@@ -503,12 +505,9 @@ However, countries such as Pakistan, Vietnam, Columbia, the United States of Ame
 
 ## Insights
 
-- This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
+- This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
 
-- This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
-
-- Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
-
+- However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
 
 
 # Density plots
