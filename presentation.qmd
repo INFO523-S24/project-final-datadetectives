@@ -3,7 +3,7 @@ title: "Global Energy Trends"
 subtitle: "INFO 523 - Spring 2023 - Project Final"
 author: "Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
 title-slide-attributes:
-  data-background-image: images/cartoon_globe.jpg
+  data-background-image: images/background for intro page.webp
   data-background-size: stretch
   data-background-opacity: "0.3"
   data-slide-number: none
@@ -84,33 +84,33 @@ Is it possible to predict a nation's power consumption by considering its popula
 ### Columns
 
 ::: {.fragment .fade-in}
--   **`population`** and **`gdp`** are directly linked to energy demand
+-   **population** and **gdp** are directly linked to energy demand
 :::
 
 ::: {.fragment .fade-in}
--   **`renewables_electricity` / `electricity_generation`** are used to create a percentage
+-   **renewables_electricity / electricity_generation** are used to create a percentage
 :::
 
 ::: {.fragment .fade-in}
--   **`primary_energy_consumption`** is the **target variable**
+-   **primary_energy_consumption** is the **target variable**
 :::
 
 ::: {.fragment .fade-in}
--   **`year`** is used to perfrom time series analysis
+-   **year** is used to perfrom time series analysis
 :::
 
 ### Analysis Plan
 
 ::: {.fragment .fade-in style="font-size: 0.82em"}
--   **`Descriptive Statistics`**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
+-   **Descriptive Statistics**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
 :::
 
 ::: {.fragment .fade-in style="font-size: 0.82em"}
--   **`Correlation Analysis`**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
+-   **Correlation Analysis**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
 :::
 
 ::: {.fragment .fade-in style="font-size: 0.82em"}
--   **`Time Series Analysis`**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
+-   **Time Series Analysis**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
 :::
 
 ### Visualizations
@@ -146,7 +146,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
-------------------------------------------------------------------------
+![](images/sus_energy.png){fig-align="center" width="500" height="315"}
 
 ## Next steps
 
@@ -154,11 +154,11 @@ What countries or regions are engaging in sustainable energy practices and relyi
 ### Columns
 
 ::: {.fragment .fade-in style="font-size: 0.96em"}
--   For insights into trends in renewable energy share and practices: **`Solar_consumption`**, **`Wind_consumption`**, **`Hydro_consumption`**, **`Other_renewable_consumption`**, **`Renewable_energy_share`**, **`Greenhouse_gas_emissions`**, **`Renewables_electricity`**, **`Electricity_generation`**, and **`Year`**.
+-   For insights into trends in renewable energy share and practices: **Solar_consumption**, **Wind_consumption**, **Hydro_consumption**, **Other_renewable_consumption**, **Renewable_energy_share**, **Greenhouse_gas_emissions**, **Renewables_electricity**, **Electricity_generation**, and **Year**.
 :::
 
 ::: {.fragment .fade-in style="font-size: 0.96em"}
--   For clustering analysis: **`Country`**, **`Year`**, **`Population`**, **`GDP`**, and all energy-related columns.
+-   For clustering analysis: **Country**, **Year**, **Population**, **GDP**, and all energy-related columns.
 :::
 
 ### Analysis Plan
@@ -448,19 +448,17 @@ fig_high_emissions.show()
 
 ## Line plot
 
-![electricity](/images/Q2plot/Q2_line_plot.png){alt="electricity" width="900" height="600"}
+![](/images/Q2plot/Q2_line_plot.png){width="900" height="600"}
 
 ## Density plot
 
-::: panel-tabset
-## Renewable Energy Consumption
+### Renewable Energy Consumption
 
 ![](images/renewables_consumption_by_continent.gif)
 
-## Non-Renewable Energy Consumption
+### Non-Renewable Energy Consumption
 
 ![](images/non_renewables_consumption_by_continent.gif)
-:::
 
 ## Clustering Plots (K- means,DBSCAN)
 
