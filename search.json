@@ -168,6 +168,13 @@
     "text": "Clustering Plots (K- means,DBSCAN)\n\nK- meansDBSCAN"
   },
   {
+    "objectID": "presentation.html#insights-7",
+    "href": "presentation.html#insights-7",
+    "title": "Global Energy Trends",
+    "section": "Insights",
+    "text": "Insights\n\nThis cluster analysis resulted in 8 clusters when the k means was used\nAfter the DBSCAN was conducted, 2 clusters emerged while one remained an outlier\nA silhoutte score was calculated to determine the accuracy of this cluster which yielded a score of 0.96\nThis implies that the cluster method developed here was very effective."
+  },
+  {
     "objectID": "presentation.html#conclusion",
     "href": "presentation.html#conclusion",
     "title": "Global Energy Trends",
