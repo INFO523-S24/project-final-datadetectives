@@ -394,11 +394,9 @@ fig.show()
 
 ### Insights
 
-This plot reveals the top 10 countries with mean green house emissions.
+This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
 
-Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries.
-
-This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom.
+However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
 
 :::
 
@@ -487,11 +485,11 @@ fig_high_emissions.show()
 
 ## Insight
 
-- This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
+This plot reveals the top 10 countries with mean green house emissions.
 
-- This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
+Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries.
 
-- Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
+This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom.
 :::
 
 ------------------------------------------------------------------------
@@ -505,9 +503,12 @@ fig_high_emissions.show()
 
 ## Insights
 
-- This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
+- This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
 
-- However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
+- This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
+
+- Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
+
 
 
 # Density plots
