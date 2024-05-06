@@ -70,13 +70,13 @@ index = False)
 
 # Question 1
 
----
+------------------------------------------------------------------------
 
 Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
-<img src="/images/electricity.png" alt = "electricity" width="500">
+<img src="/images/electricity.png" alt="electricity" width="500"/>
 
----
+------------------------------------------------------------------------
 
 ## Next steps
 
@@ -84,7 +84,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 ### Columns
 
 ::: {.fragment .fade-in}
--   **`population`** and **`gdp`** are directly linked to energy demand 
+-   **`population`** and **`gdp`** are directly linked to energy demand
 :::
 
 ::: {.fragment .fade-in}
@@ -98,97 +98,87 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: {.fragment .fade-in}
 -   **`year`** is used to perfrom time series analysis
 :::
+
 ### Analysis Plan
 
-:::: {.fragment .fade-in style="font-size: 0.82em"}
-- **`Descriptive Statistics`**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
-::: 
+::: {.fragment .fade-in style="font-size: 0.82em"}
+-   **`Descriptive Statistics`**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
+:::
 
+::: {.fragment .fade-in style="font-size: 0.82em"}
+-   **`Correlation Analysis`**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
+:::
 
-:::: {.fragment .fade-in style="font-size: 0.82em"}
-- **`Correlation Analysis`**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
-::: 
-
-
-:::: {.fragment .fade-in style="font-size: 0.82em"}
-- **`Time Series Analysis`**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
-::: 
-
+::: {.fragment .fade-in style="font-size: 0.82em"}
+-   **`Time Series Analysis`**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
+:::
 
 ### Visualizations
 
 ::: {.fragment .fade-in}
-- Histogram
-::: 
-   
-::: {.fragment .fade-in}
-- Scatterplots
-::: 
- 
-::: {.fragment .fade-in}
-- Time series analysis plot
-::: 
-  
+-   Histogram
+:::
 
+::: {.fragment .fade-in}
+-   Scatterplots
+:::
 
+::: {.fragment .fade-in}
+-   Time series analysis plot
+:::
 :::
 
 ## Distribution Plot
 
-<img src="/images/Q1%20plots/Q1_dist_plot.png" alt = "distribution plot" width="650">
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt="distribution plot" width="650"/>
 
 ## Scatterplots
 
-<img src="/images/Q1%20plots/Q1_scatter.png" alt = "scatterplot" width="600">
+<img src="/images/Q1%20plots/Q1_scatter.png" alt="scatterplot" width="600"/>
 
 ## Time Series Analysis Plot
 
-<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt = "time series analysis plot" width="600">
+<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt="time series analysis plot" width="600"/>
 
 # Question 2
 
----
+------------------------------------------------------------------------
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
----
+------------------------------------------------------------------------
 
 ## Next steps
 
 ::: panel-tabset
 ### Columns
 
-:::: {.fragment .fade-in style="font-size: 0.96em"}
-- For insights into trends in renewable energy share and practices: **`Solar_consumption`**, **`Wind_consumption`**, **`Hydro_consumption`**, **`Other_renewable_consumption`**, **`Renewable_energy_share`**, **`Greenhouse_gas_emissions`**, **`Renewables_electricity`**, **`Electricity_generation`**, and **`Year`**.
-::::
+::: {.fragment .fade-in style="font-size: 0.96em"}
+-   For insights into trends in renewable energy share and practices: **`Solar_consumption`**, **`Wind_consumption`**, **`Hydro_consumption`**, **`Other_renewable_consumption`**, **`Renewable_energy_share`**, **`Greenhouse_gas_emissions`**, **`Renewables_electricity`**, **`Electricity_generation`**, and **`Year`**.
+:::
 
-:::: {.fragment .fade-in style="font-size: 0.96em"}
-- For clustering analysis: **`Country`**, **`Year`**, **`Population`**, **`GDP`**, and all energy-related columns.
-::::
-
-
+::: {.fragment .fade-in style="font-size: 0.96em"}
+-   For clustering analysis: **`Country`**, **`Year`**, **`Population`**, **`GDP`**, and all energy-related columns.
+:::
 
 ### Analysis Plan
-:::: {.fragment .fade-in style="font-size: 0.92em"}
-- We utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.
-::::
-:::: {.fragment .fade-in style="font-size: 0.92em"}
-- A line plot was used to display trends in global energy consumption.
-::::
-:::: {.fragment .fade-in style="font-size: 0.92em"}
-- A density plot illustrated renewable energy consumption by continent.
-:::
-:::: {.fragment .fade-in style="font-size: 0.92em"}
-- Clustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns.
-::::
 
-
-
-
-
+::: {.fragment .fade-in style="font-size: 0.92em"}
+-   We utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.
 :::
 
+::: {.fragment .fade-in style="font-size: 0.92em"}
+-   A line plot was used to display trends in global energy consumption.
+:::
 
+::: {.fragment .fade-in style="font-size: 0.92em"}
+-   A density plot illustrated renewable energy consumption by continent.
+:::
+
+::: {.fragment .fade-in style="font-size: 0.92em"}
+-   Clustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns.
+:::
+:::
 
 ## MAP:Share of Renewable Energy Consumption
 
@@ -251,9 +241,8 @@ fig.show()
 
 ```
 
+## Barplot
 
-
-##  Barplot
 ::: panel-tabset
 ### Plot1
 
@@ -378,8 +367,8 @@ fig.show()
 
 ```
 
-
 ### Plot2
+
 ```{python, figsize=[8, 12.4]}
 
 
@@ -455,68 +444,59 @@ fig_high_emissions.show()
 
 
 ```
-
-
-
-
 :::
-
 
 ## Line plot
 
-<img src="/images/Q2plot/Q2_line_plot.png" alt="electricity" width="900" height="600">
-
+![electricity](/images/Q2plot/Q2_line_plot.png){alt="electricity" width="900" height="600"}
 
 ## Density plot
+
 ::: panel-tabset
+## Renewable Energy Consumption
 
-## Plot 1
+![](images/renewables_consumption_by_continent.gif)
 
-## Plot 2
+## Non-Renewable Energy Consumption
 
+![](images/non_renewables_consumption_by_continent.gif)
 :::
 
 ## Clustering Plots (K- means,DBSCAN)
+
 ::: panel-tabset
 ### K- means
 
-
-<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="800" height="470">
-
-
-
-
-
+<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="800" height="470"/>
 
 ### DBSCAN
 
-<img src="/images/Q2plot/Q2_db.png" alt = "distribution plot" width="800">
-
-
+<img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="800"/>
 :::
 
 ## Conclusion
-:::: {.fragment .fade-in style="font-size: 0.7em"}
-- Economic and demographic growth often coincide with increased energy demand, while shifts in renewable energy proportion suggest changes in energy source composition. Analyzing these patterns aids in forecasting future power consumption trends.
+
+::: {.fragment .fade-in style="font-size: 0.7em"}
+-   Economic and demographic growth often coincide with increased energy demand, while shifts in renewable energy proportion suggest changes in energy source composition. Analyzing these patterns aids in forecasting future power consumption trends.
 :::
 
-:::: {.fragment .fade-in style="font-size: 0.7em"}
-- Nations like China, India, Brazil, and the USA are at the forefront of renewable energy adoption, yet persistent greenhouse gas emissions in some countries necessitate intensified emission reduction endeavors.
+::: {.fragment .fade-in style="font-size: 0.7em"}
+-   Nations like China, India, Brazil, and the USA are at the forefront of renewable energy adoption, yet persistent greenhouse gas emissions in some countries necessitate intensified emission reduction endeavors.
 :::
 
-:::: {.fragment .fade-in style="font-size: 0.7em"}
-- Continental Dynamics: While there's a global upsurge in renewable energy utilization, simultaneous spikes in non-renewable consumption highlight the ongoing imperative for sustainable energy transitions.
+::: {.fragment .fade-in style="font-size: 0.7em"}
+-   Continental Dynamics: While there's a global upsurge in renewable energy utilization, simultaneous spikes in non-renewable consumption highlight the ongoing imperative for sustainable energy transitions.
 :::
 
-:::: {.fragment .fade-in style="font-size: 0.7em"}
-- Clustering techniques unveil regions preferring renewable energy over non-renewable sources, offering crucial insights for targeted sustainability strategies.
+::: {.fragment .fade-in style="font-size: 0.7em"}
+-   Clustering techniques unveil regions preferring renewable energy over non-renewable sources, offering crucial insights for targeted sustainability strategies.
 :::
 
-## References 
+## References
 
-- [Revealjs](https://quarto.org/docs/presentations/revealjs/)
-- [Data](https://ourworldindata.org/energy)
-- [TidyTuesday - GH](https://github.com/owid/energy-data)
-- [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
+-   [Revealjs](https://quarto.org/docs/presentations/revealjs/)
+-   [Data](https://ourworldindata.org/energy)
+-   [TidyTuesday - GH](https://github.com/owid/energy-data)
+-   [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
 
-## Thank you! 
+## Thank you!
