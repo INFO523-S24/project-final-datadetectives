@@ -562,7 +562,7 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 ### DBSCAN
 
-<img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="650"/>
+<img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="720"/>
 :::
 
 ------------------------------------------------------------------------
@@ -607,5 +607,3 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 ------------------------------------------------------------------------
 
 ![](images/thank you gif2.gif){fig-align="center" width="800"}
-
-------------------------------------------------------------------------
