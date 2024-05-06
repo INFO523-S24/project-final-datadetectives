@@ -100,12 +100,20 @@ Is it possible to predict a nation's power consumption by considering its popula
 :::
 ### Analysis Plan
 
-- Data cleaning
-- Normalizing the data
-- EDA
-- Descriptive Statistics
-- Correlation Analysis
-- Time Series Analysis
+:::: {.fragment .fade-in style="font-size: 0.82em"}
+- **`Descriptive Statistics`**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
+::: 
+
+
+:::: {.fragment .fade-in style="font-size: 0.82em"}
+- **`Correlation Analysis`**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
+::: 
+
+
+:::: {.fragment .fade-in style="font-size: 0.82em"}
+- **`Time Series Analysis`**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
+::: 
+
 
 ### Visualizations
 
@@ -161,16 +169,16 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 
 ### Analysis Plan
-:::: {.fragment .fade-in style="font-size: 0.96em"}
+:::: {.fragment .fade-in style="font-size: 0.92em"}
 - We utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.
 ::::
-:::: {.fragment .fade-in style="font-size: 0.96em"}
+:::: {.fragment .fade-in style="font-size: 0.92em"}
 - A line plot was used to display trends in global energy consumption.
 ::::
-:::: {.fragment .fade-in style="font-size: 0.96em"}
+:::: {.fragment .fade-in style="font-size: 0.92em"}
 - A density plot illustrated renewable energy consumption by continent.
 :::
-:::: {.fragment .fade-in style="font-size: 0.96em"}
+:::: {.fragment .fade-in style="font-size: 0.92em"}
 - Clustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns.
 ::::
 
@@ -182,7 +190,7 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 
 
-## MAP
+## MAP:Share of Renewable Energy Consumption
 
 ```{python, figsize=[8, 12.944]}
 
@@ -234,7 +242,7 @@ fig = px.choropleth(world,
                     range_color=(0, 7),  
                     projection='natural earth',
                     color_continuous_scale=px.colors.sequential.Plasma,
-                    title='Share of Renewable Energy Consumption (%)')
+                    title='')
 
 # Setting x-axis format to display only the year
 fig.update_xaxes(dtick='M1', tickformat='%Y')
@@ -372,7 +380,7 @@ fig.show()
 
 
 ### Plot2
-```{python, figsize=[8, 20]}
+```{python, figsize=[8, 12.4]}
 
 
 #| label: BAR2
@@ -423,6 +431,9 @@ country_stats = world.groupby('name').agg({
 # Sorting countries by greenhouse gas emissions and selecting top 10
 top_emissions_countries = country_stats.nlargest(10, 'greenhouse_gas_emissions')
 
+# Defining width and height based on the golden ratio
+width = 1050
+
 # Creating vertical bar plot with color gradient for greenhouse gas emissions
 fig_high_emissions = px.bar(top_emissions_countries, 
                              x='name', 
@@ -431,7 +442,7 @@ fig_high_emissions = px.bar(top_emissions_countries,
                              labels={'greenhouse_gas_emissions': 'Mean Greenhouse Gas<br>(megatonnes of CO₂ equivalents)'},
                              title='Top 10 Countries with Highest Mean Greenhouse Gas Emissions',
                              orientation='v',
-                             color_continuous_scale='Emrld')
+                             color_continuous_scale='Emrld', width=width)
 
 # Updating x-axis label for emissions plot
 fig_high_emissions.update_xaxes(title='Country')
@@ -453,20 +464,25 @@ fig_high_emissions.show()
 
 ## Line plot
 
-<img src="/images/Q2_line_plot.png" alt="electricity" width="810" height="500">
+<img src="/images/Q2plot/Q2_line_plot.png" alt="electricity" width="900" height="600">
 
 
 ## Density plot
+::: panel-tabset
 
+## Plot 1
 
+## Plot 2
 
-## Clustering Plots (K- means, DBSCAN)
+:::
 
+## Clustering Plots (K- means,DBSCAN)
 ::: panel-tabset
 ### K- means
 
 
-<img src="/images/Q2plot/Q2_Kmean.png" alt = "distribution plot" width="600">
+<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="800" height="470">
+
 
 
 
@@ -480,8 +496,21 @@ fig_high_emissions.show()
 :::
 
 ## Conclusion
+:::: {.fragment .fade-in style="font-size: 0.7em"}
+- Economic and demographic growth often coincide with increased energy demand, while shifts in renewable energy proportion suggest changes in energy source composition. Analyzing these patterns aids in forecasting future power consumption trends.
+:::
 
+:::: {.fragment .fade-in style="font-size: 0.7em"}
+- Nations like China, India, Brazil, and the USA are at the forefront of renewable energy adoption, yet persistent greenhouse gas emissions in some countries necessitate intensified emission reduction endeavors.
+:::
 
+:::: {.fragment .fade-in style="font-size: 0.7em"}
+- Continental Dynamics: While there's a global upsurge in renewable energy utilization, simultaneous spikes in non-renewable consumption highlight the ongoing imperative for sustainable energy transitions.
+:::
+
+:::: {.fragment .fade-in style="font-size: 0.7em"}
+- Clustering techniques unveil regions preferring renewable energy over non-renewable sources, offering crucial insights for targeted sustainability strategies.
+:::
 
 ## References 
 
