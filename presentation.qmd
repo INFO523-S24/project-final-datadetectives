@@ -284,6 +284,20 @@ fig.show()
 
 ```
 
+------------------------------------------------------------------------
+
+## Insights
+
+-   This visualization reveals the share of renewable energy around the world
+
+-   North America has very little to adequate amount in the share of renewable energy.
+
+-   South America has little share of renewable energy for some parts while some other parts have a large share of renewable energy.
+
+-   Some parts of Asia also have the same renewable energy share distribution as North America with some parts having more and some having very little.
+
+------------------------------------------------------------------------
+
 ## Barplot
 
 ::: panel-tabset
