@@ -68,7 +68,16 @@ q1_data_cleaned.to_csv('data/q1_energy_data_cleaned.csv',
 index = False)
 ```
 
-# Question 1
+## Project Overview and Data set
+
+-   \
+    Energy is crucial today for powering industries, homes, and technological advancements.
+
+-   The aim of this project is to predict power consumption trends based on population size, GDP, renewable energy usage, and identify regions transitioning to sustainable energy practices while reducing greenhouse gas emissions.
+
+-   This data set was gathered from the Our World in Data website where multiple data sets were merged together to form this data.
+
+## Question 1
 
 ------------------------------------------------------------------------
 
@@ -79,6 +88,10 @@ Is it possible to predict a nation's power consumption by considering its popula
 ------------------------------------------------------------------------
 
 ## Next steps
+
+------------------------------------------------------------------------
+
+## Visualizations 
 
 ::: panel-tabset
 ### Columns
@@ -126,19 +139,53 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: {.fragment .fade-in}
 -   Time series analysis plot
 :::
+
+## 
 :::
 
+------------------------------------------------------------------------
+
+::: panel-tabset
 ## Distribution Plot
 
-<img src="/images/Q1%20plots/Q1_dist_plot.png" alt="distribution plot" width="650"/>
+![](images/Q1 plots/Q1_dist_plot.png)
 
-## Scatterplots
+## Insights
 
-<img src="/images/Q1%20plots/Q1_scatter.png" alt="scatterplot" width="600"/>
+-   This visualization depicts the distribution of primary energy consumption for all the regional boundaries in the data set.
 
+-   The plot reveals that primary energy consumption is right skewed.
+
+-   This implies that more regional boundaries and countries in the world consume less primary energy compared to some sections of the world which rely heavily on primary energy
+
+-   Primary energy is energy that is directly extracted from natural resources such as natural gas, fuel, sunlight, wind and water.
+:::
+
+------------------------------------------------------------------------
+
+::: panel-tabset
+## Scatter Plot
+
+![](images/Q1 plots/Q1_scatter.png)
+
+## Insights
+
+-   This visualization depicts the relationship between primary energy and the population , gross domestic product (gdp) and renewable energy of all the countries and regional boundaries in the world.
+
+-   The visualization reveals a positive relationship between primary energy consumption and all the variables in visualization
+
+-   This implies that the more primary energy consumed, the higher the gdp of a country, the higher the renewable electricity and the higher the population in the country or regional boundary.
+:::
+
+------------------------------------------------------------------------
+
+::: panel-tabset
 ## Time Series Analysis Plot
 
-<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt="time series analysis plot" width="600"/>
+![](images/Q1 plots/Q1_time_series_plot.png)
+
+## Insights
+:::
 
 # Question 2
 
@@ -172,7 +219,7 @@ What countries or regions are engaging in sustainable energy practices and relyi
 :::
 
 ::: {.fragment .fade-in style="font-size: 0.92em"}
--   A density plot illustrated renewable energy consumption by continent.
+-   A density plot illustrated renewable energy and non-renewable enerconsumption by continent.
 :::
 
 ::: {.fragment .fade-in style="font-size: 0.92em"}
