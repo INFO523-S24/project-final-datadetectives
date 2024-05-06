@@ -27,11 +27,17 @@ This project utilizes the comprehensive energy dataset from Our World in Data, s
 Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
 ```{python}
-#| label: question
+#| label: libraries
 #| echo: false
+#| warning: false
+
 # cell library
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from matplotlib.ticker import FuncFormatter
+from matplotlib.patches import Ellipse
+from IPython.display import HTML
 import seaborn as sns
 import statsmodels.api as sm
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -39,6 +45,29 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import matplotlib.dates as mdates
+import geopandas as gpd
+import plotly.graph_objects as go
+import plotly.express as px
+from sklearn.preprocessing import MinMaxScaler
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import calinski_harabasz_score
+from sklearn.cluster import KMeans
+from scipy.cluster import hierarchy
+from scipy.spatial.distance import pdist
+from sklearn.neighbors import NearestNeighbors
+from sklearn.cluster import DBSCAN
+from sklearn.mixture import GaussianMixture
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import adjusted_rand_score
+```
+
+```{python}
+#| label: question
+#| echo: false
+
 # Load the dataset
 data = pd.read_csv('data/owid-energy-data.csv')
 
@@ -254,9 +283,6 @@ What countries or regions are engaging in sustainable energy practices and relyi
 #| label: MAP1
 #| echo: false
 #| warning: false
-import pandas as pd
-import geopandas as gpd
-import plotly.express as px
 
 # Loading data
 data = pd.read_csv("data/owid-energy-data.csv")
@@ -317,11 +343,6 @@ fig.show()
 #| label: BAR1
 #| echo: false
 #| warning: false
-
-import pandas as pd
-import geopandas as gpd
-import plotly.graph_objects as go
-
 world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
 # Merging world shapefile with energy data
@@ -436,14 +457,9 @@ fig.show()
 -The second plot explores the country with the highest mean renewable energy share. China has the highest renewable share of 22.75%, followed by India with 14.23%, Brazil and the United States with 9% and 3.28% respectively. Over the decade, the top countries remain the same, with only the top country’s percentage share increasing, indicating that they are working more towards renewable practices
 
 ```{python}
-
-
 #| label: BAR2
 #| echo: false
 #| warning: false
-import pandas as pd
-import geopandas as gpd
-import plotly.express as px
 
 # Read world shapefile
 world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
@@ -513,7 +529,6 @@ fig_high_emissions.show()
     This plot shows the mean greenhouse gas emissions over two decades. Here, China, despite practicing more renewable energy consumption and share, emits the most greenhouse gases. The same trend is seen for the United States and India
 
 ```{python}
-
 # Create renewable energy dataset as a subset of the data
 wind_data = data[['country', 'year', 'wind_consumption']]
 solar_data = data[['country', 'year', 'solar_consumption']]
@@ -544,13 +559,7 @@ plt.tight_layout()  # Adjust the plot to ensure everything fits without overlap
 plt.show()
 ```
 
-```{python}
-import matplotlib.pyplot as plt
-
-
-
-
-```
+This visualization provides information on the energy consumption of wind, solar and hydro energy over the years. It can be observed from the line plot that hydro electric power has always been the lead in terms of energy consumed over the years. It's consumption appears to have climbed steadily over the years. Wind and Solar energy consumption appear to have taken off in the early 2000s and have continued to climb steadily over the years with more of wind energy being consumed than solar energy.
 
 ### Data Wrangling for Density Plot
 
@@ -562,7 +571,6 @@ Density plots for renewable and non-renewable energy for the continents
 #| warning: false
 
 ## loading the data set
-import pandas as pd
 energy = pd.read_csv('data/owid-energy-data.csv') 
 
 ## performing data wrangling operations on the data set to make it suitable for the analysis
@@ -663,12 +671,6 @@ Visualizing the density plots for renewable consumption
 #| label: density1_redone
 #| output: false
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-from matplotlib.animation import FuncAnimation
-from matplotlib.ticker import FuncFormatter
-from IPython.display import HTML
-
 # Extract unique years from the 'year' column
 years = energy_wrangled['year'].unique()
 
@@ -709,7 +711,6 @@ html_animation2 = ani2.to_jshtml()
 ```{python}
 #| label: hmtl_animation2
 
-
 HTML(html_animation2)
 ```
 
@@ -722,12 +723,6 @@ The visualization for the non-renewable consumption of energy
 ```{python}
 #| label: density2_redone
 #| output: false
-
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-from matplotlib.animation import FuncAnimation
-from matplotlib.ticker import FuncFormatter
 
 # Extract unique years from the 'year' column
 years = energy_wrangled['year'].unique()
@@ -791,21 +786,7 @@ The required packages for the cluster analysis are imported.
 
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-import scipy.stats as stats
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import calinski_harabasz_score
-from sklearn.cluster import KMeans
-from scipy.cluster import hierarchy
-from scipy.spatial.distance import pdist
-from sklearn.neighbors import NearestNeighbors
-from sklearn.cluster import DBSCAN
-from sklearn.mixture import GaussianMixture
-from sklearn.metrics import silhouette_score
-from sklearn.metrics import adjusted_rand_score
-from matplotlib.patches import Ellipse
+
 ```
 
 The data is dealt with appropriately for missing values and duplicates. The numerical features in the data set are also standardized and categorical variables encoded. For this analysis.
