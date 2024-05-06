@@ -2,7 +2,7 @@
 title: "Global Energy Trends"
 subtitle: "INFO 523 - Project Final"
 author: 
-  - name: "data detectives - Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
+  - name: "data detectives - Ayesha, Abhishek, Shreemithra, Toluwanimi, Valerie, Alyssa"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption"

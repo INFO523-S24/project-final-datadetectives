@@ -1,7 +1,7 @@
 ---
 title: "Global Energy Trends"
 subtitle: "INFO 523 - Spring 2023 - Project Final"
-author: "Ayesha, Abhishek, Sheemithra, Toluwanimi, Valerie, Alyssa"
+author: "Ayesha, Abhishek, Shreemithra, Toluwanimi, Valerie, Alyssa"
 title-slide-attributes:
   data-background-image: images/background for intro page.webp
   data-background-size: stretch
