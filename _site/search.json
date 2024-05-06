@@ -130,14 +130,14 @@
     "href": "presentation.html#line-plot",
     "title": "Global Energy Trends",
     "section": "Line plot",
-    "text": "Line plot"
+    "text": "Line plot\n\n\n\nelectricity"
   },
   {
     "objectID": "presentation.html#density-plot",
     "href": "presentation.html#density-plot",
     "title": "Global Energy Trends",
     "section": "Density plot",
-    "text": "Density plot\n\nPlot 1Plot 2"
+    "text": "Density plot\n\nRenewable Energy ConsumptionNon-Renewable Energy Consumption"
   },
   {
     "objectID": "presentation.html#clustering-plots-k--meansdbscan",
