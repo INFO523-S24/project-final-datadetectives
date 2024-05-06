@@ -91,56 +91,54 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ------------------------------------------------------------------------
 
-## Visualizations 
+## Visualizations
 
 ::: panel-tabset
-### Columns
+## Columns
 
-::: {.fragment .fade-in}
 -   **population** and **gdp** are directly linked to energy demand
-:::
 
-::: {.fragment .fade-in}
+```{=html}
+<!-- -->
+```
 -   **renewables_electricity / electricity_generation** are used to create a percentage
-:::
 
-::: {.fragment .fade-in}
+```{=html}
+<!-- -->
+```
+-   **renewables_electricity / electricity_generation** are used to create a percentage
+
+```{=html}
+<!-- -->
+```
 -   **primary_energy_consumption** is the **target variable**
-:::
 
-::: {.fragment .fade-in}
+```{=html}
+<!-- -->
+```
 -   **year** is used to perfrom time series analysis
-:::
 
-### Analysis Plan
+## Analysis Plan
 
-::: {.fragment .fade-in style="font-size: 0.82em"}
 -   **Descriptive Statistics**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
-:::
 
-::: {.fragment .fade-in style="font-size: 0.82em"}
+```{=html}
+<!-- -->
+```
 -   **Correlation Analysis**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
-:::
 
-::: {.fragment .fade-in style="font-size: 0.82em"}
+```{=html}
+<!-- -->
+```
 -   **Time Series Analysis**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
-:::
 
-### Visualizations
+## Visualizations
 
-::: {.fragment .fade-in}
--   Histogram
-:::
+-   Distribution Plot
 
-::: {.fragment .fade-in}
--   Scatterplots
-:::
+-   Scatter Plot
 
-::: {.fragment .fade-in}
--   Time series analysis plot
-:::
-
-## 
+-   Time series plot
 :::
 
 ------------------------------------------------------------------------
@@ -148,7 +146,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: panel-tabset
 ## Distribution Plot
 
-![](images/Q1 plots/Q1_dist_plot.png)
+![](images/Q1%20plots/Q1_dist_plot.png)
 
 ## Insights
 
@@ -166,7 +164,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: panel-tabset
 ## Scatter Plot
 
-![](images/Q1 plots/Q1_scatter.png)
+![](images/Q1%20plots/Q1_scatter.png)
 
 ## Insights
 
@@ -182,7 +180,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: panel-tabset
 ## Time Series Analysis Plot
 
-![](images/Q1 plots/Q1_time_series_plot.png)
+![](images/Q1%20plots/Q1_time_series_plot.png)
 
 ## Insights
 :::
@@ -192,8 +190,6 @@ Is it possible to predict a nation's power consumption by considering its popula
 ------------------------------------------------------------------------
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
-
-![](images/sus_energy.png){fig-align="center" width="500" height="315"}
 
 ## Next steps
 
