@@ -119,11 +119,11 @@
     "text": "Next steps\n\nColumnsAnalysis Plan\n\n\n\n\nFor insights into trends in renewable energy share and practices: Solar_consumption, Wind_consumption, Hydro_consumption, Other_renewable_consumption, Renewable_energy_share, Greenhouse_gas_emissions, Renewables_electricity, Electricity_generation, and Year.\n\n\n\n\nFor clustering analysis: Country, Year, Population, GDP, and all energy-related columns.\n\n\n\n\n\n\nA map and bar plot were utilized to reveal renewable energy consumption and greenhouse gas emissions.\n\n\n\n\nA line plot was used to display trends in global energy consumption.\n\n\n\n\nA density plot illustrated renewable energy and non-renewable energy consumption by continent.\n\n\n\n\nClustering analysis was conducted on energy-related variables to identify clusters for regional boundaries based on their renewable and non-renewable energy consumption patterns."
   },
   {
-    "objectID": "presentation.html#map-share-of-renewable-energy-consumption",
-    "href": "presentation.html#map-share-of-renewable-energy-consumption",
+    "objectID": "presentation.html#mapshare-of-renewable-energy-consumption",
+    "href": "presentation.html#mapshare-of-renewable-energy-consumption",
     "title": "Global Energy Trends",
-    "section": "MAP: Share of Renewable Energy Consumption",
-    "text": "MAP: Share of Renewable Energy Consumption"
+    "section": "MAP:Share of Renewable Energy Consumption",
+    "text": "MAP:Share of Renewable Energy Consumption"
   },
   {
     "objectID": "presentation.html#insights",
@@ -144,7 +144,7 @@
     "href": "presentation.html#insights-1",
     "title": "Global Energy Trends",
     "section": "Insights",
-    "text": "Insights\n\nPlot 1Plot 2\n\n\nThis plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy\nHowever, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy\n\n\nThis plot reveals the top 10 countries with mean green house emissions\nCountries such as China and the United states have the highest green house emissions out amongst the top 10 countries\nThis is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom"
+    "text": "Insights\n\nPlot 1Plot 2\n\n\nThis plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.\nHowever, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.\n\n\nThis plot reveals the top 10 countries with mean green house emissions.\nCountries such as China and the United states have the highest green house emissions out amongst the top 10 countries.\nThis is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom."
   },
   {
     "objectID": "presentation.html#line-plot",
@@ -158,7 +158,7 @@
     "href": "presentation.html#insights-2",
     "title": "Global Energy Trends",
     "section": "Insights",
-    "text": "Insights\nThis visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.\nThis plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.\nWind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy."
+    "text": "Insights\n\nThis visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.\nThis plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.\nWind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy."
   },
   {
     "objectID": "presentation.html#insights-3",
@@ -194,12 +194,5 @@
     "title": "Global Energy Trends",
     "section": "References",
     "text": "References\n\nRevealjs\nData\nTidyTuesday - GH\nImage formatting"
-  },
-  {
-    "objectID": "presentation.html#thank-you",
-    "href": "presentation.html#thank-you",
-    "title": "Global Energy Trends",
-    "section": "Thank you!",
-    "text": "Thank you!"
   }
 ]

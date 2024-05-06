@@ -74,7 +74,9 @@ index = False)
 
 -   The aim of this project is to predict power consumption trends based on population size, GDP, renewable energy usage, and identify regions transitioning to sustainable energy practices while reducing greenhouse gas emissions.
 
--   This data set was gathered from the Our World in Data website where multiple data sets were merged together to form this data.
+-   This data set was gathered from the **Our World in Data** website where multiple data sets were merged together to form this data.
+
+------------------------------------------------------------------------
 
 # Question 1
 
@@ -123,7 +125,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ## Distribution Plot
 
-<img src="/images/Q1%20plots/Q1_dist_plot.png" alt="distribution plot" width="600"/>
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt="distribution plot" width="650"/>
 
 
 ## Scatter Plot
@@ -142,7 +144,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
-<img src="/images/question 2 image2.jpeg" alt="Q2 - intro" width="650"/>
+<img src="/images/question 2 image2.jpeg" alt="Q2 - intro" width="500"/>
 
 <img src="/images/question 2 intro image.jpeg" alt="Q2 - intro 2" width="4"/>
 
@@ -163,24 +165,25 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 ### Analysis Plan
 
-::: {.fragment .fade-in style="font-size: 0.6em"}
+::: {.fragment .fade-in style="font-size: 0.75em"}
 -   A map and bar plot were utilized to reveal renewable energy consumption and greenhouse gas emissions.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.6em"}
+::: {.fragment .fade-in style="font-size: 0.75em"}
 -   A line plot was used to display trends in global energy consumption.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.6em"}
+::: {.fragment .fade-in style="font-size: 0.75em"}
 -   A density plot illustrated renewable energy and non-renewable energy consumption by continent.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.6em"}
+::: {.fragment .fade-in style="font-size: 0.75em"}
 -   Clustering analysis was conducted on energy-related variables to identify clusters for regional boundaries based on their renewable and non-renewable energy consumption patterns.
 :::
 :::
+------------------------------------------------------------------------
 
-## MAP: Share of Renewable Energy Consumption
+## MAP:Share of Renewable Energy Consumption
 
 ```{python, figsize=[8, 12.944]}
 
@@ -458,6 +461,7 @@ fig_high_emissions.show()
 
 
 ```
+
 :::
 
 ------------------------------------------------------------------------
@@ -467,53 +471,53 @@ fig_high_emissions.show()
 ::: panel-tabset
 ## Plot 1
 
-This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy
+This plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy.
 
-However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy
+However, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy.
 
 ## Plot 2
 
-This plot reveals the top 10 countries with mean green house emissions
+This plot reveals the top 10 countries with mean green house emissions.
 
-Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries
+Countries such as China and the United states have the highest green house emissions out amongst the top 10 countries.
 
-This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom
+This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom.
 :::
 
 ------------------------------------------------------------------------
 
 ## Line plot
 
-<img src="/images/Q2plot/Q2_line_plot.png" alt="q2 - line plot" width="650"/>
+<img src="/images/Q2plot/Q2_line_plot.png" alt="q2 - line plot" width="680"/>
 
 
 ------------------------------------------------------------------------
 
 ## Insights
 
-This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
+- This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
 
-This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
+- This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
 
-Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
+- Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
 
-------------------------------------------------------------------------
+
 
 # Density plots
 
-------------------------------------------------------------------------
+
 
 ### Renewable Energy Consumption
 
 ![](images/renewables_consumption_by_continent.gif)
 
-------------------------------------------------------------------------
+
 
 ### Non-Renewable Energy Consumption
 
 ![](images/non_renewables_consumption_by_continent.gif)
 
-------------------------------------------------------------------------
+
 
 ## Insights
 
@@ -536,7 +540,7 @@ Wind and Solar Energy consumption seems to have taken off in the early 2000s and
 ::: panel-tabset
 ### K-Means
 
-<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="650"/>
+<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="640"/>
 
 ### DBSCAN
 
@@ -582,6 +586,8 @@ Wind and Solar Energy consumption seems to have taken off in the early 2000s and
 -   [TidyTuesday - GH](https://github.com/owid/energy-data)
 -   [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
 
-## Thank you!
+------------------------------------------------------------------------
 
 ![](images/thank you gif2.gif){fig-align="center" width="800"}
+
+------------------------------------------------------------------------
