@@ -191,6 +191,10 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
+![](images/question 2 image2.jpeg){fig-align="center" width="770"}
+
+![](images/question 2 intro image.jpeg){fig-align="center" width="4"}
+
 ## Next steps
 
 ::: panel-tabset
@@ -585,6 +589,20 @@ Wind and Solar Energy consumption seems to have taken off in the early 2000s and
 <img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="800"/>
 :::
 
+------------------------------------------------------------------------
+
+## Insights
+
+-   This cluster analysis resulted in 8 clusters when the k means was used
+
+-   After the DBSCAN was conducted, 2 clusters emerged while one remained an outlier
+
+-   A silhoutte score was calculated to determine the accuracy of this cluster which yielded a score of 0.96
+
+-   This implies that the cluster method developed here was very effective.
+
+------------------------------------------------------------------------
+
 ## Conclusion
 
 ::: {.fragment .fade-in style="font-size: 0.7em"}
@@ -611,3 +629,5 @@ Wind and Solar Energy consumption seems to have taken off in the early 2000s and
 -   [Image formatting](https://stackoverflow.com/questions/34138412/reveal-js-how-to-add-an-image-to-a-slide)
 
 ## Thank you!
+
+![](images/thank you gif2.gif){fig-align="center" width="800"}
