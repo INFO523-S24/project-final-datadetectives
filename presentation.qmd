@@ -85,7 +85,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 <img src="/images/electricity.png" alt="electricity" width="500"/>
 
-------------------------------------------------------------------------
+
 
 # Next steps
 
@@ -113,19 +113,31 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ## Analysis Plan
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Descriptive Statistics
+:::
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Correlation Analysis
+:::
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Time Series Analysis
+:::
 
 ## Visualizations
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Distribution Plot
+:::
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Scatter Plot
+:::
 
+::: {.fragment .fade-in style="font-size: 0.9em"}
 -   Time series analysis plot
+:::
 
 :::
 

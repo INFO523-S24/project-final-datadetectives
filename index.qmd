@@ -80,6 +80,8 @@ index = False)
 
 ```
 
+### Density Plot
+
 ```{python}
 #| label: question2
 #| echo: false
@@ -104,6 +106,8 @@ plt.show()
 -   
 
     A right-skewed distribution is shown by the distribution's shape, which shows that most values are low and that frequency drops off quickly as values rise. In order to train the model to identify patterns and to validate its correctness by contrasting the projected values with the actual data shown in the plot, the historical data represented in this histogram would be crucial.
+
+### Scatter Plot
 
 ```{python}
 #| label: question3
@@ -165,6 +169,8 @@ plt.show()
 -   
 
     The relationship between primary energy consumption and the GDP, population size, and the proportion of power derived from renewable sources is represented graphically in this plot. If persistent patterns are seen over time, one might utilize the spread and trends of the scatter points to deduce that there might be correlations between these parameters and a country's power consumption, which could be used to anticipate energy usage.
+
+### Time Series Analysis Plot
 
 ```{python}
 #| label: question4
