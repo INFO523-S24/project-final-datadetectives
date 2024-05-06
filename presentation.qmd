@@ -529,15 +529,49 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 ![](/images/Q2plot/Q2_line_plot.png){width="900" height="600"}
 
+------------------------------------------------------------------------
+
+## Insights
+
+This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
+
+This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years
+
+Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy
+
+------------------------------------------------------------------------
+
 ## Density plot
+
+------------------------------------------------------------------------
 
 ### Renewable Energy Consumption
 
 ![](images/renewables_consumption_by_continent.gif)
 
+------------------------------------------------------------------------
+
 ### Non-Renewable Energy Consumption
 
 ![](images/non_renewables_consumption_by_continent.gif)
+
+------------------------------------------------------------------------
+
+## Insights
+
+::: panel-tabset
+## Renewable Energy Plot
+
+-   This plot reveals that South America are the leading continents in terms of renewable energy conosumption.
+
+-   Africa has a very steep density curve implying that its consumption of renewable energy has barely grown over the years.
+
+## Non-Renewable Energy Plot
+
+-   This plot reveals that Europe is one of the largest consumers of non-renewable energy.
+
+-   Asia has also had its consumption of non-renewable energy grow by large amounts over the years
+:::
 
 ## Clustering Plots (K- means,DBSCAN)
 
