@@ -77,11 +77,18 @@
     "text": "This project was developed by Data Detectives For INFO 523 - Data Mining and Discovery at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nAyesha Khatun: First year PhD student, School of Information, Major areas are  Natural Language Processing and Machine Learning\nShreemithra Naveen: First year Master Student in Data Science, Fascinated about AI, ML, VR and AR\nAlyssa Nether: A nondegree seeking graduate student exploring the realm of data science hoping to apply for the program in the future.\nToluwanimi Olorunnisola: Second year PhD student, Systems and Industrial Engineering, College of Engineering.\nValerie Naa Dei Okine: Master of Data Science, Major areas are machine learning and artificial intelligence\nAbhishek Kumar: 1st Year, MS Data Science, Researcher, VIP project: Road Safety"
   },
   {
-    "objectID": "presentation.html#next-steps",
-    "href": "presentation.html#next-steps",
+    "objectID": "presentation.html#project-overview-and-data-set",
+    "href": "presentation.html#project-overview-and-data-set",
     "title": "Global Energy Trends",
-    "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis PlanVisualizations\n\n\n\n\npopulation and gdp are directly linked to energy demand\n\n\n\n\nrenewables_electricity / electricity_generation are used to create a percentage\n\n\n\n\nprimary_energy_consumption is the target variable\n\n\n\n\nyear is used to perfrom time series analysis\n\n\n\n\n\n\nDescriptive Statistics:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.\n\n\n\n\nCorrelation Analysis:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.\n\n\n\n\nTime Series Analysis:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively\n\n\n\n\n\n\nHistogram\n\n\n\n\nScatterplots\n\n\n\n\nTime series analysis plot"
+    "section": "Project Overview and Data set",
+    "text": "Project Overview and Data set\n\nEnergy is crucial today for powering industries, homes, and technological advancements.\nThe aim of this project is to predict power consumption trends based on population size, GDP, renewable energy usage, and identify regions transitioning to sustainable energy practices while reducing greenhouse gas emissions.\nThis data set was gathered from the Our World in Data website where multiple data sets were merged together to form this data."
+  },
+  {
+    "objectID": "presentation.html#visualizations",
+    "href": "presentation.html#visualizations",
+    "title": "Global Energy Trends",
+    "section": "Visualizations",
+    "text": "Visualizations\n\nColumnsAnalysis PlanVisualizations\n\n\n\npopulation and gdp are directly linked to energy demand.\nrenewables_electricity / electricity_generation are used to create a percentage.\nprimary_energy_consumption is the target variable.\nyear is used to perfrom time series analysis.\n\n\n\n\nDescriptive Statistics\nCorrelation Analysis\nTime Series Analysis\n\n\n\n\nDistribution Plot\nScatter Plot\nTime series plot"
   },
   {
     "objectID": "presentation.html#distribution-plot",
@@ -91,11 +98,11 @@
     "text": "Distribution Plot"
   },
   {
-    "objectID": "presentation.html#scatterplots",
-    "href": "presentation.html#scatterplots",
+    "objectID": "presentation.html#scatter-plot",
+    "href": "presentation.html#scatter-plot",
     "title": "Global Energy Trends",
-    "section": "Scatterplots",
-    "text": "Scatterplots"
+    "section": "Scatter Plot",
+    "text": "Scatter Plot"
   },
   {
     "objectID": "presentation.html#time-series-analysis-plot",
@@ -109,14 +116,21 @@
     "href": "presentation.html#next-steps-1",
     "title": "Global Energy Trends",
     "section": "Next steps",
-    "text": "Next steps\n\nColumnsAnalysis Plan\n\n\n\n\nFor insights into trends in renewable energy share and practices: Solar_consumption, Wind_consumption, Hydro_consumption, Other_renewable_consumption, Renewable_energy_share, Greenhouse_gas_emissions, Renewables_electricity, Electricity_generation, and Year.\n\n\n\n\nFor clustering analysis: Country, Year, Population, GDP, and all energy-related columns.\n\n\n\n\n\n\nWe utilized map and bar plots to reveal renewable energy consumption and greenhouse gas emissions.\n\n\n\n\nA line plot was used to display trends in global energy consumption.\n\n\n\n\nA density plot illustrated renewable energy consumption by continent.\n\n\n\n\nClustering analysis was conducted on energy-related variables to identify clusters based on energy consumption patterns."
+    "text": "Next steps\n\nColumnsAnalysis Plan\n\n\n\n\nFor insights into trends in renewable energy share and practices: Solar_consumption, Wind_consumption, Hydro_consumption, Other_renewable_consumption, Renewable_energy_share, Greenhouse_gas_emissions, Renewables_electricity, Electricity_generation, and Year.\n\n\n\n\nFor clustering analysis: Country, Year, Population, GDP, and all energy-related columns.\n\n\n\n\n\n\nA map and bar plot were utilized to reveal renewable energy consumption and greenhouse gas emissions.\n\n\n\n\nA line plot was used to display trends in global energy consumption.\n\n\n\n\nA density plot illustrated renewable energy and non-renewable energy consumption by continent.\n\n\n\n\nClustering analysis was conducted on energy-related variables to identify clusters for regional boundaries based on their renewable and non-renewable energy consumption patterns."
   },
   {
-    "objectID": "presentation.html#mapshare-of-renewable-energy-consumption",
-    "href": "presentation.html#mapshare-of-renewable-energy-consumption",
+    "objectID": "presentation.html#map-share-of-renewable-energy-consumption",
+    "href": "presentation.html#map-share-of-renewable-energy-consumption",
     "title": "Global Energy Trends",
-    "section": "MAP:Share of Renewable Energy Consumption",
-    "text": "MAP:Share of Renewable Energy Consumption"
+    "section": "MAP: Share of Renewable Energy Consumption",
+    "text": "MAP: Share of Renewable Energy Consumption"
+  },
+  {
+    "objectID": "presentation.html#insights",
+    "href": "presentation.html#insights",
+    "title": "Global Energy Trends",
+    "section": "Insights",
+    "text": "Insights\n\nThis visualization reveals the share of renewable energy around the world.\nNorth America has very little to adequate amount in the share of renewable energy.\nSouth America has little share of renewable energy for some parts while some other parts have a large share of renewable energy.\nSome parts of Asia also have the same renewable energy share distribution as North America with some parts having more and some having very little."
   },
   {
     "objectID": "presentation.html#barplot",
@@ -126,25 +140,46 @@
     "text": "Barplot\n\nPlot1Plot2"
   },
   {
+    "objectID": "presentation.html#insights-1",
+    "href": "presentation.html#insights-1",
+    "title": "Global Energy Trends",
+    "section": "Insights",
+    "text": "Insights\n\nPlot 1Plot 2\n\n\nThis plot reveals that countries such as China, Brazil, and India have a relatively high share of renewable energy\nHowever, countries such as Pakistan, Vietnam, Columbia, the United States of America, Canada, and Indonesia have relatively much lower shares of renewable energy\n\n\nThis plot reveals the top 10 countries with mean green house emissions\nCountries such as China and the United states have the highest green house emissions out amongst the top 10 countries\nThis is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, Australia, and the United Kingdom"
+  },
+  {
     "objectID": "presentation.html#line-plot",
     "href": "presentation.html#line-plot",
     "title": "Global Energy Trends",
     "section": "Line plot",
-    "text": "Line plot\n\n\n\nelectricity"
+    "text": "Line plot"
   },
   {
-    "objectID": "presentation.html#density-plot",
-    "href": "presentation.html#density-plot",
+    "objectID": "presentation.html#insights-2",
+    "href": "presentation.html#insights-2",
     "title": "Global Energy Trends",
-    "section": "Density plot",
-    "text": "Density plot\n\nRenewable Energy ConsumptionNon-Renewable Energy Consumption"
+    "section": "Insights",
+    "text": "Insights\nThis visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.\nThis plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.\nWind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy."
   },
   {
-    "objectID": "presentation.html#clustering-plots-k--meansdbscan",
-    "href": "presentation.html#clustering-plots-k--meansdbscan",
+    "objectID": "presentation.html#insights-3",
+    "href": "presentation.html#insights-3",
     "title": "Global Energy Trends",
-    "section": "Clustering Plots (K- means,DBSCAN)",
-    "text": "Clustering Plots (K- means,DBSCAN)\n\nK- meansDBSCAN"
+    "section": "Insights",
+    "text": "Insights\n\nRenewable Energy PlotNon-Renewable Energy Plot\n\n\n\nThis plot reveals that South America are the leading continents in terms of renewable energy conosumption.\nAfrica has a very steep density curve implying that its consumption of renewable energy has barely grown over the years.\n\n\n\n\nThis plot reveals that Europe is one of the largest consumers of non-renewable energy.\nAsia has also had its consumption of non-renewable energy grow by large amounts over the years."
+  },
+  {
+    "objectID": "presentation.html#clustering-plots",
+    "href": "presentation.html#clustering-plots",
+    "title": "Global Energy Trends",
+    "section": "Clustering Plots",
+    "text": "Clustering Plots\n\nK-MeansDBSCAN"
+  },
+  {
+    "objectID": "presentation.html#insights-4",
+    "href": "presentation.html#insights-4",
+    "title": "Global Energy Trends",
+    "section": "Insights",
+    "text": "Insights\n\nThis cluster analysis resulted in 8 clusters when the K-Means was used.\nAfter the DBSCAN was conducted, 2 clusters emerged while one remained an outlier.\nA silhoutte score was calculated to determine the accuracy of this cluster which yielded a score of 0.96.\nThis implies that the cluster method developed here was very effective."
   },
   {
     "objectID": "presentation.html#conclusion",

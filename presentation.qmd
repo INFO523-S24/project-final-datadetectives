@@ -70,14 +70,13 @@ index = False)
 
 ## Project Overview and Data set
 
--   \
-    Energy is crucial today for powering industries, homes, and technological advancements.
+-   Energy is crucial today for powering industries, homes, and technological advancements.
 
 -   The aim of this project is to predict power consumption trends based on population size, GDP, renewable energy usage, and identify regions transitioning to sustainable energy practices while reducing greenhouse gas emissions.
 
 -   This data set was gathered from the Our World in Data website where multiple data sets were merged together to form this data.
 
-## Question 1
+# Question 1
 
 ------------------------------------------------------------------------
 
@@ -87,7 +86,7 @@ Is it possible to predict a nation's power consumption by considering its popula
 
 ------------------------------------------------------------------------
 
-## Next steps
+# Next steps
 
 ------------------------------------------------------------------------
 
@@ -96,41 +95,21 @@ Is it possible to predict a nation's power consumption by considering its popula
 ::: panel-tabset
 ## Columns
 
--   **population** and **gdp** are directly linked to energy demand
+-   `population` and `gdp` are directly linked to energy demand.
 
-```{=html}
-<!-- -->
-```
--   **renewables_electricity / electricity_generation** are used to create a percentage
+-   `renewables_electricity` / `electricity_generation` are used to create a percentage.
 
-```{=html}
-<!-- -->
-```
--   **renewables_electricity / electricity_generation** are used to create a percentage
-
-```{=html}
-<!-- -->
-```
--   **primary_energy_consumption** is the **target variable**
-
-```{=html}
-<!-- -->
-```
--   **year** is used to perfrom time series analysis
+-   `primary_energy_consumption` is the **target variable**.
+  
+-   `year` is used to perfrom time series analysis.
 
 ## Analysis Plan
 
--   **Descriptive Statistics**:Summarize population, GDP, and renewable energy distributions to grasp their trends and variability over time accurately.
+-   Descriptive Statistics
 
-```{=html}
-<!-- -->
-```
--   **Correlation Analysis**:Uncover relationships between population size, GDP, renewable energy, and power consumption, identifying influential factors shaping energy dynamics.
+-   Correlation Analysis
 
-```{=html}
-<!-- -->
-```
--   **Time Series Analysis**:Analyze energy consumption trends over time, integrating population, GDP, and renewable energy data to forecast future consumption patterns and comprehend energy usage dynamics comprehensively
+-   Time Series Analysis
 
 ## Visualizations
 
@@ -139,61 +118,35 @@ Is it possible to predict a nation's power consumption by considering its popula
 -   Scatter Plot
 
 -   Time series plot
+
 :::
 
-------------------------------------------------------------------------
-
-::: panel-tabset
 ## Distribution Plot
 
-![](images/Q1%20plots/Q1_dist_plot.png)
+<img src="/images/Q1%20plots/Q1_dist_plot.png" alt="distribution plot" width="600"/>
 
-## Insights
 
--   This visualization depicts the distribution of primary energy consumption for all the regional boundaries in the data set.
-
--   The plot reveals that primary energy consumption is right skewed.
-
--   This implies that more regional boundaries and countries in the world consume less primary energy compared to some sections of the world which rely heavily on primary energy
-
--   Primary energy is energy that is directly extracted from natural resources such as natural gas, fuel, sunlight, wind and water.
-:::
-
-------------------------------------------------------------------------
-
-::: panel-tabset
 ## Scatter Plot
 
-![](images/Q1%20plots/Q1_scatter.png)
+<img src="/images/Q1%20plots/Q1_scatter.png" alt="scatter plot" width="600"/>
 
-## Insights
 
--   This visualization depicts the relationship between primary energy and the population , gross domestic product (gdp) and renewable energy of all the countries and regional boundaries in the world.
 
--   The visualization reveals a positive relationship between primary energy consumption and all the variables in visualization
-
--   This implies that the more primary energy consumed, the higher the gdp of a country, the higher the renewable electricity and the higher the population in the country or regional boundary.
-:::
-
-------------------------------------------------------------------------
-
-::: panel-tabset
 ## Time Series Analysis Plot
 
-![](images/Q1%20plots/Q1_time_series_plot.png)
+<img src="/images/Q1%20plots/Q1_time_series_plot.png" alt="time series analysis plot" width="600"/>
 
-## Insights
-:::
-
-# Question 2
+# Question 2 
 
 ------------------------------------------------------------------------
 
 What countries or regions are engaging in sustainable energy practices and relying more on renewable energy compared to nonrenewable energy? Which countries are moving towards the trajectory of relying more on renewable energy and producing less greenhouse gas emissions?
 
-![](images/question 2 image2.jpeg){fig-align="center" width="770"}
+<img src="/images/question 2 image2.jpeg" alt="Q2 - intro" width="650"/>
 
-![](images/question 2 intro image.jpeg){fig-align="center" width="4"}
+<img src="/images/question 2 intro image.jpeg" alt="Q2 - intro 2" width="4"/>
+
+------------------------------------------------------------------------
 
 ## Next steps
 
@@ -210,24 +163,24 @@ What countries or regions are engaging in sustainable energy practices and relyi
 
 ### Analysis Plan
 
-::: {.fragment .fade-in style="font-size: 0.92em"}
+::: {.fragment .fade-in style="font-size: 0.6em"}
 -   A map and bar plot were utilized to reveal renewable energy consumption and greenhouse gas emissions.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.92em"}
+::: {.fragment .fade-in style="font-size: 0.6em"}
 -   A line plot was used to display trends in global energy consumption.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.92em"}
+::: {.fragment .fade-in style="font-size: 0.6em"}
 -   A density plot illustrated renewable energy and non-renewable energy consumption by continent.
 :::
 
-::: {.fragment .fade-in style="font-size: 0.92em"}
+::: {.fragment .fade-in style="font-size: 0.6em"}
 -   Clustering analysis was conducted on energy-related variables to identify clusters for regional boundaries based on their renewable and non-renewable energy consumption patterns.
 :::
 :::
 
-## MAP:Share of Renewable Energy Consumption
+## MAP: Share of Renewable Energy Consumption
 
 ```{python, figsize=[8, 12.944]}
 
@@ -292,7 +245,7 @@ fig.show()
 
 ## Insights
 
--   This visualization reveals the share of renewable energy around the world
+-   This visualization reveals the share of renewable energy around the world.
 
 -   North America has very little to adequate amount in the share of renewable energy.
 
@@ -531,7 +484,8 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 ## Line plot
 
-![](/images/Q2plot/Q2_line_plot.png){width="900" height="600"}
+<img src="/images/Q2plot/Q2_line_plot.png" alt="q2 - line plot" width="650"/>
+
 
 ------------------------------------------------------------------------
 
@@ -539,13 +493,13 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 This visualization provides information on the energy consumption of wind, solar, and hydro energy over the years.
 
-This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years
+This plot reveals that Hydro electric power has always been in the lead in terms of energy consumed over the years. Its consumption seems to have climbed steadily over the years.
 
-Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy
+Wind and Solar Energy consumption seems to have taken off in the early 2000s and have continued to climb steadilty over the years with more of wind energy being consumed than solar energy.
 
 ------------------------------------------------------------------------
 
-## Density plot
+# Density plots
 
 ------------------------------------------------------------------------
 
@@ -574,30 +528,30 @@ Wind and Solar Energy consumption seems to have taken off in the early 2000s and
 
 -   This plot reveals that Europe is one of the largest consumers of non-renewable energy.
 
--   Asia has also had its consumption of non-renewable energy grow by large amounts over the years
+-   Asia has also had its consumption of non-renewable energy grow by large amounts over the years.
 :::
 
-## Clustering Plots (K- means,DBSCAN)
+## Clustering Plots
 
 ::: panel-tabset
-### K- means
+### K-Means
 
-<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="800" height="470"/>
+<img src="/images/Q2plot/Q2_Kmean.png" alt="distribution plot" width="650"/>
 
 ### DBSCAN
 
-<img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="800"/>
+<img src="/images/Q2plot/Q2_db.png" alt="distribution plot" width="650"/>
 :::
 
 ------------------------------------------------------------------------
 
 ## Insights
 
--   This cluster analysis resulted in 8 clusters when the k means was used
+-   This cluster analysis resulted in **8 clusters** when the K-Means was used.
 
--   After the DBSCAN was conducted, 2 clusters emerged while one remained an outlier
+-   After the DBSCAN was conducted, **2 clusters** emerged while one remained an outlier.
 
--   A silhoutte score was calculated to determine the accuracy of this cluster which yielded a score of 0.96
+-   A silhoutte score was calculated to determine the accuracy of this cluster which yielded a score of **0.96**.
 
 -   This implies that the cluster method developed here was very effective.
 
