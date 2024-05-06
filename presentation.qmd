@@ -76,21 +76,17 @@ index = False)
 
 -   This data set was gathered from the **Our World in Data** website where multiple data sets were merged together to form this data.
 
-------------------------------------------------------------------------
 
 # Question 1
 
-------------------------------------------------------------------------
 
 Is it possible to predict a nation's power consumption by considering its population size, gross domestic product (GDP), and the percentage of electricity generated from renewable sources and changes across the years?
 
 <img src="/images/electricity.png" alt="electricity" width="500"/>
 
-------------------------------------------------------------------------
 
 # Next steps
 
-------------------------------------------------------------------------
 
 ## Visualizations
 
@@ -181,7 +177,7 @@ What countries or regions are engaging in sustainable energy practices and relyi
 -   Clustering analysis was conducted on energy-related variables to identify clusters for regional boundaries based on their renewable and non-renewable energy consumption patterns.
 :::
 :::
-------------------------------------------------------------------------
+
 
 ## MAP:Share of Renewable Energy Consumption
 
@@ -244,7 +240,7 @@ fig.show()
 
 ```
 
-------------------------------------------------------------------------
+
 
 ## Insights
 
@@ -488,7 +484,7 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 ## Line plot
 
-<img src="/images/Q2plot/Q2_line_plot.png" alt="q2 - line plot" width="680"/>
+<img src="/images/Q2plot/Q2_line_plot.png" alt="q2 - line plot" width="730"/>
 
 
 ------------------------------------------------------------------------
@@ -505,19 +501,19 @@ This is followed by INdian, Japan, Russia, Germany, South Korea, South Africa, A
 
 # Density plots
 
-
+------------------------------------------------------------------------
 
 ### Renewable Energy Consumption
 
 ![](images/renewables_consumption_by_continent.gif)
 
-
+------------------------------------------------------------------------
 
 ### Non-Renewable Energy Consumption
 
 ![](images/non_renewables_consumption_by_continent.gif)
 
-
+------------------------------------------------------------------------
 
 ## Insights
 
